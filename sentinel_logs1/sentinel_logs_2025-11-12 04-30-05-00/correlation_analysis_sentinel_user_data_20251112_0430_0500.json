@@ -1,0 +1,234 @@
+{
+  "report_metadata": {
+    "generated_at": "2025-11-12T14:27:57.748300",
+    "report_type": "Advanced Security Correlation Analysis v5.1 - AI-Enhanced Edition",
+    "total_users": 2,
+    "total_events": 3,
+    "ai_enhanced": true,
+    "generation_time_seconds": 11.448009490966797,
+    "api_stats": {
+      "total_requests": 14,
+      "total_wait_time": 0,
+      "requests_last_minute": 12,
+      "requests_today": 14,
+      "rpm_limit": 15,
+      "rpd_limit": 1500,
+      "rate_limit_exceeded": false
+    },
+    "improvements": [
+      "Intelligent time gap detection using outlier analysis",
+      "Proper ResultDescription extraction for failures",
+      "Enhanced Unknown data handling",
+      "Frequent activity grouping (not hardcoded thresholds)",
+      "AI-generated alert descriptions with rate limiting"
+    ]
+  },
+  "summary": {
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 2
+  },
+  "high_priority_events": [],
+  "medium_priority_events": [],
+  "low_priority_events": [
+    {
+      "user_principal_name": "raviraj.jadhav@yash.com",
+      "user_id": "6c65fe55-abdc-4b88-a95a-b15dd04f53ce",
+      "user_display_name": "Raviraj Ramesh Jadhav",
+      "user_type": "Guest",
+      "total_events": 2,
+      "total_clusters": 2,
+      "clusters": [
+        {
+          "clustering_metadata": {
+            "method": "iqr_outlier_detection",
+            "q1": 63.685697,
+            "q2": 63.685697,
+            "q3": 63.685697,
+            "iqr": 0.0,
+            "mean": 63.685697,
+            "std_dev": 0.0,
+            "normal_gaps_count": 1,
+            "outlier_count": 0,
+            "total_gaps": 1,
+            "final_threshold": 63.685697
+          }
+        },
+        {
+          "cluster_id": "CLUSTER_000",
+          "start_time": "2025-11-12T04:35:11.136190+00:00",
+          "end_time": "2025-11-12T04:35:11.136190+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        },
+        {
+          "cluster_id": "CLUSTER_001",
+          "start_time": "2025-11-12T04:36:14.821887+00:00",
+          "end_time": "2025-11-12T04:36:14.821887+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        }
+      ],
+      "locations": [
+        {
+          "city": "Kothrud",
+          "state": "Maharashtra",
+          "country": "IN",
+          "ip_address": "203.199.133.30",
+          "timestamp": "2025-11-12T04:35:11.1361903Z"
+        },
+        {
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "country": "IN",
+          "ip_address": "27.107.64.154",
+          "timestamp": "2025-11-12T04:36:14.8218871Z"
+        }
+      ],
+      "unique_locations": 2,
+      "applications": [
+        {
+          "app_name": "YASH-SPN-UES-Azure-App",
+          "app_id": "b8d957b6-3709-49a0-b182-1bc63498c116",
+          "resource": "Microsoft Graph",
+          "access_count": 2
+        }
+      ],
+      "unique_apps": 1,
+      "authentication_summary": {
+        "methods": [
+          "Single Sign-On"
+        ],
+        "total_mfa": 0,
+        "total_single_factor": 2,
+        "failed_attempts": 0
+      },
+      "failure_analysis": {
+        "total_failures": 0,
+        "success_rate": 100.0,
+        "failure_reasons": [],
+        "critical_failures": 0,
+        "failed_event_timeline": [],
+        "failure_categories": {}
+      },
+      "behavioral_anomalies": [],
+      "risk_score": 3,
+      "risk_factors": [
+        "Predominantly single-factor authentication",
+        "Guest user cross-tenant access"
+      ],
+      "timeline": [
+        {
+          "timestamp": "2025-11-12T04:35:11.1361903Z",
+          "app": "YASH-SPN-UES-Azure-App",
+          "location": "Kothrud, IN",
+          "ip_address": "203.199.133.30",
+          "browser": "Edge 142.0.0",
+          "os": "Windows10",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        },
+        {
+          "timestamp": "2025-11-12T04:36:14.8218871Z",
+          "app": "YASH-SPN-UES-Azure-App",
+          "location": "Mumbai, IN",
+          "ip_address": "27.107.64.154",
+          "browser": "Edge 142.0.0",
+          "os": "Windows10",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        }
+      ],
+      "alert_title": "\u26a0\ufe0f [LOW RISK] Cross-Tenant Guest Activity & Weak Authentication Methods - Raviraj Ramesh Jadhav (2 events)",
+      "alert_summary": "2 locations",
+      "alert_description": "We've detected unusual activity where Raviraj, a guest user, successfully accessed one of our applications from two different locations. This is concerning because guest users accessing resources across tenants, especially with only single-factor authentication, increases the risk of unauthorized access or a compromised account."
+    },
+    {
+      "user_principal_name": "athrva.tomar@yashtechnologies841.onmicrosoft.com",
+      "user_id": "584f0d50-10b1-4861-b2d9-ccc74e7067c4",
+      "user_display_name": "Athrva Tomar",
+      "user_type": "Member",
+      "total_events": 1,
+      "total_clusters": 1,
+      "clusters": [
+        {
+          "clustering_metadata": {
+            "method": "default",
+            "reason": "insufficient_events"
+          }
+        },
+        {
+          "cluster_id": "CLUSTER_000",
+          "start_time": "2025-11-12T04:55:33.672335+00:00",
+          "end_time": "2025-11-12T04:55:33.672335+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        }
+      ],
+      "locations": [
+        {
+          "city": "Navi Mumbai",
+          "state": "Maharashtra",
+          "country": "IN",
+          "ip_address": "14.143.131.254",
+          "timestamp": "2025-11-12T04:55:33.6723356Z"
+        }
+      ],
+      "unique_locations": 1,
+      "applications": [
+        {
+          "app_name": "OfficeHome",
+          "app_id": "4765445b-32c6-49b0-83e6-1d93765276ca",
+          "resource": "OfficeHome",
+          "access_count": 1
+        }
+      ],
+      "unique_apps": 1,
+      "authentication_summary": {
+        "methods": [
+          "Single Sign-On"
+        ],
+        "total_mfa": 0,
+        "total_single_factor": 1,
+        "failed_attempts": 0
+      },
+      "failure_analysis": {
+        "total_failures": 0,
+        "success_rate": 100.0,
+        "failure_reasons": [],
+        "critical_failures": 0,
+        "failed_event_timeline": [],
+        "failure_categories": {}
+      },
+      "behavioral_anomalies": [],
+      "risk_score": 2,
+      "risk_factors": [
+        "Predominantly single-factor authentication"
+      ],
+      "timeline": [
+        {
+          "timestamp": "2025-11-12T04:55:33.6723356Z",
+          "app": "OfficeHome",
+          "location": "Navi Mumbai, IN",
+          "ip_address": "14.143.131.254",
+          "browser": "Chrome 142.0.0",
+          "os": "Windows10",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        }
+      ],
+      "alert_title": "\u26a0\ufe0f [LOW RISK] Weak Authentication Methods - Athrva Tomar (1 events)",
+      "alert_summary": "Normal activity pattern",
+      "alert_description": "We observed Athrva Tomar successfully accessing an application, but the primary concern is that this access relied solely on a single password. This makes the account more vulnerable to unauthorized access if that password were ever compromised, as there are no additional security layers protecting it."
+    }
+  ]
+}

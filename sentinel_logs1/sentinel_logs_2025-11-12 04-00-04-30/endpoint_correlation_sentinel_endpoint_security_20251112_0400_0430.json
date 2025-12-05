@@ -1,0 +1,363 @@
+{
+  "report_metadata": {
+    "generated_at": "2025-11-12 14:35:38",
+    "analysis_period": "2025-11-12 04:05 - 04:26 UTC",
+    "device": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+    "total_events_analyzed": 129,
+    "alerts_generated": 18,
+    "highest_severity": "MEDIUM",
+    "severity_distribution": {
+      "HIGH": 0,
+      "MEDIUM": 3,
+      "LOW": 15
+    }
+  },
+  "executive_summary": "**Total Events Analyzed:** 6\n**Alerts Generated:** 18\n**Highest Severity:** MEDIUM\n**Devices Monitored:** 1\n\nDuring a 21-minute monitoring period, six device-related events on `wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net` triggered a significant eighteen security alerts. This high alert-to-event ratio suggests potential unusual activity or highly sensitive detection rules requiring further investigation.",
+  "security_alerts": [
+    {
+      "alert_id": "ALERT-001",
+      "title": "Execution of sysstat cron helper script",
+      "severity": "LOW",
+      "category": "System Activity",
+      "mitre_attack": "N/A",
+      "description": "A standard Debian `sysstat` cron helper script (`/usr/lib/sysstat/sa1` wrapper) was executed multiple times on the device. This script is designed to run periodically, often via cron, to invoke the main system activity data collection script, aiming to gather system statistics without excessively logging the helper script's execution itself. This is a common and expected background process for system monitoring on Linux.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:05:01.112969Z (First occurrence)",
+        "Action Type": "ScriptContent",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "SHA256": "dbcc108e4c4b56ce676a2e512ffd0dc06fd211dfb606d9fd25764f71ea62f9b0",
+        "Key Components": [
+          "Script identifies as a \"Debian sa1 helper which is run from cron.d job\".",
+          "It checks for systemd timer presence and `sysstat` enablement.",
+          "The script's content indicates its purpose is to `exec /usr/lib/sysstat/sa1`.",
+          "Multiple occurrences of this script execution are observed at regular intervals."
+        ]
+      },
+      "risk_assessment": "This event represents normal and routine system monitoring activity. The script content and execution pattern are consistent with legitimate `sysstat` operations, indicating a very low security risk."
+    },
+    {
+      "alert_id": "ALERT-002",
+      "title": "Execution of sysstat data collection script",
+      "severity": "LOW",
+      "category": "System Activity",
+      "mitre_attack": "N/A",
+      "description": "The core `sysstat` data collection script (`/usr/lib/sysstat/sa1`) was executed multiple times on the device. Its function is to collect and store binary system activity data into `/var/log/sysstat` for performance analysis and historical logging. This is a standard and expected part of system monitoring on Linux systems.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:10:03.812559Z (First occurrence)",
+        "Action Type": "ScriptContent",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "SHA256": "c3dc69bd9576e336b57e0462f414b8da007011b9e03fb3c86e9097dede956b1d",
+        "Key Components": [
+          "Script identifies as `sa1: Collect and store binary data in system activity data file.`.",
+          "It uses `sadc` to perform the data collection, storing it in `/var/log/sysstat`.",
+          "Multiple occurrences of this script execution are observed following the helper script."
+        ]
+      },
+      "risk_assessment": "This event reflects normal system activity related to performance monitoring. The execution of the `sysstat` data collection script is a benign operation, posing a very low security risk."
+    },
+    {
+      "alert_id": "ALERT-003",
+      "title": "Execution of lsb_release script",
+      "severity": "LOW",
+      "category": "System Information Gathering",
+      "mitre_attack": "N/A",
+      "description": "The `lsb_release` script, a standard Python utility for Debian, was executed on the device. This script's purpose is to retrieve and display Linux Standard Base (LSB) information about the operating system distribution, such as its ID, description, release, and codename. This is a common task for system administrators for inventory, diagnostics, or compatibility checks.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:26:26.107509Z",
+        "Action Type": "ScriptContent",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "SHA256": "484b6a9de8b41aa9310a305b64c092e473ee73bead994e52c4271c66df9ba3c8",
+        "Key Components": [
+          "Script identified as `lsb_release command for Debian` using `#!/usr/bin/python3 -Es`.",
+          "Its content parses command-line options to display distributor ID, description, release, and codename."
+        ]
+      },
+      "risk_assessment": "This event indicates normal system information gathering. The `lsb_release` utility is a legitimate tool, and its execution typically poses a very low security risk, often being part of routine system checks or automated processes."
+    },
+    {
+      "alert_id": "ALERT-004",
+      "title": "Execution of APT Periodic Maintenance Script",
+      "severity": "LOW",
+      "category": "System Maintenance",
+      "mitre_attack": "N/A",
+      "description": "A portion of an `apt-periodic` script was detected executing on the device. This script is a standard Debian utility designed to automate routine APT package management tasks, including updating package lists, downloading upgradeable packages, and performing package cleaning operations (`autoclean`, `clean`). Its execution is crucial for maintaining system security and stability by ensuring packages are kept up-to-date and system resources are managed.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:29:09.416856Z",
+        "Action Type": "ScriptContent",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "SHA256": "4949c220a844071ee4709115aadfc00684578d5c7dda9c1b5a5c65a75de9d50f",
+        "Key Components": [
+          "Script content describes `APT::Periodic` configuration variables for automated updates, upgrades, and cleaning.",
+          "Includes a `check_stamp()` function, characteristic of time-based periodic tasks.",
+          "The script is typically invoked by cron or systemd timers for regular system maintenance."
+        ]
+      },
+      "risk_assessment": "This event represents normal and essential system maintenance activity. The `apt-periodic` script is a legitimate component of Debian-based systems, and its execution is expected for keeping the system updated and clean, thus posing a very low security risk."
+    },
+    {
+      "alert_id": "ALERT-005",
+      "title": "Normal Lucene Index File Deletion by Wazuh-indexer Service",
+      "severity": "LOW",
+      "category": "System Activity / Application Operation",
+      "mitre_attack": "N/A",
+      "description": "Multiple file deletion events have been observed on the `wazuh1` indexer node, where the `wazuh-indexer` service, running as a Java process, is deleting files within its Lucene index directories. This activity is consistent with normal operations for an OpenSearch/Wazuh-indexer system, typically involving index segment merging or cleanup.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:00:03.482946Z (first event)",
+        "Action Type": "FileDeleted",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process Account Name": "wazuh-indexer",
+        "Initiating Process File Name": "java",
+        "File Name Pattern": "`_kX_Lucene912_0.doc`, `_6X_Lucene912_0.doc` (e.g., `_k4_Lucene912_0.doc`, `_6b_Lucene912_0.doc`)",
+        "Folder Path Pattern": "`/var/lib/wazuh-indexer/nodes/0/indices/<index_id>/0/index/`",
+        "Key Components": [
+          "The `java` process, executed by `systemd`, is running the `org.opensearch.bootstrap.OpenSearch` application.",
+          "Deletions are performed by the dedicated `wazuh-indexer` user within its own data paths."
+        ]
+      },
+      "risk_assessment": "These file deletion events are indicative of routine index management tasks performed by the legitimate Wazuh-indexer service. No suspicious patterns, unauthorized users, or unusual file paths were identified. Therefore, the risk associated with these events is considered low, representing expected system behavior."
+    },
+    {
+      "alert_id": "ALERT-006",
+      "title": "System Activity Monitoring (sysstat) Execution",
+      "severity": "LOW",
+      "category": "System Activity",
+      "mitre_attack": "T1070.003 - Indicator Removal on Host: Clear System Logs (N/A, but monitoring tools are related)",
+      "description": "A series of processes related to system activity monitoring tools (`sysstat` family: `sa1`, `sadc`) were observed executing. These tools are commonly used for collecting system performance data and are typically run as scheduled tasks or by `systemd`. This is considered normal system behavior.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:00:00.379589Z",
+        "Action Type": "ProcessCreated",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process": "/usr/lib/systemd/systemd (PID 559722)",
+        "Process Path": "/usr/bin/dash",
+        "Process Command Line": "`/bin/sh /usr/lib/sysstat/sa1 1 1`",
+        "Subsequent Process": "/usr/lib/sysstat/sadc",
+        "Subsequent Process Command Line": "`/usr/lib/sysstat/sadc -F -L -S DISK 1 1 /var/log/sysstat`"
+      },
+      "risk_assessment": "This activity represents expected, routine system monitoring. The processes are legitimate system binaries running under the `root` account, which is standard for such tasks. No immediate security risk is indicated."
+    },
+    {
+      "alert_id": "ALERT-007",
+      "title": "Wazuh Log Collector Monitoring Recent Logins",
+      "severity": "LOW",
+      "category": "Security Monitoring",
+      "mitre_attack": "T1003.008 - Credential Access: LSA Secrets (N/A, but related to user activity monitoring)",
+      "description": "The Wazuh log collector initiated a command to retrieve recent login information using the `last` utility. This is a legitimate security monitoring function performed by Wazuh agents to track user activity and detect potential unauthorized access.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:03:00.235677Z",
+        "Action Type": "ProcessCreated",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process Parent": "wazuh-logcollector",
+        "Initiating Process": "/usr/bin/dash (PID 559763)",
+        "Initiating Process Command Line": "`sh -c \"last -n 20\"`",
+        "Process Path": "/usr/bin/last",
+        "Process Command Line": "`last -n 20`"
+      },
+      "risk_assessment": "This event is an expected part of the Wazuh agent's normal operation for security auditing. The execution of `last -n 20` by the log collector is a benign action in this context. No security risk is identified."
+    },
+    {
+      "alert_id": "ALERT-008",
+      "title": "Cron Job Initiating Debian System Activity Report",
+      "severity": "LOW",
+      "category": "System Maintenance",
+      "mitre_attack": "T1053.003 - Scheduled Task/Job: Cron",
+      "description": "A `cron` job executed a shell command to run `debian-sa1`, which is part of the `sysstat` package for collecting system activity data on Debian-based systems. This is a common, scheduled task for system health monitoring and maintenance.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:05:01.055394Z",
+        "Action Type": "ProcessCreated",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process": "/usr/sbin/cron (PID 559783)",
+        "Initiating Process Command Line": "`/usr/sbin/cron -f -P`",
+        "Process Path": "/usr/bin/dash",
+        "Process Command Line": "`/bin/sh -c \"command -v debian-sa1 > /dev/null && debian-sa1 1 1\"`",
+        "Subsequent Process (implied)": "/usr/lib/sysstat/debian-sa1"
+      },
+      "risk_assessment": "The cron execution of `debian-sa1` is a normal, automated system maintenance activity. These events typically occur at regular intervals (e.g., hourly, daily) and do not represent a security threat."
+    },
+    {
+      "alert_id": "ALERT-009",
+      "title": "Snapd Daemon Activity",
+      "severity": "LOW",
+      "category": "Software Management",
+      "mitre_attack": "N/A",
+      "description": "The `snapd` daemon, responsible for managing Snap packages, was observed initiating child `snapd` processes and executing `systemctl` commands to query the status of its related services and sockets. This is typical behavior for the `snapd` daemon during its operation and system integration.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:16:39.16883Z",
+        "Action Type": "ProcessCreated",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process": "/snap/snapd/25577/usr/lib/snapd/snapd (PID 582, then 559945, 559948, 559951, 559954, 559957)",
+        "Initiating Process Command Line": "`/usr/lib/snapd/snapd`",
+        "Process Paths": "/snap/snapd/25577/usr/lib/snapd/snapd, /usr/bin/systemctl",
+        "Process Command Lines": ""
+      },
+      "risk_assessment": "These events represent normal and expected operations of the `snapd` service and its interaction with `systemctl` for service management. No malicious intent is inferred from this activity."
+    },
+    {
+      "alert_id": "ALERT-010",
+      "title": "Hourly Cron Job Executing `run-parts`",
+      "severity": "LOW",
+      "category": "System Maintenance",
+      "mitre_attack": "T1053.003 - Scheduled Task/Job: Cron",
+      "description": "The system's `cron` daemon executed a command to run scripts located in the `/etc/cron.hourly` directory using `run-parts`. This is a standard hourly maintenance task on Linux systems, designed to automate the execution of various administrative scripts.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:17:01.085249Z",
+        "Action Type": "ProcessCreated",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process": "/usr/sbin/cron (PID 559963)",
+        "Initiating Process Command Line": "`/usr/sbin/cron -f -P`",
+        "Process Path": "/usr/bin/dash",
+        "Process Command Line": "`/bin/sh -c \"   cd / && run-parts --report /etc/cron.hourly\"`",
+        "Subsequent Process": "/usr/bin/run-parts",
+        "Subsequent Process Command Line": "`run-parts --report /etc/cron.hourly`"
+      },
+      "risk_assessment": "This is a regular and expected system maintenance activity. The execution of scripts within `/etc/cron.hourly` by `cron` is a benign operation. No security risk is identified."
+    },
+    {
+      "alert_id": "ALERT-011",
+      "title": "APT Daily System Update and Cleanup Operations",
+      "severity": "LOW",
+      "category": "System Maintenance",
+      "mitre_attack": "N/A",
+      "description": "A comprehensive set of processes related to APT (Advanced Package Tool) daily operations was observed, including checking network status, querying APT configurations, checking package integrity, managing package archives, and cleaning up old `.deb` files. This sequence of commands is typical for a Debian-based system performing automated updates and package cache maintenance.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:29:09.322881Z",
+        "Action Type": "ProcessCreated",
+        "Device Name": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Initiating Process (initial)": "/usr/lib/systemd/systemd (parent of apt-helper)",
+        "Initial Process": "/usr/lib/apt/apt-helper (PID 560173)",
+        "Initial Process Command Line": "`/usr/lib/apt/apt-helper wait-online`",
+        "Subsequent Processes (examples)": ""
+      },
+      "risk_assessment": "This extensive chain of APT-related processes is normal for automated system updates and package management on a Debian-based Linux system. While it involves various system utilities, their coordinated execution in this context is benign and essential for system security and stability. No abnormal behavior or security risk is present."
+    },
+    {
+      "alert_id": "ALERT-012",
+      "title": "Routine Root Logon by Cron Daemon",
+      "severity": "LOW",
+      "category": "System Activity",
+      "mitre_attack": "N/A",
+      "description": "This alert indicates a series of successful local logons by the `root` account, initiated by the `cron` daemon at regular intervals. This is a normal and expected behavior on Unix-like systems where `cron` executes scheduled tasks, often with root privileges. The consistency in the initiating process, command line, and account suggests routine system operations.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:05:01.10602Z",
+        "Action Type": "LogonSuccess",
+        "AccountName": "root",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Key Components": [
+          "Initiating Process: `/usr/sbin/cron -f -P`",
+          "Logon Type: Local",
+          "Terminal: cron"
+        ]
+      },
+      "risk_assessment": "This event represents standard operating procedure for a Linux system's cron scheduler. While root activity is generally sensitive, in this specific context, it is benign and indicates normal system maintenance or scheduled job execution. There is no immediate security risk indicated by these events."
+    },
+    {
+      "alert_id": "ALERT-013",
+      "title": "Generic User Account Detected on Azure-hosted Linux Workstation",
+      "severity": "MEDIUM",
+      "category": "User Account Activity",
+      "mitre_attack": "T1078 - Valid Accounts",
+      "description": "A highly generic username \"LOGIN\" was detected as a logged-on user on an Azure-hosted Ubuntu workstation. The presence of such an account, especially as the primary logged-on user, can indicate a default or service account that might be unmonitored or vulnerable if not properly secured, potentially facilitating unauthorized access or obscuring activity.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:08:25.0494488Z",
+        "Action Type": "Device Information Update",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "LoggedOnUser": "LOGIN",
+        "OSPlatform": "Linux",
+        "CloudPlatforms": "Azure"
+      },
+      "risk_assessment": "This event presents a medium risk. While \"LOGIN\" could be a legitimate system account or placeholder, its generic nature warrants investigation to ensure it's not a default account with weak credentials or being used to mask malicious activity. Remediation involves verifying the purpose and security of this account."
+    },
+    {
+      "alert_id": "ALERT-014",
+      "title": "Device Assigned to Unassigned Machine Group",
+      "severity": "LOW",
+      "category": "Asset Management",
+      "mitre_attack": "N/A",
+      "description": "An Azure-hosted Ubuntu workstation, `wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net`, is currently categorized under the \"UnassignedGroup\" machine group. Devices not assigned to appropriate security groups may miss critical policy enforcement, vulnerability management scans, and baseline configurations, increasing their potential exposure to threats.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:08:25.0494488Z",
+        "Action Type": "Device Information Update",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "MachineGroup": "UnassignedGroup",
+        "OSPlatform": "Linux",
+        "CloudPlatforms": "Azure"
+      },
+      "risk_assessment": "This is a low-severity alert indicating an asset management and governance issue. While not an immediate threat, it represents a gap in proper security posture management that should be addressed by assigning the device to an appropriate machine group to ensure consistent security controls."
+    },
+    {
+      "alert_id": "ALERT-015",
+      "title": "New Linux Workstation Onboarded and Reporting from Azure",
+      "severity": "LOW",
+      "category": "Device Onboarding",
+      "mitre_attack": "N/A",
+      "description": "A Linux workstation named `wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net` has successfully onboarded and is actively reporting its device information from an Azure environment. This event confirms the successful deployment and health of the security sensor on this endpoint, providing continuous visibility into its state and activities.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:08:25.0494488Z",
+        "Action Type": "Device Information Update",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "OSPlatform": "Linux",
+        "DeviceType": "Workstation",
+        "CloudPlatforms": "Azure",
+        "OnboardingStatus": "Onboarded",
+        "SensorHealthState": "Active"
+      },
+      "risk_assessment": "This event signifies a normal and expected operational activity. It is a low-risk informational alert that confirms the endpoint's successful integration into the security monitoring infrastructure, which is a positive step for maintaining overall security visibility."
+    },
+    {
+      "alert_id": "ALERT-016",
+      "title": "Device in Unassigned Management Group",
+      "severity": "MEDIUM",
+      "category": "Configuration Management",
+      "mitre_attack": "N/A",
+      "description": "The device `wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net` is reported to be part of the \"UnassignedGroup\". This indicates a potential misconfiguration or oversight in asset management, which could prevent the application of proper security policies, monitoring, or compliance controls.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:08:25.0494488Z",
+        "Action Type": "Device Network Information Report",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Key Components": [
+          "MachineGroup: UnassignedGroup",
+          "DeviceId: 875524232b2377b606ca585f2a6692b5be921b94"
+        ]
+      },
+      "risk_assessment": "A device that is not assigned to a proper management group may lack critical security configurations, updates, or oversight, increasing its vulnerability to attacks. This is particularly concerning for a system named \"wazuh1,\" which likely serves a security monitoring function."
+    },
+    {
+      "alert_id": "ALERT-017",
+      "title": "Unknown Network Adapter Type Reported",
+      "severity": "MEDIUM",
+      "category": "System Anomaly / Misconfiguration",
+      "mitre_attack": "N/A",
+      "description": "Multiple network adapters on the device `wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net` are consistently reporting an \"Unknown\" NetworkAdapterType. While this could be a reporting limitation, it represents an unusual configuration for a production system and may obscure details about the actual network hardware or virtualization environment.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:08:25.0494488Z",
+        "Action Type": "Device Network Information Report",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Key Components": [
+          "NetworkAdapterName: eth0, enP28238s1, lo",
+          "NetworkAdapterType: Unknown (for all adapters)",
+          "DeviceId: 875524232b2377b606ca585f2a6692b5be921b94"
+        ]
+      },
+      "risk_assessment": "Consistent \"Unknown\" network adapter types can hinder troubleshooting, security assessments, and incident response efforts by masking fundamental system information. It warrants investigation to confirm whether it's a benign reporting issue or indicative of an unexpected or potentially manipulated system configuration."
+    },
+    {
+      "alert_id": "ALERT-018",
+      "title": "Standard Network Interface Configuration Detected",
+      "severity": "LOW",
+      "category": "Baseline Activity / Network Configuration",
+      "mitre_attack": "N/A",
+      "description": "The device `wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net` has reported standard network interface configurations, including an Ethernet adapter with private IP addresses and a loopback interface. This reflects a typical and expected network setup for a Linux-based internal cloud application.",
+      "evidence": {
+        "Timestamp": "2025-11-12T04:08:25.0494488Z",
+        "Action Type": "Device Network Information Report",
+        "DeviceName": "wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net",
+        "Key Components": [
+          "NetworkAdapterName: eth0, enP28238s1, lo",
+          "IPAddresses: 172.22.0.4, fe80::222:48ff:fe2e:a86c",
+          "MacAddress: 00-22-48-2E-A8-6C (for eth0/enP28238s1), 00-00-00-00-00-00 (for lo)"
+        ]
+      },
+      "risk_assessment": "This event indicates normal operational activity for the device's network interfaces and does not pose an immediate security risk. It serves as a valuable baseline for expected network configuration, which can be used to detect future deviations or anomalies."
+    }
+  ],
+  "raw_metadata": "TOTAL_EVENTS: 6\nDEVICES: wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net\nTIME_RANGE: 2025-11-12 04:05 - 04:26 UTC\nEVENT_CATEGORIES: DeviceEvents\nPRIMARY_DEVICE: wazuh1.x0rsjvjofsvujdf53bjf3swsje.bx.internal.cloudapp.net"
+}

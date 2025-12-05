@@ -1,0 +1,17 @@
+Endpoint Security:
+- DeviceEvents
+- DeviceFileEvents
+- DeviceFileCertificateInfo
+- DeviceImageLoadEvents
+- DeviceInfo
+- DeviceLogonEvents
+- DeviceNetworkEvents
+- DeviceNetworkInfo
+- DeviceProcessEvents
+- DeviceRegistryEvents
+
+User Data:
+- IdentityInfo
+- SigninLogs
+- UserPeerAnalytics
+- BehaviorAnalytics

@@ -1,0 +1,167 @@
+{
+  "IdentityInfo": [],
+  "SigninLogs": [
+    {
+      "TimeGenerated": "2025-11-12T03:29:23.18356Z",
+      "OperationName": "Sign-in activity",
+      "ResultType": "0",
+      "ResultSignature": "SUCCESS",
+      "ResultDescription": "",
+      "Identity": "Uday  Sharma",
+      "AppDisplayName": "Azure Portal",
+      "AppId": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+      "AuthenticationDetails": [
+        {
+          "authenticationStepDateTime": "2025-11-12T03:27:07.4114631+00:00",
+          "authenticationMethod": "Previously satisfied",
+          "succeeded": true,
+          "authenticationStepResultDetail": "First factor requirement satisfied by claim in the token",
+          "authenticationStepRequirement": "Primary authentication",
+          "StatusSequence": 0,
+          "RequestSequence": 0
+        },
+        {
+          "authenticationStepDateTime": "2025-11-12T03:27:07.4114631+00:00",
+          "authenticationMethod": "Previously satisfied",
+          "succeeded": true,
+          "authenticationStepResultDetail": "MFA requirement satisfied by claim in the token",
+          "authenticationStepRequirement": "Primary authentication"
+        }
+      ],
+      "AuthenticationMethodsUsed": "",
+      "AuthenticationProcessingDetails": [
+        {
+          "key": "Login Hint Present",
+          "value": "True"
+        },
+        {
+          "key": "Legacy TLS (TLS 1.0, 1.1, 3DES)",
+          "value": "False"
+        },
+        {
+          "key": "Is CAE Token",
+          "value": "False"
+        }
+      ],
+      "AuthenticationRequirement": "multiFactorAuthentication",
+      "ClientAppUsed": "Browser",
+      "ConditionalAccessPolicies": [
+        {
+          "id": "SecurityDefaults",
+          "displayName": "Security Defaults",
+          "result": "success",
+          "conditionsSatisfied": 3,
+          "conditionsNotSatisfied": 0,
+          "enforcedGrantControls": [
+            "Mfa"
+          ]
+        },
+        {
+          "id": "a2532f45-35da-4969-bb25-26b46d39fc31",
+          "displayName": "Require multifactor authentication for all users",
+          "result": "reportOnlySuccess",
+          "conditionsSatisfied": 3,
+          "conditionsNotSatisfied": 0,
+          "enforcedGrantControls": [
+            "Mfa"
+          ]
+        },
+        {
+          "id": "d745d837-0770-48ec-949c-94c62c26fa87",
+          "displayName": "Block device code flow",
+          "result": "reportOnlyNotApplied",
+          "conditionsSatisfied": 3,
+          "conditionsNotSatisfied": 32768,
+          "enforcedGrantControls": [
+            "Block"
+          ]
+        },
+        {
+          "id": "e09401cc-af23-4494-8956-079d5c34914f",
+          "displayName": "Block legacy authentication",
+          "result": "reportOnlyNotApplied",
+          "conditionsSatisfied": 3,
+          "conditionsNotSatisfied": 16,
+          "enforcedGrantControls": [
+            "Block"
+          ]
+        },
+        {
+          "id": "407a7420-a3e5-4067-89e4-46b193832ecd",
+          "displayName": "Require multifactor authentication for risky sign-ins",
+          "enforcedSessionControls": [
+            "SignInFrequency"
+          ],
+          "result": "reportOnlyNotApplied",
+          "conditionsSatisfied": 3,
+          "conditionsNotSatisfied": 32,
+          "enforcedGrantControls": [
+            "Mfa"
+          ]
+        },
+        {
+          "id": "29c93c5b-3c5e-4229-ba33-4dbf0fa1acbb",
+          "displayName": "Require password change for high-risk users",
+          "enforcedSessionControls": [
+            "SignInFrequency"
+          ],
+          "result": "reportOnlyNotApplied",
+          "conditionsSatisfied": 3,
+          "conditionsNotSatisfied": 64,
+          "enforcedGrantControls": [
+            "Block"
+          ]
+        }
+      ],
+      "ConditionalAccessStatus": "notApplied",
+      "CreatedDateTime": "2025-11-12T03:27:07.4114631Z",
+      "DeviceDetail": {
+        "deviceId": "{PII Removed}",
+        "operatingSystem": "Windows10",
+        "browser": "Edge 141.0.0",
+        "displayName": "{PII Removed}",
+        "trustType": "Azure AD registered"
+      },
+      "Id": "f7a8bb66-0550-4447-8ef6-28a4f9880a00",
+      "IPAddress": "2405:201:302c:e12b:886c:17da:79c6:8309",
+      "LocationDetails": {
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "countryOrRegion": "IN",
+        "geoCoordinates": {
+          "latitude": 22.71299934387207,
+          "longitude": 75.83889770507812
+        }
+      },
+      "MfaDetail": {},
+      "NetworkLocationDetails": [],
+      "OriginalRequestId": "f7a8bb66-0550-4447-8ef6-28a4f9880a00",
+      "ResourceDisplayName": "Azure Resource Manager",
+      "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0 OS/10.0.22621",
+      "UserDisplayName": "Uday  Sharma",
+      "UserId": "be4948de-7f30-4b44-9cc5-53e8bf1b4837",
+      "UserPrincipalName": "uday.sharma@yash.com",
+      "UserType": "Guest",
+      "UniqueTokenIdentifier": "Zruo91AFR0SO9iik-YgKAA",
+      "SessionId": "00a98e59-eb8c-5856-6df0-e9363d05c7fc",
+      "AuthenticationAppPolicyEvaluationDetails": "",
+      "GlobalSecureAccessIpAddress": "",
+      "TokenProtectionStatusDetails": {
+        "signInSessionStatus": "bound",
+        "signInSessionStatusCode": 0
+      },
+      "AppliedConditionalAccessPolicies": "",
+      "DevicesInsights": {
+        "UserAgentFamily": "Edge",
+        "ISP": "reliance jio infocomm limited"
+      },
+      "ActivityInsights": {
+        "App": "Azure Portal",
+        "Resource": "Azure Resource Manager"
+      },
+      "ActionType": "Sign-in",
+      "ActivityType": "LogOn"
+    }
+  ],
+  "UserPeerAnalytics": []
+}

@@ -1,0 +1,234 @@
+{
+  "report_metadata": {
+    "generated_at": "2025-11-12T14:27:34.581254",
+    "report_type": "Advanced Security Correlation Analysis v5.1 - AI-Enhanced Edition",
+    "total_users": 4,
+    "total_events": 12,
+    "ai_enhanced": true,
+    "generation_time_seconds": 19.645079612731934,
+    "api_stats": {
+      "total_requests": 10,
+      "total_wait_time": 0,
+      "requests_last_minute": 10,
+      "requests_today": 10,
+      "rpm_limit": 15,
+      "rpd_limit": 1500,
+      "rate_limit_exceeded": false
+    },
+    "improvements": [
+      "Intelligent time gap detection using outlier analysis",
+      "Proper ResultDescription extraction for failures",
+      "Enhanced Unknown data handling",
+      "Frequent activity grouping (not hardcoded thresholds)",
+      "AI-generated alert descriptions with rate limiting"
+    ]
+  },
+  "summary": {
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 4
+  },
+  "high_priority_events": [],
+  "medium_priority_events": [],
+  "low_priority_events": [
+    {
+      "user_principal_name": "raviraj.jadhav@yash.com",
+      "user_id": "6c65fe55-abdc-4b88-a95a-b15dd04f53ce",
+      "user_display_name": "Raviraj Ramesh Jadhav",
+      "user_type": "Guest",
+      "total_events": 2,
+      "total_clusters": 2,
+      "clusters": [
+        {
+          "clustering_metadata": {
+            "method": "iqr_outlier_detection",
+            "q1": 56.385282,
+            "q2": 56.385282,
+            "q3": 56.385282,
+            "iqr": 0.0,
+            "mean": 56.385282,
+            "std_dev": 0.0,
+            "normal_gaps_count": 1,
+            "outlier_count": 0,
+            "total_gaps": 1,
+            "final_threshold": 56.385282
+          }
+        },
+        {
+          "cluster_id": "CLUSTER_000",
+          "start_time": "2025-11-12T04:18:44.632134+00:00",
+          "end_time": "2025-11-12T04:18:44.632134+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        },
+        {
+          "cluster_id": "CLUSTER_001",
+          "start_time": "2025-11-12T04:19:41.017416+00:00",
+          "end_time": "2025-11-12T04:19:41.017416+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        }
+      ],
+      "locations": [
+        {
+          "city": "Kothrud",
+          "state": "Maharashtra",
+          "country": "IN",
+          "ip_address": "203.199.133.30",
+          "timestamp": "2025-11-12T04:18:44.6321342Z"
+        }
+      ],
+      "unique_locations": 1,
+      "applications": [
+        {
+          "app_name": "YASH-SPN-UES-Azure-App",
+          "app_id": "b8d957b6-3709-49a0-b182-1bc63498c116",
+          "resource": "Microsoft Graph",
+          "access_count": 1
+        },
+        {
+          "app_name": "Azure DevOps",
+          "app_id": "499b84ac-1321-427f-aa17-267ca6975798",
+          "resource": "Azure DevOps",
+          "access_count": 1
+        }
+      ],
+      "unique_apps": 2,
+      "authentication_summary": {
+        "methods": [
+          "Single Sign-On"
+        ],
+        "total_mfa": 0,
+        "total_single_factor": 2,
+        "failed_attempts": 0
+      },
+      "failure_analysis": {
+        "total_failures": 0,
+        "success_rate": 100.0,
+        "failure_reasons": [],
+        "critical_failures": 0,
+        "failed_event_timeline": [],
+        "failure_categories": {}
+      },
+      "behavioral_anomalies": [],
+      "risk_score": 3,
+      "risk_factors": [
+        "Predominantly single-factor authentication",
+        "Guest user cross-tenant access"
+      ],
+      "timeline": [
+        {
+          "timestamp": "2025-11-12T04:18:44.6321342Z",
+          "app": "YASH-SPN-UES-Azure-App",
+          "location": "Kothrud, IN",
+          "ip_address": "203.199.133.30",
+          "browser": "Chrome 142.0.0",
+          "os": "Windows10",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        },
+        {
+          "timestamp": "2025-11-12T04:19:41.0174167Z",
+          "app": "Azure DevOps",
+          "location": "Kothrud, IN",
+          "ip_address": "203.199.133.30",
+          "browser": "Chrome 142.0.0",
+          "os": "Windows10",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        }
+      ],
+      "alert_title": "\u26a0\ufe0f [LOW RISK] Cross-Tenant Guest Activity & Weak Authentication Methods - Raviraj Ramesh Jadhav (2 events)",
+      "alert_summary": "Normal activity pattern",
+      "alert_description": "We've identified that Raviraj, a guest user, successfully accessed two of our applications. This is concerning because it involved a guest user accessing resources across different parts of our system, and their access was primarily secured by only a single password, which presents a higher security risk."
+    },
+    {
+      "user_principal_name": "rohan.karekar@yash.com",
+      "user_id": "5e50bd0d-a115-4d2f-9687-1d9d81bb4bcc",
+      "user_display_name": "Rohan Karekar",
+      "user_type": "Guest",
+      "total_events": 1,
+      "total_clusters": 1,
+      "clusters": [
+        {
+          "clustering_metadata": {
+            "method": "default",
+            "reason": "insufficient_events"
+          }
+        },
+        {
+          "cluster_id": "CLUSTER_000",
+          "start_time": "2025-11-12T04:23:28.482639+00:00",
+          "end_time": "2025-11-12T04:23:28.482639+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        }
+      ],
+      "locations": [
+        {
+          "city": "Thathawade (Dattwadi)",
+          "state": "Maharashtra",
+          "country": "IN",
+          "ip_address": "2401:4900:1c17:ee07:98fd:c089:d800:6827",
+          "timestamp": "2025-11-12T04:23:28.4826398Z"
+        }
+      ],
+      "unique_locations": 1,
+      "applications": [
+        {
+          "app_name": "Azure DevOps",
+          "app_id": "499b84ac-1321-427f-aa17-267ca6975798",
+          "resource": "Azure DevOps",
+          "access_count": 1
+        }
+      ],
+      "unique_apps": 1,
+      "authentication_summary": {
+        "methods": [
+          "Single Sign-On"
+        ],
+        "total_mfa": 0,
+        "total_single_factor": 1,
+        "failed_attempts": 0
+      },
+      "failure_analysis": {
+        "total_failures": 0,
+        "success_rate": 100.0,
+        "failure_reasons": [],
+        "critical_failures": 0,
+        "failed_event_timeline": [],
+        "failure_categories": {}
+      },
+      "behavioral_anomalies": [],
+      "risk_score": 3,
+      "risk_factors": [
+        "Predominantly single-factor authentication",
+        "Guest user cross-tenant access"
+      ],
+      "timeline": [
+        {
+          "timestamp": "2025-11-12T04:23:28.4826398Z",
+          "app": "Azure DevOps",
+          "location": "Thathawade (Dattwadi), IN",
+          "ip_address": "2401:4900:1c17:ee07:98fd:c089:d800:6827",
+          "browser": "Chrome 142.0.0",
+          "os": "MacOs",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        }
+      ],
+      "alert_title": "\u26a0\ufe0f [LOW RISK] Cross-Tenant Guest Activity & Weak Authentication Methods - Rohan Karekar (1 events)",
+      "alert_summary": "Normal activity pattern",
+      "alert_description": "We've detected that a guest user, Rohan Karekar, successfully accessed resources across different parts of our organization, which is unusual for a guest account. This \"cross-tenant\" access, especially when only protected by a single password, is concerning as it could potentially expose sensitive information or lead to unauthorized access."
+    }
+  ]
+}

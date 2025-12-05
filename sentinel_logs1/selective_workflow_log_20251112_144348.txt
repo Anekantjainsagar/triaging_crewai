@@ -1,0 +1,69 @@
+[2025-11-12 14:23:32] [HEADER] ================================================================================
+[2025-11-12 14:23:32] [HEADER] 🎯 SELECTIVE AZURE SENTINEL LOG ANALYSIS
+[2025-11-12 14:23:32] [HEADER] ================================================================================
+[2025-11-12 14:23:32] [INFO] Configuration: 2025-11-12 to 2025-11-12, 3:00 - 6:00, 30min intervals
+[2025-11-12 14:23:32] [INFO] Process User Data: True
+[2025-11-12 14:23:32] [INFO] Process Endpoint Security: True
+[2025-11-12 14:23:32] [INFO] Skip Fetch: False
+[2025-11-12 14:23:32] [INFO] Skip Clean: False
+[2025-11-12 14:23:32] [INFO] Skip Correlation: False
+[2025-11-12 14:23:32] [HEADER] 
+================================================================================
+[2025-11-12 14:23:32] [HEADER] STEP 1: FETCHING DATA FROM AZURE SENTINEL
+[2025-11-12 14:23:32] [HEADER] ================================================================================
+[2025-11-12 14:26:45] [SUCCESS] ✅ Data fetching complete. Processed 6 intervals
+[2025-11-12 14:26:45] [HEADER] 
+================================================================================
+[2025-11-12 14:26:45] [HEADER] PROCESSING USER DATA FILES
+[2025-11-12 14:26:45] [HEADER] ================================================================================
+[2025-11-12 14:26:45] [INFO] 🧹 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 03-00-03-30\sentinel_user_data_20251112_0300_0330.json
+[2025-11-12 14:26:45] [INFO] 📊 Analyzing: sentinel_logs1\sentinel_logs_2025-11-12 03-00-03-30\cleaned_sentinel_user_data_20251112_0300_0330.json
+[2025-11-12 14:26:54] [SUCCESS] ✅ Analysis complete: correlation_analysis_sentinel_user_data_20251112_0300_0330.md
+[2025-11-12 14:26:54] [INFO] 🧹 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 03-30-04-00\sentinel_user_data_20251112_0330_0400.json
+[2025-11-12 14:26:54] [ERROR] ❌ Cleaning failed: sentinel_logs1\sentinel_logs_2025-11-12 03-30-04-00\sentinel_user_data_20251112_0330_0400.json
+[2025-11-12 14:26:54] [INFO] 🧹 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 04-00-04-30\sentinel_user_data_20251112_0400_0430.json
+[2025-11-12 14:26:54] [INFO] 📊 Analyzing: sentinel_logs1\sentinel_logs_2025-11-12 04-00-04-30\cleaned_sentinel_user_data_20251112_0400_0430.json
+[2025-11-12 14:27:34] [SUCCESS] ✅ Analysis complete: correlation_analysis_sentinel_user_data_20251112_0400_0430.md
+[2025-11-12 14:27:34] [INFO] 🧹 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 04-30-05-00\sentinel_user_data_20251112_0430_0500.json
+[2025-11-12 14:27:34] [INFO] 📊 Analyzing: sentinel_logs1\sentinel_logs_2025-11-12 04-30-05-00\cleaned_sentinel_user_data_20251112_0430_0500.json
+[2025-11-12 14:27:57] [SUCCESS] ✅ Analysis complete: correlation_analysis_sentinel_user_data_20251112_0430_0500.md
+[2025-11-12 14:27:57] [INFO] 🧹 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 05-00-05-30\sentinel_user_data_20251112_0500_0530.json
+[2025-11-12 14:27:57] [INFO] 📊 Analyzing: sentinel_logs1\sentinel_logs_2025-11-12 05-00-05-30\cleaned_sentinel_user_data_20251112_0500_0530.json
+[2025-11-12 14:28:08] [SUCCESS] ✅ Analysis complete: correlation_analysis_sentinel_user_data_20251112_0500_0530.md
+[2025-11-12 14:28:08] [INFO] 🧹 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 05-30-06-00\sentinel_user_data_20251112_0530_0600.json
+[2025-11-12 14:28:08] [INFO] 📊 Analyzing: sentinel_logs1\sentinel_logs_2025-11-12 05-30-06-00\cleaned_sentinel_user_data_20251112_0530_0600.json
+[2025-11-12 14:28:08] [SUCCESS] ✅ Analysis complete: correlation_analysis_sentinel_user_data_20251112_0530_0600.md
+[2025-11-12 14:28:08] [SUCCESS] ✅ User data processing complete: 5 files cleaned, 5 analyzed
+[2025-11-12 14:28:08] [HEADER] 
+================================================================================
+[2025-11-12 14:28:08] [HEADER] PROCESSING ENDPOINT SECURITY FILES
+[2025-11-12 14:28:08] [HEADER] ================================================================================
+[2025-11-12 14:28:08] [INFO] 🔒 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 03-00-03-30\sentinel_endpoint_security_20251112_0300_0330.json
+[2025-11-12 14:28:09] [SUCCESS] ✅ Cleaned successfully: sentinel_logs1\sentinel_logs_2025-11-12 03-00-03-30\cleaned_sentinel_endpoint_security_20251112_0300_0330.json
+[2025-11-12 14:28:09] [INFO] 🔗 Correlating: sentinel_logs1\sentinel_logs_2025-11-12 03-00-03-30\cleaned_sentinel_endpoint_security_20251112_0300_0330.json
+[2025-11-12 14:31:01] [SUCCESS] ✅ Correlation complete: 20 alerts generated
+[2025-11-12 14:31:01] [INFO] 🔒 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 03-30-04-00\sentinel_endpoint_security_20251112_0330_0400.json
+[2025-11-12 14:31:01] [SUCCESS] ✅ Cleaned successfully: sentinel_logs1\sentinel_logs_2025-11-12 03-30-04-00\cleaned_sentinel_endpoint_security_20251112_0330_0400.json
+[2025-11-12 14:31:01] [INFO] 🔗 Correlating: sentinel_logs1\sentinel_logs_2025-11-12 03-30-04-00\cleaned_sentinel_endpoint_security_20251112_0330_0400.json
+[2025-11-12 14:32:41] [SUCCESS] ✅ Correlation complete: 8 alerts generated
+[2025-11-12 14:32:41] [INFO] 🔒 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 04-00-04-30\sentinel_endpoint_security_20251112_0400_0430.json
+[2025-11-12 14:32:42] [SUCCESS] ✅ Cleaned successfully: sentinel_logs1\sentinel_logs_2025-11-12 04-00-04-30\cleaned_sentinel_endpoint_security_20251112_0400_0430.json
+[2025-11-12 14:32:42] [INFO] 🔗 Correlating: sentinel_logs1\sentinel_logs_2025-11-12 04-00-04-30\cleaned_sentinel_endpoint_security_20251112_0400_0430.json
+[2025-11-12 14:35:38] [SUCCESS] ✅ Correlation complete: 18 alerts generated
+[2025-11-12 14:35:38] [INFO] 🔒 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 04-30-05-00\sentinel_endpoint_security_20251112_0430_0500.json
+[2025-11-12 14:35:38] [SUCCESS] ✅ Cleaned successfully: sentinel_logs1\sentinel_logs_2025-11-12 04-30-05-00\cleaned_sentinel_endpoint_security_20251112_0430_0500.json
+[2025-11-12 14:35:38] [INFO] 🔗 Correlating: sentinel_logs1\sentinel_logs_2025-11-12 04-30-05-00\cleaned_sentinel_endpoint_security_20251112_0430_0500.json
+[2025-11-12 14:38:27] [SUCCESS] ✅ Correlation complete: 17 alerts generated
+[2025-11-12 14:38:27] [INFO] 🔒 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 05-00-05-30\sentinel_endpoint_security_20251112_0500_0530.json
+[2025-11-12 14:38:27] [SUCCESS] ✅ Cleaned successfully: sentinel_logs1\sentinel_logs_2025-11-12 05-00-05-30\cleaned_sentinel_endpoint_security_20251112_0500_0530.json
+[2025-11-12 14:38:27] [INFO] 🔗 Correlating: sentinel_logs1\sentinel_logs_2025-11-12 05-00-05-30\cleaned_sentinel_endpoint_security_20251112_0500_0530.json
+[2025-11-12 14:41:09] [SUCCESS] ✅ Correlation complete: 15 alerts generated
+[2025-11-12 14:41:09] [INFO] 🔒 Cleaning: sentinel_logs1\sentinel_logs_2025-11-12 05-30-06-00\sentinel_endpoint_security_20251112_0530_0600.json
+[2025-11-12 14:41:09] [SUCCESS] ✅ Cleaned successfully: sentinel_logs1\sentinel_logs_2025-11-12 05-30-06-00\cleaned_sentinel_endpoint_security_20251112_0530_0600.json
+[2025-11-12 14:41:09] [INFO] 🔗 Correlating: sentinel_logs1\sentinel_logs_2025-11-12 05-30-06-00\cleaned_sentinel_endpoint_security_20251112_0530_0600.json
+[2025-11-12 14:43:48] [SUCCESS] ✅ Correlation complete: 15 alerts generated
+[2025-11-12 14:43:48] [SUCCESS] ✅ Endpoint security processing complete: 6 files cleaned, 6 correlated
+[2025-11-12 14:43:48] [HEADER] 
+================================================================================
+[2025-11-12 14:43:48] [HEADER] 🎉 SELECTIVE WORKFLOW COMPLETED
+[2025-11-12 14:43:48] [HEADER] ================================================================================

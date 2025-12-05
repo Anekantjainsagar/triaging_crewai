@@ -1,0 +1,116 @@
+{
+  "report_metadata": {
+    "generated_at": "2025-11-12T14:26:54.542584",
+    "report_type": "Advanced Security Correlation Analysis v5.1 - AI-Enhanced Edition",
+    "total_users": 1,
+    "total_events": 1,
+    "ai_enhanced": true,
+    "generation_time_seconds": 4.016342639923096,
+    "api_stats": {
+      "total_requests": 2,
+      "total_wait_time": 0,
+      "requests_last_minute": 2,
+      "requests_today": 2,
+      "rpm_limit": 15,
+      "rpd_limit": 1500,
+      "rate_limit_exceeded": false
+    },
+    "improvements": [
+      "Intelligent time gap detection using outlier analysis",
+      "Proper ResultDescription extraction for failures",
+      "Enhanced Unknown data handling",
+      "Frequent activity grouping (not hardcoded thresholds)",
+      "AI-generated alert descriptions with rate limiting"
+    ]
+  },
+  "summary": {
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 1
+  },
+  "high_priority_events": [],
+  "medium_priority_events": [],
+  "low_priority_events": [
+    {
+      "user_principal_name": "uday.sharma@yash.com",
+      "user_id": "be4948de-7f30-4b44-9cc5-53e8bf1b4837",
+      "user_display_name": "Uday  Sharma",
+      "user_type": "Guest",
+      "total_events": 1,
+      "total_clusters": 1,
+      "clusters": [
+        {
+          "clustering_metadata": {
+            "method": "default",
+            "reason": "insufficient_events"
+          }
+        },
+        {
+          "cluster_id": "CLUSTER_000",
+          "start_time": "2025-11-12T03:29:23.183560+00:00",
+          "end_time": "2025-11-12T03:29:23.183560+00:00",
+          "duration_seconds": 0,
+          "event_count": 1,
+          "unique_apps": 1,
+          "has_failures": false,
+          "failure_count": 0
+        }
+      ],
+      "locations": [
+        {
+          "city": "Indore",
+          "state": "Madhya Pradesh",
+          "country": "IN",
+          "ip_address": "2405:201:302c:e12b:886c:17da:79c6:8309",
+          "timestamp": "2025-11-12T03:29:23.18356Z"
+        }
+      ],
+      "unique_locations": 1,
+      "applications": [
+        {
+          "app_name": "Azure Portal",
+          "app_id": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
+          "resource": "Azure Resource Manager",
+          "access_count": 1
+        }
+      ],
+      "unique_apps": 1,
+      "authentication_summary": {
+        "methods": [
+          "Single Sign-On"
+        ],
+        "total_mfa": 1,
+        "total_single_factor": 0,
+        "failed_attempts": 0
+      },
+      "failure_analysis": {
+        "total_failures": 0,
+        "success_rate": 100.0,
+        "failure_reasons": [],
+        "critical_failures": 0,
+        "failed_event_timeline": [],
+        "failure_categories": {}
+      },
+      "behavioral_anomalies": [],
+      "risk_score": 2,
+      "risk_factors": [
+        "Guest user cross-tenant access"
+      ],
+      "timeline": [
+        {
+          "timestamp": "2025-11-12T03:29:23.18356Z",
+          "app": "Azure Portal",
+          "location": "Indore, IN",
+          "ip_address": "2405:201:302c:e12b:886c:17da:79c6:8309",
+          "browser": "Edge 141.0.0",
+          "os": "Windows10",
+          "result": "\u2705 Success",
+          "auth_method": "Single Sign-On"
+        }
+      ],
+      "alert_title": "\u26a0\ufe0f [LOW RISK] Cross-Tenant Guest Activity - Uday  Sharma (1 events)",
+      "alert_summary": "Normal activity pattern",
+      "alert_description": "We've identified an unusual event where a guest user, Uday Sharma, successfully accessed resources in a different part of our system than they were expected to. This is concerning because it highlights a potential misconfiguration that could allow unauthorized access to sensitive information across our various environments."
+    }
+  ]
+}
