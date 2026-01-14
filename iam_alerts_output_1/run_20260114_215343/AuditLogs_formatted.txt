@@ -1,0 +1,726 @@
+================================================================================
+AZURE AD AUDIT LOG ANALYSIS
+================================================================================
+
+### USER-INITIATED EVENTS ###
+
+
+[USER: pragyan.behera@Yash.com]
+Total Events: 1
+
+  [GROUP_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:16:38.5757728Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.148
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 0daebeca-b165-4c52-8ead-9e443b41e3aa
+      Result: success
+
+
+[USER: dhiyaneswaran.s@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:15:09.9514809Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Azure MFA StrongAuthenticationService
+      Correlation ID: f483e8f6-2b17-4d82-98f7-d035d64e8829
+      Result: success
+
+
+[USER: prasant.morusu@Yash.com]
+Total Events: 6
+Time Span: 143 seconds
+
+  [GROUP_MANAGEMENT] - 6 events:
+    • 2026-01-14T11:12:27.8237416Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.148
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: fae23c06-7083-4fc4-993a-d0a9e0d0f2f2
+      Result: success
+    • 2026-01-14T11:12:27.8237416Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.148
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: fae23c06-7083-4fc4-993a-d0a9e0d0f2f2
+      Result: success
+    • 2026-01-14T11:11:53.7553315Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.155
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 1d954f63-349e-4a90-a13a-9a3bdb0001f1
+      Result: success
+    • 2026-01-14T11:11:53.7553315Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.155
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 1d954f63-349e-4a90-a13a-9a3bdb0001f1
+      Result: success
+    • 2026-01-14T11:10:03.8390086Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.151
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 21325a98-9e7d-45b5-b4e6-943f7c1e2ec7
+      Result: success
+    • 2026-01-14T11:10:03.8390086Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.151
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 21325a98-9e7d-45b5-b4e6-943f7c1e2ec7
+      Result: success
+
+
+[USER: vikram.chavan@yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:11:38.6104571Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Azure MFA StrongAuthenticationService
+      Correlation ID: cc440101-7e8f-4fd3-83f6-552fb93469db
+      Result: success
+
+
+[USER: sarita.lad@Yash.com]
+Total Events: 3
+Time Span: 13 seconds
+
+  [GROUP_MANAGEMENT] - 3 events:
+    • 2026-01-14T11:11:23.779393Z
+      Operation: Add owner to group
+      IP: 2a01:111:f402:f0e7::f152
+      Device: N/A
+      Service: Office 365 SharePoint Online
+      Correlation ID: 11d87e6f-8437-49fa-b872-c832b64e78cb
+      Result: success
+    • 2026-01-14T11:11:10.2550684Z
+      Operation: Add member to group
+      IP: 2a01:111:f402:f0e7::f152
+      Device: N/A
+      Service: Office 365 SharePoint Online
+      Correlation ID: 91c6784d-5e87-462a-a116-71afaff43eb7
+      Result: success
+    • 2026-01-14T11:11:10.0080483Z
+      Operation: Add owner to group
+      IP: 2a01:111:f402:f0e7::f152
+      Device: N/A
+      Service: Office 365 SharePoint Online
+      Correlation ID: a8a0c475-c8ec-448d-8be1-3f8a68334815
+      Result: success
+
+
+[USER: nagavvss.kumar@Yash.com]
+Total Events: 20
+Time Span: 427 seconds
+
+  [GROUP_MANAGEMENT] - 4 events:
+    • 2026-01-14T11:11:10.5737838Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.156
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: f8b5ad86-8efd-45d8-a271-1905376dbfe0
+      Result: success
+    • 2026-01-14T11:11:10.5737838Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.156
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: f8b5ad86-8efd-45d8-a271-1905376dbfe0
+      Result: success
+    • 2026-01-14T11:11:10.5737838Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.156
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: f8b5ad86-8efd-45d8-a271-1905376dbfe0
+      Result: success
+    • 2026-01-14T11:11:10.5737838Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.156
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: f8b5ad86-8efd-45d8-a271-1905376dbfe0
+      Result: success
+
+  [USER_MANAGEMENT] - 16 events:
+    • 2026-01-14T11:09:02.2569404Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Azure MFA StrongAuthenticationService
+      Correlation ID: ff0e7286-2f32-471e-8c7d-16443e31c910
+      Result: success
+    • 2026-01-14T11:07:59.9122817Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Azure MFA StrongAuthenticationService
+      Correlation ID: 7d042a0d-c0d6-4a6d-82d1-1d2b916fa613
+      Result: success
+    • 2026-01-14T11:06:40.5669403Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+    • 2026-01-14T11:04:55.0996393Z
+      Operation: Update StsRefreshTokenValidFrom Timestamp
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 88b4ac7e-8399-4bcc-8871-5ae23e414bc3
+      Result: success
+    • 2026-01-14T11:04:55.0986412Z
+      Operation: Change user password
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 88b4ac7e-8399-4bcc-8871-5ae23e414bc3
+      Result: success
+    • 2026-01-14T11:04:55.0726424Z
+      Operation: Update PasswordProfile
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 88b4ac7e-8399-4bcc-8871-5ae23e414bc3
+      Result: success
+    • 2026-01-14T11:04:47.3487547Z
+      Operation: Reset password (self-service)
+      IP: N/A
+      Device: Naga V V S S Kumar K
+      Service: My Signins
+      Correlation ID: cbf15a86-a967-4b27-adb0-ae5bd0c9a07c
+      Result: success
+    • 2026-01-14T11:04:47.325454Z
+      Operation: Update StsRefreshTokenValidFrom Timestamp
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: a3ab0487-f28f-47dd-bdbc-9f003ec0066b
+      Result: success
+    • 2026-01-14T11:04:47.3244541Z
+      Operation: Reset user password
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: a3ab0487-f28f-47dd-bdbc-9f003ec0066b
+      Result: success
+    • 2026-01-14T11:04:47.2404466Z
+      Operation: Update PasswordProfile
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: a3ab0487-f28f-47dd-bdbc-9f003ec0066b
+      Result: success
+    • 2026-01-14T11:04:47.2344476Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: a3ab0487-f28f-47dd-bdbc-9f003ec0066b
+      Result: success
+    • 2026-01-14T11:04:47.1354453Z
+      Operation: Update PasswordProfile
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: a3ab0487-f28f-47dd-bdbc-9f003ec0066b
+      Result: success
+    • 2026-01-14T11:04:45.81666Z
+      Operation: User started password reset
+      IP: 4.194.47.150
+      Device: Naga V V S S Kumar K
+      Service: My Signins
+      Correlation ID: cbf15a86-a967-4b27-adb0-ae5bd0c9a07c
+      Result: success
+    • 2026-01-14T11:04:45Z
+      Operation: User reset password
+      IP: 163.116.214.93
+      Device: Naga V V S S Kumar K
+      Service: Naga V V S S Kumar K
+      Correlation ID: 9062dd04-e28d-4938-98c9-2363a15b5a8b
+      Result: success
+    • 2026-01-14T11:04:04.6189556Z
+      Operation: Reset password (self-service)
+      IP: N/A
+      Device: Naga V V S S Kumar K
+      Service: My Signins
+      Correlation ID: 455159d8-d4f8-4fa3-a558-264b9914ac65
+      Result: failure
+    • 2026-01-14T11:04:03.2700053Z
+      Operation: User started password reset
+      IP: 4.194.47.158
+      Device: Naga V V S S Kumar K
+      Service: My Signins
+      Correlation ID: 455159d8-d4f8-4fa3-a558-264b9914ac65
+      Result: success
+
+
+[USER: pankaj.dashetwar@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [GROUP_MANAGEMENT] - 2 events:
+    • 2026-01-14T11:10:48.3315135Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.147
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 76b06456-1e17-45a1-89e6-f3c4cb629b5c
+      Result: success
+    • 2026-01-14T11:10:48.3315135Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.147
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: 76b06456-1e17-45a1-89e6-f3c4cb629b5c
+      Result: success
+
+
+[USER: parul.pardhal@yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:10:26.0759939Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Azure MFA StrongAuthenticationService
+      Correlation ID: bca71318-d402-492c-9c38-9c559c118bbe
+      Result: success
+
+
+[USER: jai.raikwar@Yash.com]
+Total Events: 4
+Time Span: 20 seconds
+
+  [GROUP_MANAGEMENT] - 4 events:
+    • 2026-01-14T11:09:14.6565357Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.154
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: c5c34cdc-0d45-4033-b49e-a0ac1ea19193
+      Result: success
+    • 2026-01-14T11:09:14.6565357Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.154
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: c5c34cdc-0d45-4033-b49e-a0ac1ea19193
+      Result: success
+    • 2026-01-14T11:08:53.7149302Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.158
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: a25e22c4-02d9-483b-a137-2e06e1ba2062
+      Result: success
+    • 2026-01-14T11:08:53.7149302Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.158
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: a25e22c4-02d9-483b-a137-2e06e1ba2062
+      Result: success
+
+
+[USER: chandra.chunduri@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:08:51.5768808Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Azure MFA StrongAuthenticationService
+      Correlation ID: 0a0c2bef-a8f3-40fb-81ee-8599971cde39
+      Result: success
+
+
+[USER: ashok.nimmagadda@yash.com]
+Total Events: 14
+Time Span: 120 seconds
+
+  [USER_MANAGEMENT] - 12 events:
+    • 2026-01-14T11:06:55.8486837Z
+      Operation: Update StsRefreshTokenValidFrom Timestamp
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: b9c812ee-c156-4398-8e79-0d75b927f580
+      Result: success
+    • 2026-01-14T11:06:55.8476847Z
+      Operation: Change user password
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: b9c812ee-c156-4398-8e79-0d75b927f580
+      Result: success
+    • 2026-01-14T11:06:55.8206815Z
+      Operation: Update PasswordProfile
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: b9c812ee-c156-4398-8e79-0d75b927f580
+      Result: success
+    • 2026-01-14T11:06:16.4513755Z
+      Operation: Reset password (self-service)
+      IP: N/A
+      Device: Ashok Kumar Nimmagadda
+      Service: My Signins
+      Correlation ID: aefedc09-b4d2-4ddb-bd35-a06ae67026cc
+      Result: success
+    • 2026-01-14T11:06:16.4513755Z
+      Operation: Reset password (self-service)
+      IP: N/A
+      Device: Ashok Kumar Nimmagadda
+      Service: My Signins
+      Correlation ID: aefedc09-b4d2-4ddb-bd35-a06ae67026cc
+      Result: success
+    • 2026-01-14T11:06:16.4513755Z
+      Operation: Reset password (self-service)
+      IP: N/A
+      Device: Ashok Kumar Nimmagadda
+      Service: My Signins
+      Correlation ID: aefedc09-b4d2-4ddb-bd35-a06ae67026cc
+      Result: success
+    • 2026-01-14T11:06:16.4133771Z
+      Operation: Update StsRefreshTokenValidFrom Timestamp
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: 9cf064bc-f102-4afa-84de-534624122407
+      Result: success
+    • 2026-01-14T11:06:16.411375Z
+      Operation: Reset user password
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: 9cf064bc-f102-4afa-84de-534624122407
+      Result: success
+    • 2026-01-14T11:06:16.3273718Z
+      Operation: Update PasswordProfile
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: 9cf064bc-f102-4afa-84de-534624122407
+      Result: success
+    • 2026-01-14T11:06:16.3193712Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: 9cf064bc-f102-4afa-84de-534624122407
+      Result: success
+    • 2026-01-14T11:06:16.2253721Z
+      Operation: Update PasswordProfile
+      IP: N/A
+      Device: N/A
+      Service: Microsoft password reset service
+      Correlation ID: 9cf064bc-f102-4afa-84de-534624122407
+      Result: success
+    • 2026-01-14T11:06:14.9713908Z
+      Operation: User started password reset
+      IP: 4.194.47.153
+      Device: Ashok Kumar Nimmagadda
+      Service: My Signins
+      Correlation ID: aefedc09-b4d2-4ddb-bd35-a06ae67026cc
+      Result: success
+
+  [GROUP_MANAGEMENT] - 2 events:
+    • 2026-01-14T11:04:55.6704622Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.150
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: fe6f91f0-7391-43c6-a845-3f2a104eddc7
+      Result: success
+    • 2026-01-14T11:04:55.6704622Z
+      Operation: Settings_GetSettingsAsync
+      IP: 4.194.47.150
+      Device: N/A
+      Service: SYSTEM
+      Correlation ID: fe6f91f0-7391-43c6-a845-3f2a104eddc7
+      Result: success
+
+
+[USER: suresh.paturi@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:41.5460977Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+      Result: success
+
+
+[USER: leela.bhupathi@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:41.5390944Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+      Result: success
+
+
+[USER: bhargava.pappu@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.591937Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: babi.naimkhan@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.5859383Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: abhay.raghuvanshi@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.5799411Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: ananya.budhauliya@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.5729404Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: karan.sandbhor@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.5599402Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: amol.khomne@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.5529398Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: bhavana.kaithi@yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.5459361Z
+      Operation: Update user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: success
+
+
+[USER: Abhishek Bhardwaj@Yash.com]
+Total Events: 1
+
+  [USER_MANAGEMENT] - 1 events:
+    • 2026-01-14T11:06:40.4819338Z
+      Operation: Add user
+      IP: N/A
+      Device: N/A
+      Service: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6
+      Correlation ID: 013a369d-c51d-49a7-a8c2-35af19dd821d
+      Result: failure
+
+
+[USER: sagar.aluri@yash.com]
+Total Events: 7
+Time Span: 27 seconds
+
+  [GROUP_MANAGEMENT] - 7 events:
+    • 2026-01-14T11:04:35.3653475Z
+      Operation: Add member to group
+      IP: 52.112.54.109
+      Device: N/A
+      Service: Microsoft Teams Services
+      Correlation ID: ea26c916-c24b-4c79-8c6d-e122f03995a2
+      Result: success
+    • 2026-01-14T11:04:35.312394Z
+      Operation: Add owner to group
+      IP: 52.112.54.109
+      Device: N/A
+      Service: Microsoft Teams Services
+      Correlation ID: 6cbfa521-2a22-4a2e-8766-1874776b5622
+      Result: success
+    • 2026-01-14T11:04:35.2809977Z
+      Operation: Add owner to group
+      IP: 52.112.54.109
+      Device: N/A
+      Service: Microsoft Teams Services
+      Correlation ID: a7afa24a-ff6d-49e9-b7a6-d8308c39612e
+      Result: success
+    • 2026-01-14T11:04:35.2711325Z
+      Operation: Add member to group
+      IP: 52.112.54.109
+      Device: N/A
+      Service: Microsoft Teams Services
+      Correlation ID: 81467d16-32fc-459b-b4fa-8280170cab7c
+      Result: success
+    • 2026-01-14T11:04:07.3964028Z
+      Operation: Add member to group
+      IP: 52.123.178.56
+      Device: N/A
+      Service: Microsoft Teams Services
+      Correlation ID: 12ca860a-fb18-4d9d-8bb8-eb4fd2c3cb3b
+      Result: success
+    • 2026-01-14T11:04:07.3924075Z
+      Operation: Add owner to group
+      IP: 52.123.178.56
+      Device: N/A
+      Service: Microsoft Teams Services
+      Correlation ID: 12ca860a-fb18-4d9d-8bb8-eb4fd2c3cb3b
+      Result: success
+    • 2026-01-14T11:04:07.3894101Z
+      Operation: Add group
+      IP: 52.123.178.56
+      Device: Business and Industry Consulting @ Americas
+      Service: Microsoft Teams Services
+      Correlation ID: 12ca860a-fb18-4d9d-8bb8-eb4fd2c3cb3b
+      Result: success
+
+
+### SYSTEM-INITIATED EVENTS ###
+
+
+[SERVICE: Device Registration Service]
+Total Events: 8
+  • 2026-01-14T11:12:39.3264905Z
+    Operation: Update device
+    Device: YISC1101571LT
+    Correlation ID: 2f6b1f52-3073-4a09-8050-7307cb52588c
+  • 2026-01-14T11:11:21.4146408Z
+    Operation: Update device
+    Device: YH1102151LT
+    Correlation ID: 2b208cf2-f9a7-4c8b-9b21-f3000a3bf68b
+  • 2026-01-14T11:11:21.4146408Z
+    Operation: Update device
+    Device: YH1102151LT
+    Correlation ID: 2b208cf2-f9a7-4c8b-9b21-f3000a3bf68b
+  • 2026-01-14T11:09:01.4969342Z
+    Operation: Update device
+    Device: YH1004605LT
+    Correlation ID: d3038bd3-8a70-4a5c-b3aa-585a961a91fc
+  • 2026-01-14T11:06:19.4894737Z
+    Operation: Update device
+    Device: YISC1012341LT
+    Correlation ID: 5c0531cf-755d-4b88-9600-839098be8e10
+
+[SERVICE: ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6]
+Total Events: 16
+  • 2026-01-14T11:06:41.6605149Z
+    Operation: Update group
+    Device: BG2-BU2
+    Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+  • 2026-01-14T11:06:41.6555158Z
+    Operation: Update group
+    Device: Panasonicprojectyashteam
+    Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+  • 2026-01-14T11:06:41.6485156Z
+    Operation: Update group
+    Device: YASH Updates - US Immigration
+    Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+  • 2026-01-14T11:06:41.6315152Z
+    Operation: Update group
+    Device: LinkedinSalesNav_Users
+    Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+  • 2026-01-14T11:06:41.6265145Z
+    Operation: Update group
+    Device: BG4-BU7
+    Correlation ID: 59b5c998-a7af-4473-8bf5-a1119a769e15
+
+[SERVICE: Office 365 SharePoint Online]
+Total Events: 3
+  • 2026-01-14T11:06:15.5307295Z
+    Operation: Update group
+    Device: Business and Industry Consulting @ Americas
+    Correlation ID: 81ddf065-c26b-4153-9a7c-ac1d53980ea1
+  • 2026-01-14T11:06:15.3379586Z
+    Operation: Update group
+    Device: Business and Industry Consulting @ Americas
+    Correlation ID: 682c108f-21e2-40c4-8bf5-72f4bd136bbd
+  • 2026-01-14T11:04:16.2150976Z
+    Operation: Update group
+    Device: Business and Industry Consulting @ Americas
+    Correlation ID: 8e38db4b-7b27-4e75-97f2-b5be5fd7501b
+
+[SERVICE: Microsoft Teams Templates Service]
+Total Events: 1
+  • 2026-01-14T11:05:44.4984823Z
+    Operation: Update group
+    Device: Business and Industry Consulting @ Americas
+    Correlation ID: acbecdaf-6466-43ca-b9a8-aa9d6f431e57
+
+[SERVICE: Office 365 Exchange Online]
+Total Events: 1
+  • 2026-01-14T11:04:35.5288755Z
+    Operation: Update group
+    Device: Business and Industry Consulting @ Americas
+    Correlation ID: 543c2f60-4836-4a72-ba3d-2a5ae5949948
+
+================================================================================

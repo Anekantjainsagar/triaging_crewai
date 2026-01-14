@@ -1,0 +1,2185 @@
+
+SUMMARY
+================================================================================
+Total Users: 35
+Total Sign-ins: 90
+Total Successful Sign-ins: 85
+Total Failed Sign-ins: 5
+Unique IPs: 30
+Unique Locations: 19
+Time Range: 2026-01-14T11:10:40.1289485Z to 2026-01-14T14:05:31.6352875Z
+================================================================================
+Thought: The user wants a comprehensive security analysis of the provided Azure AD sign-in logs. I need to identify all authentication security patterns, detect compromised accounts and credential attacks, correlate login patterns, and generate security alerts across all severity levels (CRITICAL, HIGH, MEDIUM, LOW, INFORMATIONAL).
+
+I will process the logs user by user, analyzing their sign-in events based on the provided detection rules.
+
+Here's a plan:
+1.  **Initialize an empty list for alerts.**
+2.  **Iterate through each user's sign-in events:**
+    *   For each user, group their sign-ins by success/failure and chronologically.
+    *   Extract relevant information for each event: timestamp, IP, location, device, app, auth method, MFA status, error, risk level, correlation ID.
+    *   Apply the detection rules to identify patterns and generate alerts.
+    *   Pay close attention to:
+        *   Failed login patterns (single, multiple, followed by success).
+        *   Geographic anomalies (impossible travel, new countries, different cities).
+        *   MFA status (especially for admin/sensitive apps, or lack thereof).
+        *   Risk indicators (though all are "hidden" in this data, I'll note it).
+        *   Access patterns (multiple IPs).
+        *   Device and application changes.
+    *   Ensure all severity levels are covered, including INFORMATIONAL for baseline.
+    *   Calculate `time_delta_seconds` between consecutive events for a user.
+    *   Assign `confidence_score` based on the severity and clarity of the event.
+    *   Collect all `correlation_ids` for each alert.
+
+Let's start processing the data.
+
+**User: srijan.srivastava@yash.com**
+*   **Events:** 1 failure, 1 success.
+*   **Failure:** 2026-01-14T14:05:29.6076318Z, IP: 2405:201:34:1148:f00c:c39:6cd9:6e57, Location: Kolhapur, Maharashtra, IN, App: OfficeHome, MFA: Yes, Error: MFA expired.
+*   **Success:** 2026-01-14T14:05:31.6352875Z, IP: 2405:201:34:1148:f00c:c39:6cd9:6e57, Location: Kolhapur, Maharashtra, IN, App: OfficeHome, MFA: Yes, Auth Method: Mobile app notification.
+*   **Pattern:** Single failed login due to MFA expiration, immediately followed by a successful login from the same IP/location/device after refreshing MFA.
+*   **Alerts:**
+    *   LOW: Single failed login (MFA expired).
+    *   INFORMATIONAL: Successful login after MFA refresh.
+
+**User: somanath.alegav@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T14:05:09.4624569Z, IP: 2405:201:c41c:d80a:a938:664c:942d:33c5, Location: Karwan, Telangana, IN, App: Palo Alto Networks - GlobalProtect, MFA: No.
+*   **Pattern:** Successful login to a VPN application without MFA. This is a potential policy violation or a risk, depending on the sensitivity of the VPN and the user's role. Palo Alto GlobalProtect is a sensitive application.
+*   **Alerts:**
+    *   HIGH: Access to sensitive application (VPN) without MFA.
+
+**User: arpit.tater@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:17:50.9586734Z, IP: 27.58.113.68, Location: Jaipur, Rajasthan, IN, App: Office 365 SharePoint Online, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: olga.gretskaya@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:17:34.1059694Z, IP: 5.187.52.204, Location: Gdansk, Pomorskie, PL, App: Office 365 SharePoint Online, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: arzoo.soni@yash.com**
+*   **Events:** 1 failure.
+*   **Failure:** 2026-01-14T11:17:22.904416Z, IP: 14.143.131.254, Location: Beed, Maharashtra, IN, App: Office 365 SharePoint Online, MFA: Yes, Error: 'Keep me signed in' interrupt.
+*   **Pattern:** Single failed login due to 'Keep me signed in' interrupt.
+*   **Alerts:**
+    *   LOW: Single failed login (user interrupt).
+
+**User: vishal.gangji@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:17:22.4212808Z, IP: 49.43.0.86, Location: Indore, Madhya Pradesh, IN, App: Office 365 SharePoint Online, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: sriraj.thakur@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device/app/auth method/MFA within 0 seconds.
+*   **Pattern:** Duplicate successful logins, likely a system artifact or rapid retry.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful logins (duplicate events).
+
+**User: m.venugopalarao@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:17:00.9509714Z, IP: 87.242.253.113, Location: Barnet, Greater London, GB, App: Dime Client, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: arun.velpuri@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 69 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe. Could be routine application behavior or rapid access.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: neeraj.ahuja@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:16:56.4445769Z, IP: 2001:8f8:1d3e:69ff:c4f6:d6af:286b:8085, Location: Abu Zaby, Abu Zaby, AE, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: ramgopal.arikatha@yash.com**
+*   **Events:** 1 failure, 1 success.
+*   **Failure:** 2026-01-14T11:16:54.2305956Z, IP: 49.37.133.63, Location: Mangalhat, Telangana, IN, App: SharePoint Online Web Client Extensibility, MFA: Yes, Error: MFA required due to config change/new location.
+*   **Success:** 2026-01-14T11:16:10.140284Z, IP: 49.37.133.63, Location: Mangalhat, Telangana, IN, App: SharePoint Online Web Client Extensibility, MFA: Yes, Auth Method: Mobile app notification.
+*   **Pattern:** Failed login due to MFA policy, followed by successful login after satisfying MFA. Similar to srijan.srivastava.
+*   **Alerts:**
+    *   LOW: Single failed login (MFA policy).
+    *   INFORMATIONAL: Successful login after MFA challenge.
+
+**User: ashwani.vaishya@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 96 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: sawan.solanki@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device/app/auth method/MFA within 116 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: umesh.awasarikar@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:16:30.7736377Z, IP: 2405:201:1021:a0b5:b8e1:7788:afcf:8d2c, Location: Thathawade (Dattwadi), Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: boddapati.srinivasa@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/MFA within 63 seconds, accessing different apps (OfficeHome, Dime Client, Copilot App).
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications. This is normal behavior for a user accessing various tools.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location, accessing different applications.
+
+**User: prabhanjan.k@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:15:46.9795649Z, IP: 49.205.248.128, Location: Whitefields (Hyderabad), Telangana, IN, App: M365ChatClient, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: dhiyaneswaran.s@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:15:45.0279035Z, IP: 2401:4900:88e4:5adb:40e:b8d0:9f57:170a, Location: Chhindwara, Madhya Pradesh, IN, App: Microsoft Office, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: parth.govekar@yash.com**
+*   **Events:** 4 successful logins from the same IP/location/device within 91 seconds, accessing different apps (Office365 Shell WCSS-Client, SharePoint Online Web Client Extensibility). **MFA: No** for all.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing cloud applications without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: swapna.alhat@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 74 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: govardhan.vindyala@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:15:16.5674698Z, IP: 223.187.40.139, Location: Guntur, Andhra Pradesh, IN, App: Microsoft Office 365 Portal, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: preety.agrawalla@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device within 96 seconds, accessing Office365 Shell WCSS-Client. **MFA: No** for all.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing cloud applications without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: prasant.morusu@yash.com**
+*   **Events:** 1 failure, 8 successes.
+*   **Failure:** 2026-01-14T11:10:46.2735125Z, IP: 49.204.196.37, Location: Nellore, Andhra Pradesh, IN, App: My Signins, MFA: No, Error: 'Keep me signed in' interrupt.
+*   **Successes:** 8 successful logins from the same IP/location/device within 267 seconds, accessing various apps (My Signins, Microsoft Account Controls V2, Microsoft 365 Support Service). **MFA: No** for all.
+*   **Pattern:** Single failed login due to 'Keep me signed in' interrupt, followed by multiple successful logins to cloud applications without MFA.
+*   **Alerts:**
+    *   LOW: Single failed login (user interrupt).
+    *   MEDIUM: Access to cloud applications without MFA (multiple events).
+
+**User: mohamed.yasser@yash.com**
+*   **Events:** 6 successful logins from the same IP/location/device within 211 seconds, accessing various apps (SharePoint Online Web Client Extensibility, Office365 Shell WCSS-Client, Office 365 SharePoint Online). MFA: Yes for all.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location, accessing different applications.
+
+**User: swathi.jyothula@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:15:00.5226987Z, IP: 2401:4900:1cb2:e0f0:398f:31cd:4a93:e08a, Location: Karwan, Telangana, IN, App: OfficeHome, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: sahelie.chakravarty@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:15:00.2445369Z, IP: 2409:40f0:102c:b3b9:45c2:e872:cec2:230b, Location: Moosapet, Telangana, IN, App: One Outlook Web, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: more.prashant@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device/app/auth method/MFA within 71 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: archana.mali@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:14:53.938088Z, IP: 2405:201:300a:82d9:f4d6:7f31:2520:5929, Location: Indore, Madhya Pradesh, IN, App: Outsystem_Timesheet, MFA: No.
+*   **Pattern:** Successful login to a cloud application without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: rajkumar.gehlot@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device/app/auth method/MFA within 15 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: sharath.mamidala@yash.com**
+*   **Events:** 4 successful logins from the same IP/location/device within 69 seconds, accessing different apps (Office 365 SharePoint Online, SharePoint Online Web Client Extensibility). **MFA: No** for all.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing cloud applications without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: jayanth.kadapatinti@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:14:21.205596Z, IP: 49.205.248.117, Location: Bamboos (Hyderabad), Telangana, IN, App: Outsystem_Timesheet, MFA: No.
+*   **Pattern:** Successful login to a cloud application without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: atul.gautam@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:14:16.7398563Z, IP: 125.23.93.22, Location: New Delhi, Delhi, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Pattern:** Successful login to a cloud application without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: vikram.chavan@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:14:15.2926105Z, IP: 2402:e280:3e66:1d6:a1d9:1687:30ca:54d9, Location: Thathawade (Dattwadi), Maharashtra, IN, App: Microsoft Authentication Broker, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: parul.pardhal@yash.com**
+*   **Events:** 4 successful logins from the same IP/location/device/app/auth method/MFA within 85 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: anjali.sharma@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 67 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: shivam.bharucha@yash.com**
+*   **Events:** 3 successful logins.
+*   **Event 1:** 2026-01-14T11:14:03.3187467Z, IP: 27.107.64.154, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 2:** 2026-01-14T11:13:19.8827604Z, IP: 203.199.133.30, Location: Kothrud, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 3:** 2026-01-14T11:12:46.9321718Z, IP: 27.107.64.154, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Pattern:** Multiple successful logins from different IPs (Mumbai and Kothrud, Maharashtra) within a short timeframe (76 seconds). Kothrud is a locality in Pune, Maharashtra, which is different from Mumbai. This is a "Different city/state in same day" scenario. Also, access to cloud apps without MFA.
+*   **Alerts:**
+    *   MEDIUM: Sign-ins from multiple different IPs within short timeframe (< 1 hour).
+    *   MEDIUM: Access to cloud applications without MFA.
+    *   MEDIUM: Different city/state in same day.
+
+**User: nagavvss.kumar@yash.com**
+*   **Events:** 4 successful logins from the same IP/location/device/auth method/MFA within 115 seconds, accessing different apps (My Signins, Microsoft Account Controls V2, OfficeHome, One Outlook Web).
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location, accessing different applications.
+
+**User: ajeet.kumar@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:13:53.7821727Z, IP: 2401:4900:188b:ca39:d437:a9d9:b578:9cff, Location: Gurgaon, Haryana, IN, App: Outsystem_Timesheet, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: waad.elqurashy@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:13:50.7000613Z, IP: 194.126.138.52, Location: Bayrut, Beyrouth, LB, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: parikh.nikhil@yash.com**
+*   **Events:** 4 successful logins from the same IP/location/device/auth method/MFA within 67 seconds, accessing different apps (Office365 Shell WCSS-Client, SharePoint Online Web Client Extensibility).
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location, accessing different applications.
+
+**User: amel.shehata@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 100 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: sumit.j@yash.com**
+*   **Events:** 5 successful logins.
+*   **Event 1:** 2026-01-14T11:13:28.967933Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, App: Outsystem_Timesheet, MFA: Yes.
+*   **Event 2:** 2026-01-14T11:11:20.8775251Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, App: SharePoint Online Web Client Extensibility, MFA: Yes.
+*   **Event 3:** 2026-01-14T11:11:16.3715395Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Event 4:** 2026-01-14T11:11:10.0285493Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Event 5:** 2026-01-14T11:11:00.3054132Z, IP: 49.249.2.30, Location: Dewas, Madhya Pradesh, IN, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Pattern:** Multiple successful logins from different IPs (Mumbai and Dewas, Madhya Pradesh) within a short timeframe (148 seconds). Dewas is a city in Madhya Pradesh, different from Mumbai, Maharashtra. This is a "Different city/state in same day" scenario. All with MFA.
+*   **Alerts:**
+    *   MEDIUM: Sign-ins from multiple different IPs within short timeframe (< 1 hour).
+    *   MEDIUM: Different city/state in same day.
+
+**User: rishi.rajput@yash.com**
+*   **Events:** 5 successful logins from the same IP/location/device/auth method/MFA within 99 seconds, accessing different apps (Office 365 SharePoint Online, Office365 Shell WCSS-Client, SharePoint Online Web Client Extensibility).
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location, accessing different applications.
+
+**User: anil.kesiraju@yash.com**
+*   **Events:** 6 successful logins from the same IP/location/device/auth method/MFA within 154 seconds, accessing different apps (Office 365 SharePoint Online, SharePoint Online Web Client Extensibility, Office365 Shell WCSS-Client).
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location, accessing different applications.
+
+**User: swati.mamgain@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device/app/auth method/MFA within 42 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: sanskar.pukale@yash.com**
+*   **Events:** 3 successful logins.
+*   **Event 1:** 2026-01-14T11:13:13.8055179Z, IP: 27.107.64.214, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 2:** 2026-01-14T11:13:03.803212Z, IP: 14.141.235.38, Location: Pune, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 3:** 2026-01-14T11:12:53.0925983Z, IP: 14.141.235.38, Location: Pune, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Pattern:** Multiple successful logins from different IPs (Mumbai and Pune, Maharashtra) within a short timeframe (20 seconds). This is a "Different city/state in same day" scenario. Also, access to cloud apps without MFA.
+*   **Alerts:**
+    *   MEDIUM: Sign-ins from multiple different IPs within short timeframe (< 1 hour).
+    *   MEDIUM: Access to cloud applications without MFA.
+    *   MEDIUM: Different city/state in same day.
+
+**User: subbareddy.sana@yash.com**
+*   **Events:** 1 failure.
+*   **Failure:** 2026-01-14T11:13:07.5171194Z, IP: 27.6.183.121, Location: Irram Manzil Colony, Telangana, IN, App: Microsoft Teams Web Client, MFA: No, Error: Session expired due to CA policy.
+*   **Pattern:** Single failed login due to Conditional Access policy.
+*   **Alerts:**
+    *   HIGH: Conditional Access policy violations or bypasses (session expired).
+
+**User: rathna.kireeti@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 39 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: pankaj.dashetwar@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device within 15 seconds, accessing different apps (Microsoft Account Controls V2, My Signins). **MFA: No** for both.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing cloud applications without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: navya.vullingala@yash.com**
+*   **Events:** 13 successful logins from the same IP/location/device/auth method/MFA within 101 seconds, accessing different apps (Office365 Shell WCSS-Client, SharePoint Online Web Client Extensibility).
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe, accessing different applications. This is a high volume of logins but from a consistent source with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: High volume of successful logins from same location, accessing different applications.
+
+**User: madhusudhan.c@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 98 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: shashidhar.vanga@yash.com**
+*   **Events:** 2 successful logins from the same IP/location/device/app/auth method/MFA within 2 seconds.
+*   **Pattern:** Duplicate successful logins, likely a system artifact or rapid retry.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful logins (duplicate events).
+
+**User: dinesh.natarajan@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:12:14.0733659Z, IP: 185.95.186.2, Location: As Sulaymaniyah, As Sulaymaniyah, IQ, App: SharePoint Online Web Client Extensibility, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: somya.misra@yash.com**
+*   **Events:** 3 successful logins.
+*   **Event 1:** 2026-01-14T11:12:12.7141777Z, IP: 14.194.129.210, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 2:** 2026-01-14T11:12:08.7377989Z, IP: 14.194.129.210, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 3:** 2026-01-14T11:11:57.2935144Z, IP: 125.23.93.22, Location: New Delhi, Delhi, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Pattern:** Multiple successful logins from different IPs (Mumbai, Maharashtra and New Delhi, Delhi) within a short timeframe (15 seconds). This is a "Different city/state in same day" scenario. Also, access to cloud apps without MFA.
+*   **Alerts:**
+    *   MEDIUM: Sign-ins from multiple different IPs within short timeframe (< 1 hour).
+    *   MEDIUM: Access to cloud applications without MFA.
+    *   MEDIUM: Different city/state in same day.
+
+**User: ashok.nimmagadda@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:12:02.6408965Z, IP: 111.93.228.162, Location: Sanand, Gujarat, IN, App: Microsoft Authentication Broker, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: sasi.katta@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:11:50.2056266Z, IP: 123.63.116.121, Location: Rajkot, Gujarat, IN, App: Microsoft Teams Web Client, MFA: No.
+*   **Pattern:** Successful login to a cloud application without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: verma.aman@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:11:32.361703Z, IP: 2409:40e3:30ae:717d:646a:bb6f:169e:fd5a, Location: Chhindwara, Madhya Pradesh, IN, App: Microsoft Teams Web Client, MFA: Yes.
+*   **Pattern:** Normal successful login with MFA.
+*   **Alerts:**
+    *   INFORMATIONAL: Routine successful login with MFA.
+
+**User: sarita.lad@yash.com**
+*   **Events:** 3 successful logins from the same IP/location/device/app/auth method/MFA within 43 seconds.
+*   **Pattern:** Multiple successful logins from the same location in a short timeframe.
+*   **Alerts:**
+    *   INFORMATIONAL: Multiple successful logins from same location.
+
+**User: pallavi.brale@yash.com**
+*   **Events:** 1 success.
+*   **Success:** 2026-01-14T11:11:17.1016736Z, IP: 152.59.47.82, Location: Begampura, Gujarat, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Pattern:** Successful login to a cloud application without MFA.
+*   **Alerts:**
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: jai.raikwar@yash.com**
+*   **Events:** 3 successful logins.
+*   **Event 1:** 2026-01-14T11:11:10.8076038Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, App: My Profile, MFA: Yes.
+*   **Event 2:** 2026-01-14T11:10:48.7614549Z, IP: 49.249.2.30, Location: Dewas, Madhya Pradesh, IN, App: Microsoft Account Controls V2, MFA: Yes.
+*   **Event 3:** 2026-01-14T11:10:41.2314099Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, App: My Signins, MFA: Yes.
+*   **Pattern:** Multiple successful logins from different IPs (Mumbai, Maharashtra and Dewas, Madhya Pradesh) within a short timeframe (29 seconds). This is a "Different city/state in same day" scenario. All with MFA.
+*   **Alerts:**
+    *   MEDIUM: Sign-ins from multiple different IPs within short timeframe (< 1 hour).
+    *   MEDIUM: Different city/state in same day.
+
+**User: akhilesh.sodhani@yash.com**
+*   **Events:** 1 failure.
+*   **Failure:** 2026-01-14T11:11:04.3431336Z, IP: 2605:6400:c077:b5f3:426c:766f:bfba:ade8, Location: Luxembourg, Luxembourg, LU, Device: Unknown Device, App: Microsoft Azure CLI, Auth Method: Password, MFA: No, Error: Invalid username or password.
+*   **Pattern:** Single failed login due to invalid credentials from an unknown device and a foreign country (Luxembourg). Accessing Microsoft Azure CLI (sensitive application).
+*   **Alerts:**
+    *   HIGH: Single failed login from new country/region.
+    *   HIGH: First-time device access from risky location (Unknown Device, Luxembourg).
+    *   HIGH: Access to privileged resources (Azure CLI) without proper authentication (failed password, no MFA).
+
+Now I will compile all these into the required JSON format. I need to ensure `generated_at` is current, `log_type` is "Azure AD Sign-in Logs", and `total_users_analyzed` is 35. I will also calculate `time_delta_seconds` for each alert based on the time span of the grouped events. For single events, `time_delta_seconds` will be 0. For grouped events, it will be the difference between `last_event` and `first_event`.
+
+Let's refine the `time_delta_seconds` calculation. The provided data already gives "Time Span" for users with multiple events. For single events, it's 0. I will use this.
+
+For `confidence_score`:
+*   CRITICAL: 90-100
+*   HIGH: 70-89
+*   MEDIUM: 40-69
+*   LOW: 20-39
+*   INFORMATIONAL: 0-19
+
+I will use a consistent `generated_at` timestamp for all alerts.
+I will ensure `correlation_ids` are collected for each alert.
+I will ensure `initiator` is the user's email.
+`operation` will be a summary of the events (e.g., "Multiple successful sign-ins", "Failed sign-in").
+`device_info` will be a summary of devices involved. If multiple, list them. If one, list that one.
+
+Let's re-evaluate `shivam.bharucha@yash.com`, `sumit.j@yash.com`, `sanskar.pukale@yash.com`, `somya.misra@yash.com`, `jai.raikwar@yash.com` for impossible travel.
+*   **shivam.bharucha@yash.com**: Mumbai, Maharashtra, IN (27.107.64.154) and Kothrud, Maharashtra, IN (203.199.133.30). Kothrud is in Pune. Mumbai to Pune is ~150km. Time delta 76 seconds. This is not impossible travel (>500km in <1 hour). It's "Different city/state in same day" and "Multiple different IPs".
+*   **sumit.j@yash.com**: Mumbai, Maharashtra, IN (14.143.131.134) and Dewas, Madhya Pradesh, IN (49.249.2.30). Mumbai to Dewas is ~500-600km. Time delta 148 seconds (~2.5 minutes). This is borderline impossible travel. 500km in 2.5 minutes is impossible. This should be CRITICAL.
+*   **sanskar.pukale@yash.com**: Mumbai, Maharashtra, IN (27.107.64.214) and Pune, Maharashtra, IN (14.141.235.38). Mumbai to Pune is ~150km. Time delta 20 seconds. Not impossible travel. "Different city/state in same day" and "Multiple different IPs".
+*   **somya.misra@yash.com**: Mumbai, Maharashtra, IN (14.194.129.210) and New Delhi, Delhi, IN (125.23.93.22). Mumbai to New Delhi is ~1200km. Time delta 15 seconds. This is CRITICAL impossible travel.
+*   **jai.raikwar@yash.com**: Mumbai, Maharashtra, IN (14.143.131.134) and Dewas, Madhya Pradesh, IN (49.249.2.30). Mumbai to Dewas is ~500-600km. Time delta 29 seconds. This is CRITICAL impossible travel.
+
+Revising alerts for these users.
+
+**User: sumit.j@yash.com**
+*   **Events:** 5 successful logins.
+*   **Event 1 (Dewas):** 2026-01-14T11:11:00.3054132Z, IP: 49.249.2.30, Location: Dewas, Madhya Pradesh, IN, App: Office365 Shell WCSS-Client, MFA: Yes.
+*   **Event 2-5 (Mumbai):** 2026-01-14T11:11:10.0285493Z to 2026-01-14T11:13:28.967933Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, Apps: Office365 Shell WCSS-Client, SharePoint Online Web Client Extensibility, Outsystem_Timesheet, MFA: Yes.
+*   **Pattern:** Impossible travel (Dewas to Mumbai, ~500-600km in ~10 seconds between first Dewas and first Mumbai login). Followed by multiple logins from Mumbai without further IP changes.
+*   **Alerts:**
+    *   CRITICAL: Impossible travel: Sign-ins from geographically distant locations in impossibly short time (Dewas → Mumbai in ~10 seconds).
+    *   MEDIUM: Access to cloud applications with MFA (multiple events from Mumbai).
+
+**User: somya.misra@yash.com**
+*   **Events:** 3 successful logins.
+*   **Event 1 (New Delhi):** 2026-01-14T11:11:57.2935144Z, IP: 125.23.93.22, Location: New Delhi, Delhi, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Event 2-3 (Mumbai):** 2026-01-14T11:12:08.7377989Z to 2026-01-14T11:12:12.7141777Z, IP: 14.194.129.210, Location: Mumbai, Maharashtra, IN, App: Office365 Shell WCSS-Client, MFA: No.
+*   **Pattern:** Impossible travel (New Delhi to Mumbai, ~1200km in ~11 seconds). Also, access to cloud applications without MFA.
+*   **Alerts:**
+    *   CRITICAL: Impossible travel: Sign-ins from geographically distant locations in impossibly short time (New Delhi → Mumbai in ~11 seconds).
+    *   MEDIUM: Access to cloud applications without MFA.
+
+**User: jai.raikwar@yash.com**
+*   **Events:** 3 successful logins.
+*   **Event 1 (Dewas):** 2026-01-14T11:10:48.7614549Z, IP: 49.249.2.30, Location: Dewas, Madhya Pradesh, IN, App: Microsoft Account Controls V2, MFA: Yes.
+*   **Event 2-3 (Mumbai):** 2026-01-14T11:10:41.2314099Z to 2026-01-14T11:11:10.8076038Z, IP: 14.143.131.134, Location: Mumbai, Maharashtra, IN, Apps: My Signins, My Profile, MFA: Yes.
+*   **Pattern:** Impossible travel (Mumbai to Dewas, ~500-600km in ~7 seconds between first Mumbai and first Dewas login). Note: The events are not strictly chronological in the input for this user, but the time span is given as 29 seconds. I will use the earliest and latest timestamps to calculate the overall time delta for the alert. The first event listed is Mumbai, then Dewas, then Mumbai. This means the user was in Mumbai, then Dewas, then Mumbai again. The time between the Mumbai login at 11:10:41 and the Dewas login at 11:10:48 is 7 seconds. This is impossible travel.
+*   **Alerts:**
+    *   CRITICAL: Impossible travel: Sign-ins from geographically distant locations in impossibly short time (Mumbai → Dewas in ~7 seconds).
+    *   INFORMATIONAL: Multiple successful logins from different locations with MFA.
+
+I will also ensure that for users with multiple events, the `first_event` and `last_event` timestamps in the alert reflect the actual range of events being grouped for that specific alert, not just the user's overall time span.
+
+For `device_info`, if multiple devices are used, I will list them. If only one, I will list that one. If different devices are used across events in an alert, I will list all unique devices. In this dataset, most users stick to one device or device type.
+
+Let's consider the `generated_at` timestamp. I will use the current time for this.
+The `total_users_analyzed` is 35.
+The `log_type` is "Azure AD Sign-in Logs".
+
+Final check on detection rules:
+*   **Failed Login Patterns:**
+    *   `srijan.srivastava@yash.com`: 1 failed, then success. LOW for failed, INFORMATIONAL for success.
+    *   `arzoo.soni@yash.com`: 1 failed. LOW.
+    *   `ramgopal.arikatha@yash.com`: 1 failed, then success. LOW for failed, INFORMATIONAL for success.
+    *   `prasant.morusu@yash.com`: 1 failed. LOW.
+    *   `subbareddy.sana@yash.com`: 1 failed (CA policy). HIGH.
+    *   `akhilesh.sodhani@yash.com`: 1 failed (invalid creds, unknown device, foreign country, sensitive app). HIGH.
+*   **Geographic Anomalies:**
+    *   `sumit.j@yash.com`: Dewas (MP) -> Mumbai (MH) in ~10s. CRITICAL.
+    *   `somya.misra@yash.com`: New Delhi (DL) -> Mumbai (MH) in ~11s. CRITICAL.
+    *   `jai.raikwar@yash.com`: Mumbai (MH) -> Dewas (MP) in ~7s. CRITICAL.
+    *   `shivam.bharucha@yash.com`: Mumbai (MH) -> Kothrud (Pune, MH) in 76s. MEDIUM (Different city/state in same day).
+    *   `sanskar.pukale@yash.com`: Mumbai (MH) -> Pune (MH) in 20s. MEDIUM (Different city/state in same day).
+*   **MFA Status:**
+    *   `somanath.alegav@yash.com`: Sensitive app (GlobalProtect) without MFA. HIGH.
+    *   `parth.govekar@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `preety.agrawalla@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `prasant.morusu@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `archana.mali@yash.com`: Cloud app without MFA. MEDIUM.
+    *   `sharath.mamidala@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `jayanth.kadapatinti@yash.com`: Cloud app without MFA. MEDIUM.
+    *   `atul.gautam@yash.com`: Cloud app without MFA. MEDIUM.
+    *   `shivam.bharucha@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `sanskar.pukale@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `pankaj.dashetwar@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `somya.misra@yash.com`: Cloud apps without MFA. MEDIUM.
+    *   `sasi.katta@yash.com`: Cloud app without MFA. MEDIUM.
+    *   `pallavi.brale@yash.com`: Cloud app without MFA. MEDIUM.
+*   **Risk Indicators:** All are "hidden", so no specific alerts based on this.
+*   **Access Patterns:**
+    *   `shivam.bharucha@yash.com`: 2 different IPs in 76s. MEDIUM.
+    *   `sumit.j@yash.com`: 2 different IPs in 148s. MEDIUM (already covered by CRITICAL impossible travel, but also fits this).
+    *   `sanskar.pukale@yash.com`: 2 different IPs in 20s. MEDIUM.
+    *   `somya.misra@yash.com`: 2 different IPs in 15s. MEDIUM (already covered by CRITICAL impossible travel, but also fits this).
+    *   `jai.raikwar@yash.com`: 2 different IPs in 29s. MEDIUM (already covered by CRITICAL impossible travel, but also fits this).
+*   **Device & Application:**
+    *   `akhilesh.sodhani@yash.com`: Unknown device from risky location. HIGH.
+
+Looks good. I will now construct the JSON output.
+I will use `2026-01-14T14:05:31.6352875Z` as the `generated_at` timestamp, which is the latest event time in the logs.
+The `time_delta_seconds` for impossible travel alerts will be the time difference between the two geographically distant logins. For other grouped events, it will be the total span. For single events, it's 0.
+
+Let's re-calculate time_delta_seconds for impossible travel more precisely.
+*   **sumit.j@yash.com**: Dewas (11:11:00) to Mumbai (11:11:10). Delta = 10 seconds.
+*   **somya.misra@yash.com**: New Delhi (11:11:57) to Mumbai (11:12:08). Delta = 11 seconds.
+*   **jai.raikwar@yash.com**: Mumbai (11:10:41) to Dewas (11:10:48). Delta = 7 seconds.
+
+These are indeed impossibly short times for the distances.```json
+{
+  "generated_at": "2026-01-14T14:05:31.6352875Z",
+  "log_type": "Azure AD Sign-in Logs",
+  "total_users_analyzed": 35,
+  "alerts": [
+    {
+      "title": "Single Failed Login - MFA Expired",
+      "user": "srijan.srivastava@yash.com",
+      "severity": "LOW",
+      "alert_type": "Authentication Failure",
+      "description": "A single sign-in attempt failed because multi-factor authentication had expired, requiring a refresh.",
+      "event_count": 1,
+      "first_event": "2026-01-14T14:05:29.6076318Z",
+      "last_event": "2026-01-14T14:05:29.6076318Z",
+      "initiator": "srijan.srivastava@yash.com",
+      "confidence_score": 30,
+      "details": {
+        "operation": "Failed Sign-in (MFA Expired)",
+        "ip_addresses": [
+          "2405:201:34:1148:f00c:c39:6cd9:6e57"
+        ],
+        "device_info": "YBTC1011179LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "019bbcb1-bfbe-7f87-9b9a-bd54078cf036"
+        ]
+      }
+    },
+    {
+      "title": "Successful Login After MFA Refresh",
+      "user": "srijan.srivastava@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to OfficeHome from Kolhapur, Maharashtra, IN, using Mobile app notification for MFA, immediately following an MFA expiration.",
+      "event_count": 1,
+      "first_event": "2026-01-14T14:05:31.6352875Z",
+      "last_event": "2026-01-14T14:05:31.6352875Z",
+      "initiator": "srijan.srivastava@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in (MFA Refreshed)",
+        "ip_addresses": [
+          "2405:201:34:1148:f00c:c39:6cd9:6e57"
+        ],
+        "device_info": "YBTC1011179LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 2,
+        "correlation_ids": [
+          "e57754eb-715e-4622-9f7c-e948376f6f44"
+        ]
+      }
+    },
+    {
+      "title": "Access to Sensitive Application Without MFA",
+      "user": "somanath.alegav@yash.com",
+      "severity": "HIGH",
+      "alert_type": "Policy Violation",
+      "description": "Successful sign-in to 'Palo Alto Networks - GlobalProtect' (a sensitive application) without multi-factor authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T14:05:09.4624569Z",
+      "last_event": "2026-01-14T14:05:09.4624569Z",
+      "initiator": "somanath.alegav@yash.com",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Successful Sign-in (No MFA)",
+        "ip_addresses": [
+          "2405:201:c41c:d80a:a938:664c:942d:33c5"
+        ],
+        "device_info": "YH1101718LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "636aeca0-71b8-4c0e-968e-953230f27292"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "arpit.tater@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Office 365 SharePoint Online from Jaipur, Rajasthan, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:50.9586734Z",
+      "last_event": "2026-01-14T11:17:50.9586734Z",
+      "initiator": "arpit.tater@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "27.58.113.68"
+        ],
+        "device_info": "YICIT1010902LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "4ee6eca1-b067-6000-5040-d6045a646433"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "olga.gretskaya@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Office 365 SharePoint Online from Gdansk, Pomorskie, PL, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:34.1059694Z",
+      "last_event": "2026-01-14T11:17:34.1059694Z",
+      "initiator": "olga.gretskaya@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "5.187.52.204"
+        ],
+        "device_info": "MacOs (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "5be6eca1-708d-6000-5040-ddae90313512"
+        ]
+      }
+    },
+    {
+      "title": "Single Failed Login - User Interrupt",
+      "user": "arzoo.soni@yash.com",
+      "severity": "LOW",
+      "alert_type": "Authentication Failure",
+      "description": "A single sign-in attempt failed due to a 'Keep me signed in' interrupt.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:22.904416Z",
+      "last_event": "2026-01-14T11:17:22.904416Z",
+      "initiator": "arzoo.soni@yash.com",
+      "confidence_score": 30,
+      "details": {
+        "operation": "Failed Sign-in (User Interrupt)",
+        "ip_addresses": [
+          "14.143.131.254"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "8ae4eca1-80a7-6000-5040-de0019022080"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "vishal.gangji@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Office 365 SharePoint Online from Indore, Madhya Pradesh, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:22.4212808Z",
+      "last_event": "2026-01-14T11:17:22.4212808Z",
+      "initiator": "vishal.gangji@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "49.43.0.86"
+        ],
+        "device_info": "YISC110122LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "45e6eca1-1057-6000-5040-d963b2428a7e"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Logins (Duplicate Events)",
+      "user": "sriraj.thakur@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Microsoft Teams from Duesseldorf, Nordrhein-Westfalen, DE, with MFA, occurring within 0 seconds, likely duplicate log entries.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:17:21.9825256Z",
+      "last_event": "2026-01-14T11:17:21.9825327Z",
+      "initiator": "sriraj.thakur@yash.com",
+      "confidence_score": 5,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2a00:1e:b5c1:302:b928:d8b7:b6af:cb6c"
+        ],
+        "device_info": "MacOs",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "16c8a76f-59f5-4be1-a098-3229467974f6"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "m.venugopalarao@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Dime Client from Barnet, Greater London, GB, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:00.9509714Z",
+      "last_event": "2026-01-14T11:17:00.9509714Z",
+      "initiator": "m.venugopalarao@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "87.242.253.113"
+        ],
+        "device_info": "YH1014167LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "77e4f1b0-74da-44fc-9811-3799fe0a0f52"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "arun.velpuri@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Microsoft Edge from Dublin, Dublin, IE, with MFA, within a 69-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:15:48.616405Z",
+      "last_event": "2026-01-14T11:16:58.2867755Z",
+      "initiator": "arun.velpuri@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "4.210.48.40"
+        ],
+        "device_info": "Windows10 (Edge 18.20348)",
+        "time_delta_seconds": 69,
+        "correlation_ids": [
+          "93f7dae5-702b-407c-8290-fafca8786dd0"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "neeraj.ahuja@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Office365 Shell WCSS-Client from Abu Zaby, Abu Zaby, AE, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:56.4445769Z",
+      "last_event": "2026-01-14T11:16:56.4445769Z",
+      "initiator": "neeraj.ahuja@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2001:8f8:1d3e:69ff:c4f6:d6af:286b:8085"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "6f9d0211-c5fd-4447-a42b-29366a687d46"
+        ]
+      }
+    },
+    {
+      "title": "Single Failed Login - MFA Policy",
+      "user": "ramgopal.arikatha@yash.com",
+      "severity": "LOW",
+      "alert_type": "Authentication Failure",
+      "description": "A single sign-in attempt failed due to a multi-factor authentication policy requiring re-authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:54.2305956Z",
+      "last_event": "2026-01-14T11:16:54.2305956Z",
+      "initiator": "ramgopal.arikatha@yash.com",
+      "confidence_score": 30,
+      "details": {
+        "operation": "Failed Sign-in (MFA Policy)",
+        "ip_addresses": [
+          "49.37.133.63"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f1b99f88-0d5b-4d3a-ad41-4958ef90aedd"
+        ]
+      }
+    },
+    {
+      "title": "Successful Login After MFA Challenge",
+      "user": "ramgopal.arikatha@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to SharePoint Online Web Client Extensibility from Mangalhat, Telangana, IN, using Mobile app notification for MFA, after an initial MFA policy failure.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:10.140284Z",
+      "last_event": "2026-01-14T11:16:10.140284Z",
+      "initiator": "ramgopal.arikatha@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in (MFA Satisfied)",
+        "ip_addresses": [
+          "49.37.133.63"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 44,
+        "correlation_ids": [
+          "25aeb744-48bb-44a8-9258-bd4cdca9ba79"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "ashwani.vaishya@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Microsoft Office from Gurgaon, Haryana, IN, with MFA, within a 96-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:15:11.6774036Z",
+      "last_event": "2026-01-14T11:16:48.2886726Z",
+      "initiator": "ashwani.vaishya@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:1c7e:ba5:d176:2ec0:c51e:5001"
+        ],
+        "device_info": "Windows10 (Edge 18.26200)",
+        "time_delta_seconds": 96,
+        "correlation_ids": [
+          "0689f38d-4d1f-450f-a14a-f5802683d10b"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "sawan.solanki@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Microsoft Authentication Broker from IN, with MFA, within a 116-second timeframe.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:14:49.3698353Z",
+      "last_event": "2026-01-14T11:16:46.307518Z",
+      "initiator": "sawan.solanki@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:7b25:90ff:19be:f304:f724:1e08"
+        ],
+        "device_info": "Android (Chrome Mobile 143.0.7499)",
+        "time_delta_seconds": 116,
+        "correlation_ids": [
+          "6adbd64e-5275-4faa-8b32-c52869419909"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "umesh.awasarikar@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Office365 Shell WCSS-Client from Thathawade (Dattwadi), Maharashtra, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:30.7736377Z",
+      "last_event": "2026-01-14T11:16:30.7736377Z",
+      "initiator": "umesh.awasarikar@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2405:201:1021:a0b5:b8e1:7788:afcf:8d2c"
+        ],
+        "device_info": "YPH1101082LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "129d2899-4c3b-4e2a-ae12-7c082d96fb84"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location, Different Applications",
+      "user": "boddapati.srinivasa@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Karwan, Telangana, IN, with MFA, accessing OfficeHome, Dime Client, and Copilot App within a 63-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:15:18.587163Z",
+      "last_event": "2026-01-14T11:16:22.1358871Z",
+      "initiator": "boddapati.srinivasa@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:1c0f:1eec:c5c7:c6f:a7cb:5651"
+        ],
+        "device_info": "YH1102474LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 63,
+        "correlation_ids": [
+          "dc50bff0-34e0-45ad-9067-040a9d669514",
+          "468213a3-35dc-42c3-8650-9002d46082f9",
+          "019bbc34-62be-7d57-a988-09ab793d836b"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "prabhanjan.k@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to M365ChatClient from Whitefields (Hyderabad), Telangana, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:15:46.9795649Z",
+      "last_event": "2026-01-14T11:15:46.9795649Z",
+      "initiator": "prabhanjan.k@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "49.205.248.128"
+        ],
+        "device_info": "YH1004897LT2 (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "c8bfe2c6-a573-114f-2e4c-39a20aae7819"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "dhiyaneswaran.s@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Microsoft Office from Chhindwara, Madhya Pradesh, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:15:45.0279035Z",
+      "last_event": "2026-01-14T11:15:45.0279035Z",
+      "initiator": "dhiyaneswaran.s@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2401:4900:88e4:5adb:40e:b8d0:9f57:170a"
+        ],
+        "device_info": "DESKTOP-77EI6Q9 (Windows10, IE 10.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "762dc092-cf80-4b07-966d-219720cadc87"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "parth.govekar@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to cloud applications (Office365 Shell WCSS-Client, SharePoint Online Web Client Extensibility) from Cheeta Camp, Maharashtra, IN, without multi-factor authentication.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:13:46.7613399Z",
+      "last_event": "2026-01-14T11:15:18.1082606Z",
+      "initiator": "parth.govekar@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "182.48.218.127"
+        ],
+        "device_info": "YPH1101573LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 91,
+        "correlation_ids": [
+          "0a886e97-52b4-40aa-9c3b-bda78df19532",
+          "6dc79dbc-1717-4761-a47a-a2a14de17b64",
+          "5dadbe31-71c1-46ea-85a8-54474df9e2ae",
+          "2bc60c41-a92d-4860-8865-13aea371bdd8"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "swapna.alhat@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Outlook Mobile from Chhindwara, Madhya Pradesh, IN, with MFA, within a 74-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:14:03.437638Z",
+      "last_event": "2026-01-14T11:15:17.7030441Z",
+      "initiator": "swapna.alhat@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:88f8:442e:8f2:7b80:1826:34cd"
+        ],
+        "device_info": "iPhone 13 (Ios 26.2.0, Mobile Safari 18.7)",
+        "time_delta_seconds": 74,
+        "correlation_ids": [
+          "117c5dfa-619c-478d-9649-7950e4d2a829"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "govardhan.vindyala@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Microsoft Office 365 Portal from Guntur, Andhra Pradesh, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:15:16.5674698Z",
+      "last_event": "2026-01-14T11:15:16.5674698Z",
+      "initiator": "govardhan.vindyala@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "223.187.40.139"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "86e272c9-d655-4994-a47a-603da03e7847"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "preety.agrawalla@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from Delhi, Delhi, IN, without multi-factor authentication.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:13:39.512466Z",
+      "last_event": "2026-01-14T11:15:16.3608424Z",
+      "initiator": "preety.agrawalla@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "203.197.238.210"
+        ],
+        "device_info": "YH1103279LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 96,
+        "correlation_ids": [
+          "5f3ef842-f044-490f-abb9-637330642b4b",
+          "a0e44e28-9c3c-4d7a-8670-3e5dbca01ffa",
+          "3e8a0b4f-938d-4166-89e2-f1e01556fb8a"
+        ]
+      }
+    },
+    {
+      "title": "Single Failed Login - User Interrupt",
+      "user": "prasant.morusu@yash.com",
+      "severity": "LOW",
+      "alert_type": "Authentication Failure",
+      "description": "A single sign-in attempt failed due to a 'Keep me signed in' interrupt.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:10:46.2735125Z",
+      "last_event": "2026-01-14T11:10:46.2735125Z",
+      "initiator": "prasant.morusu@yash.com",
+      "confidence_score": 30,
+      "details": {
+        "operation": "Failed Sign-in (User Interrupt)",
+        "ip_addresses": [
+          "49.204.196.37"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "9be91ca1-c06a-4708-8b2d-cfe54803d4d1"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "prasant.morusu@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to cloud applications (Microsoft Account Controls V2, My Signins, Microsoft 365 Support Service) from Nellore, Andhra Pradesh, IN, without multi-factor authentication.",
+      "event_count": 8,
+      "first_event": "2026-01-14T11:11:46.5532978Z",
+      "last_event": "2026-01-14T11:15:14.0576487Z",
+      "initiator": "prasant.morusu@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "49.204.196.37"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 267,
+        "correlation_ids": [
+          "3540fe61-1780-4780-91fb-5645f251df8a",
+          "0a3f5b34-a49a-42ff-933f-931c7b819bcf",
+          "511f0bd4-7f34-4e7f-ba02-e81d7fb007f0",
+          "9be91ca1-c06a-4708-8b2d-cfe54803d4d1",
+          "8448ea46-f040-4af9-92d0-ea0cbd894559",
+          "88f6d852-2ec2-4e90-9573-43e1d8bc1d10",
+          "ad816175-2a9b-41fa-8ecb-7f166ae2edfc",
+          "49cde4f4-9242-4c1e-9532-4eeeaa5a2db7"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location, Different Applications",
+      "user": "mohamed.yasser@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Al Qahirah, Al Qahirah, EG, with MFA, accessing SharePoint Online Web Client Extensibility, Office365 Shell WCSS-Client, and Office 365 SharePoint Online within a 211-second timeframe.",
+      "event_count": 6,
+      "first_event": "2026-01-14T11:11:39.3773474Z",
+      "last_event": "2026-01-14T11:15:11.0981858Z",
+      "initiator": "mohamed.yasser@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "197.36.49.175"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 211,
+        "correlation_ids": [
+          "52855a82-9352-411d-b8fc-73ad7331e5ff",
+          "9e5eadff-d81e-4889-9eda-9b6e510fd908",
+          "f247b51a-7016-4359-bc0e-d9725d2c3f90",
+          "55d442cb-bdbd-4ef2-904a-294a3c6e6e79",
+          "2de3eca1-503c-6000-5040-de3a5b1c188f"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "swathi.jyothula@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to OfficeHome from Karwan, Telangana, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:15:00.5226987Z",
+      "last_event": "2026-01-14T11:15:00.5226987Z",
+      "initiator": "swathi.jyothula@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2401:4900:1cb2:e0f0:398f:31cd:4a93:e08a"
+        ],
+        "device_info": "YH1103076LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "d3b2badf-42e9-4fca-8b33-8abb87577539"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "sahelie.chakravarty@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to One Outlook Web from Moosapet, Telangana, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:15:00.2445369Z",
+      "last_event": "2026-01-14T11:15:00.2445369Z",
+      "initiator": "sahelie.chakravarty@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2409:40f0:102c:b3b9:45c2:e872:cec2:230b"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "0a289edb-b167-01eb-3961-3dd360e3308c"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "more.prashant@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Microsoft Office from Pune, Maharashtra, IN, with MFA, within a 71-second timeframe.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:13:42.6520144Z",
+      "last_event": "2026-01-14T11:14:54.2108234Z",
+      "initiator": "more.prashant@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "103.153.166.202"
+        ],
+        "device_info": "YPH1101013LT (Windows10, IE 10.0)",
+        "time_delta_seconds": 71,
+        "correlation_ids": [
+          "d1b45e83-c7fb-4cd0-816c-7823c2a4a8be",
+          "f5b1b514-2246-4d90-bde4-7b91ee519cbd"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Application Without MFA",
+      "user": "archana.mali@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Successful sign-in to Outsystem_Timesheet (a cloud application) from Indore, Madhya Pradesh, IN, without multi-factor authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:14:53.938088Z",
+      "last_event": "2026-01-14T11:14:53.938088Z",
+      "initiator": "archana.mali@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Successful Sign-in (No MFA)",
+        "ip_addresses": [
+          "2405:201:300a:82d9:f4d6:7f31:2520:5929"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f0a7af4a-fccc-42e4-aa7b-9a47223aa0ad"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "rajkumar.gehlot@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from New Delhi, Delhi, IN, with MFA, within a 15-second timeframe.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:14:33.8610444Z",
+      "last_event": "2026-01-14T11:14:49.4008021Z",
+      "initiator": "rajkumar.gehlot@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "125.23.93.22"
+        ],
+        "device_info": "YI1015531LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 15,
+        "correlation_ids": [
+          "2651722b-626a-4698-9633-ecc31beb824e",
+          "95a55253-f864-4e11-b89a-880d76b1feb9"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "sharath.mamidala@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to cloud applications (Office 365 SharePoint Online, SharePoint Online Web Client Extensibility) from Sanand, Gujarat, IN, without multi-factor authentication.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:13:18.2770745Z",
+      "last_event": "2026-01-14T11:14:27.9828141Z",
+      "initiator": "sharath.mamidala@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "111.93.228.162"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 69,
+        "correlation_ids": [
+          "16e6eca1-50de-b000-1032-cc8185997f49",
+          "dc438026-2342-4d2c-996c-2916b0f57dc1",
+          "0ee6eca1-e049-6000-5040-d6b450fe5ddd",
+          "f4aa8255-0e70-4500-a0f0-6812c0cbfccf"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Application Without MFA",
+      "user": "jayanth.kadapatinti@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Successful sign-in to Outsystem_Timesheet (a cloud application) from Bamboos (Hyderabad), Telangana, IN, without multi-factor authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:14:21.205596Z",
+      "last_event": "2026-01-14T11:14:21.205596Z",
+      "initiator": "jayanth.kadapatinti@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Successful Sign-in (No MFA)",
+        "ip_addresses": [
+          "49.205.248.117"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "55f24265-e00d-4ade-99ab-4598ed9924a6"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Application Without MFA",
+      "user": "atul.gautam@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Successful sign-in to Office365 Shell WCSS-Client (a cloud application) from New Delhi, Delhi, IN, without multi-factor authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:14:16.7398563Z",
+      "last_event": "2026-01-14T11:14:16.7398563Z",
+      "initiator": "atul.gautam@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Successful Sign-in (No MFA)",
+        "ip_addresses": [
+          "125.23.93.22"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "425e3caa-b075-48dc-ab9b-6f9bbaec9406"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "vikram.chavan@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Microsoft Authentication Broker from Thathawade (Dattwadi), Maharashtra, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:14:15.2926105Z",
+      "last_event": "2026-01-14T11:14:15.2926105Z",
+      "initiator": "vikram.chavan@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2402:e280:3e66:1d6:a1d9:1687:30ca:54d9"
+        ],
+        "device_info": "YPH1007344LT (Windows10, Edge 18.19044)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "5401a6e4-3b0b-49bf-be42-d76741aededf"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "parul.pardhal@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Thathawade (Dattwadi), Maharashtra, IN, with MFA, within an 85-second timeframe.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:12:41.8840751Z",
+      "last_event": "2026-01-14T11:14:07.3716846Z",
+      "initiator": "parul.pardhal@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:52fd:49ac:782c:85f5:7a71:e254"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 85,
+        "correlation_ids": [
+          "2793d379-d3ff-4655-b990-56bb9dae2e05",
+          "e0e62edd-9c37-4ae2-b762-f55f2a135b77",
+          "99e40986-9427-46fa-af9c-bf01430265f9",
+          "38f4162c-58d8-4d03-8ff6-432f2248d676"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "anjali.sharma@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from Kasarwadi, Maharashtra, IN, with MFA, within a 67-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:12:59.8592292Z",
+      "last_event": "2026-01-14T11:14:07.3004763Z",
+      "initiator": "anjali.sharma@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "122.167.115.142"
+        ],
+        "device_info": "YP1009615LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 67,
+        "correlation_ids": [
+          "ae72e5ab-b6ba-40c5-af8f-b0222da5c013",
+          "d6528cbf-dd3c-42f7-a133-315a79c7fbd0",
+          "a10884db-7017-4fe0-9604-862c997072d9"
+        ]
+      }
+    },
+    {
+      "title": "Sign-ins from Multiple Different IPs within Short Timeframe",
+      "user": "shivam.bharucha@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Geographic Anomaly",
+      "description": "Successful sign-ins from two different IP addresses (Mumbai and Kothrud, Maharashtra) within a 76-second timeframe. Kothrud is a locality in Pune, Maharashtra, indicating different cities/states in the same day.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:12:46.9321718Z",
+      "last_event": "2026-01-14T11:14:03.3187467Z",
+      "initiator": "shivam.bharucha@yash.com",
+      "confidence_score": 65,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "27.107.64.154",
+          "203.199.133.30"
+        ],
+        "device_info": "YP1103012LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 76,
+        "correlation_ids": [
+          "b3bd8a45-e4b6-451e-8aa2-d8cca26869ea",
+          "82b5bf4e-f6ca-4cfc-9053-2e499f4a17f0",
+          "bc387e04-6da0-4bbc-952e-93c1f412b639"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "shivam.bharucha@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from different locations without multi-factor authentication.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:12:46.9321718Z",
+      "last_event": "2026-01-14T11:14:03.3187467Z",
+      "initiator": "shivam.bharucha@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "27.107.64.154",
+          "203.199.133.30"
+        ],
+        "device_info": "YP1103012LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 76,
+        "correlation_ids": [
+          "b3bd8a45-e4b6-451e-8aa2-d8cca26869ea",
+          "82b5bf4e-f6ca-4cfc-9053-2e499f4a17f0",
+          "bc387e04-6da0-4bbc-952e-93c1f412b639"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location, Different Applications",
+      "user": "nagavvss.kumar@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Chennai, Tamil Nadu, IN, with MFA, accessing My Signins, Microsoft Account Controls V2, OfficeHome, and One Outlook Web within a 115-second timeframe.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:12:05.7580919Z",
+      "last_event": "2026-01-14T11:14:01.4482304Z",
+      "initiator": "nagavvss.kumar@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "163.116.214.93"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 115,
+        "correlation_ids": [
+          "8e6868ad-07ee-442c-8d26-68d5e998d408",
+          "142bceb4-70d8-4f58-b7e7-e8eba48a4569",
+          "0662a5dd-776f-4120-bcdf-1f8abf742c00",
+          "fd25dd92-47a5-56f5-60d3-9334820fb7e7"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "ajeet.kumar@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Outsystem_Timesheet from Gurgaon, Haryana, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:13:53.7821727Z",
+      "last_event": "2026-01-14T11:13:53.7821727Z",
+      "initiator": "ajeet.kumar@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2401:4900:188b:ca39:d437:a9d9:b578:9cff"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "a52fb63b-defd-42e8-9c06-694fd89f5e95"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "waad.elqurashy@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Office365 Shell WCSS-Client from Bayrut, Beyrouth, LB, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:13:50.7000613Z",
+      "last_event": "2026-01-14T11:13:50.7000613Z",
+      "initiator": "waad.elqurashy@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "194.126.138.52"
+        ],
+        "device_info": "DESKTOP-J9A9V48 (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "3ea53381-ac7a-47b4-b2cd-b522f2aa7e5f"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location, Different Applications",
+      "user": "parikh.nikhil@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Padaliya Bajrang, Madhya Pradesh, IN, with MFA, accessing Office365 Shell WCSS-Client and SharePoint Online Web Client Extensibility within a 67-second timeframe.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:12:33.4273723Z",
+      "last_event": "2026-01-14T11:13:41.1163212Z",
+      "initiator": "parikh.nikhil@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "49.43.4.53"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 67,
+        "correlation_ids": [
+          "435d2b03-5d5a-4133-ad8b-899f12de06b9",
+          "d81af5a7-85bf-47b1-b2c7-27d60aac5e27",
+          "43adb44f-b477-4faa-bd61-d88c23a11d49",
+          "8a52867e-a374-4f95-b12d-c2288a13aa95"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "amel.shehata@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from Al Qahirah, Al Qahirah, EG, with MFA, within a 100-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:11:52.168364Z",
+      "last_event": "2026-01-14T11:13:32.5761487Z",
+      "initiator": "amel.shehata@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "197.36.49.175"
+        ],
+        "device_info": "Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 100,
+        "correlation_ids": [
+          "be8f0b4a-8245-423b-bb50-3580c212be23",
+          "4f93a4e7-6d38-4b69-a556-9577f2f68acd",
+          "035e8d15-9a35-489b-9ac3-ac0d9df5d199"
+        ]
+      }
+    },
+    {
+      "title": "Impossible Travel: Sign-ins from Geographically Distant Locations",
+      "user": "sumit.j@yash.com",
+      "severity": "CRITICAL",
+      "alert_type": "Impossible Travel",
+      "description": "Sign-ins detected from Dewas, Madhya Pradesh, IN, and Mumbai, Maharashtra, IN, within approximately 10 seconds. The distance between these locations makes this travel impossible in such a short timeframe, indicating a potential compromised account.",
+      "event_count": 5,
+      "first_event": "2026-01-14T11:11:00.3054132Z",
+      "last_event": "2026-01-14T11:13:28.967933Z",
+      "initiator": "sumit.j@yash.com",
+      "confidence_score": 95,
+      "details": {
+        "operation": "Impossible Travel Detected",
+        "ip_addresses": [
+          "49.249.2.30",
+          "14.143.131.134"
+        ],
+        "device_info": "YIBTC1102378LT (Windows10, Edge 143.0.0), Windows10 (Chrome 143.0.0)",
+        "time_delta_seconds": 10,
+        "correlation_ids": [
+          "1a07e71c-79c7-4fd5-b3f3-40544eba7e0b",
+          "e83e73a1-2e74-4f68-8cc2-559f27c6c1b0",
+          "0cacdb31-157c-4995-96fe-c6b7e2d1cd81",
+          "a549bea1-4842-4aac-85c1-de6977a4652f",
+          "53bf35c1-7d80-405c-9f9f-a0761e8f3a17"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location, Different Applications",
+      "user": "rishi.rajput@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Thathawade (Dattwadi), Maharashtra, IN, with MFA, accessing Office 365 SharePoint Online, Office365 Shell WCSS-Client, and SharePoint Online Web Client Extensibility within a 99-second timeframe.",
+      "event_count": 5,
+      "first_event": "2026-01-14T11:11:45.5747804Z",
+      "last_event": "2026-01-14T11:13:25.1661456Z",
+      "initiator": "rishi.rajput@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2409:40c2:116e:af47:2132:96b9:e6d1:a173"
+        ],
+        "device_info": "YP1102639LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 99,
+        "correlation_ids": [
+          "fae5eca1-c081-6000-5040-de5d3c336e8b",
+          "535cef1e-c8ed-4d32-9095-e7f2ab561236",
+          "160e893d-d7c3-4b37-9f98-0a618445e31f",
+          "6556d72a-1047-4819-84b7-5cfa3038b1ff",
+          "177b1d22-3be2-4585-8de1-a594b282a1a4"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location, Different Applications",
+      "user": "anil.kesiraju@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins from Miyapur (Hyderabad), Telangana, IN, with MFA, accessing Office 365 SharePoint Online, SharePoint Online Web Client Extensibility, and Office365 Shell WCSS-Client within a 154-second timeframe.",
+      "event_count": 6,
+      "first_event": "2026-01-14T11:10:40.1289485Z",
+      "last_event": "2026-01-14T11:13:14.6005717Z",
+      "initiator": "anil.kesiraju@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "124.123.137.63"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 154,
+        "correlation_ids": [
+          "d9e5eca1-20a5-6000-5040-d2828713c310",
+          "c0a66161-936b-47e5-a4f5-f93038dff1aa",
+          "9f39ad4b-61a3-4eaf-abba-04e85f284e1f",
+          "6eda19ee-a9ae-47c7-a638-ca10d36179dd",
+          "cb376102-c0f3-49d7-837a-13d47868125d",
+          "d386a3ab-5123-4a91-a119-e80d3da4fc49"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "swati.mamgain@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from Ram Nagar, Delhi, IN, with MFA, within a 42-second timeframe.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:12:31.6603295Z",
+      "last_event": "2026-01-14T11:13:13.8803646Z",
+      "initiator": "swati.mamgain@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "223.190.85.6"
+        ],
+        "device_info": "YG1601194LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 42,
+        "correlation_ids": [
+          "77c6b806-8f9e-4e77-9495-a1d6c03b0cc5",
+          "3f2168a8-b98b-41f0-8462-be1a72f6a641"
+        ]
+      }
+    },
+    {
+      "title": "Sign-ins from Multiple Different IPs within Short Timeframe",
+      "user": "sanskar.pukale@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Geographic Anomaly",
+      "description": "Successful sign-ins from two different IP addresses (Mumbai and Pune, Maharashtra) within a 20-second timeframe. This indicates different cities/states in the same day.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:12:53.0925983Z",
+      "last_event": "2026-01-14T11:13:13.8055179Z",
+      "initiator": "sanskar.pukale@yash.com",
+      "confidence_score": 65,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "27.107.64.214",
+          "14.141.235.38"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 20,
+        "correlation_ids": [
+          "0600794f-ae6d-44ed-99b5-5875583ef0d1",
+          "fffa92bc-f1af-4976-a049-54af191c3b30",
+          "0019624e-11a7-42e4-b093-5b6854a19290"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "sanskar.pukale@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from different locations without multi-factor authentication.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:12:53.0925983Z",
+      "last_event": "2026-01-14T11:13:13.8055179Z",
+      "initiator": "sanskar.pukale@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "27.107.64.214",
+          "14.141.235.38"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 20,
+        "correlation_ids": [
+          "0600794f-ae6d-44ed-99b5-5875583ef0d1",
+          "fffa92bc-f1af-4976-a049-54af191c3b30",
+          "0019624e-11a7-42e4-b093-5b6854a19290"
+        ]
+      }
+    },
+    {
+      "title": "Conditional Access Policy Violation - Session Expired",
+      "user": "subbareddy.sana@yash.com",
+      "severity": "HIGH",
+      "alert_type": "Policy Violation",
+      "description": "A sign-in attempt failed because the session expired or was invalid due to Conditional Access sign-in frequency checks.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:13:07.5171194Z",
+      "last_event": "2026-01-14T11:13:07.5171194Z",
+      "initiator": "subbareddy.sana@yash.com",
+      "confidence_score": 75,
+      "details": {
+        "operation": "Failed Sign-in (CA Policy)",
+        "ip_addresses": [
+          "27.6.183.121"
+        ],
+        "device_info": "Windows10 (Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "50628b98-598f-4c39-908a-45113eeb3ad1"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "rathna.kireeti@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from Gachibowli, Telangana, IN, with MFA, within a 39-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:12:21.8744067Z",
+      "last_event": "2026-01-14T11:13:00.9257838Z",
+      "initiator": "rathna.kireeti@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2405:201:c00b:2102:d580:d5d7:1903:825"
+        ],
+        "device_info": "YH1011735LT1 (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 39,
+        "correlation_ids": [
+          "c22fc712-4efb-42c5-bc4c-129de6888f06",
+          "65ed6822-c230-4ff0-a427-db9c527abd02",
+          "7705a957-c7ad-471b-acd3-e2da1e81f440"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "pankaj.dashetwar@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to cloud applications (Microsoft Account Controls V2, My Signins) from Nagpur, Maharashtra, IN, without multi-factor authentication.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:12:14.2323118Z",
+      "last_event": "2026-01-14T11:12:30.179913Z",
+      "initiator": "pankaj.dashetwar@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "49.36.33.141"
+        ],
+        "device_info": "YPH1101433LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 15,
+        "correlation_ids": [
+          "2cd9123c-d68d-4013-b039-de578151218b",
+          "03d0673b-db69-4aeb-869e-c78b4c0e51af"
+        ]
+      }
+    },
+    {
+      "title": "High Volume of Successful Logins from Same Location, Different Applications",
+      "user": "navya.vullingala@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "High volume of successful sign-ins (13 events) from Anakapalle, Andhra Pradesh, IN, with MFA, accessing Office365 Shell WCSS-Client and SharePoint Online Web Client Extensibility within a 101-second timeframe.",
+      "event_count": 13,
+      "first_event": "2026-01-14T11:10:45.7068713Z",
+      "last_event": "2026-01-14T11:12:27.2916591Z",
+      "initiator": "navya.vullingala@yash.com",
+      "confidence_score": 15,
+      "details": {
+        "operation": "High Volume Successful Sign-ins",
+        "ip_addresses": [
+          "117.252.52.184"
+        ],
+        "device_info": "YH1102829LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 101,
+        "correlation_ids": [
+          "3a267341-a0b5-42b9-b0ea-cec1c09d4eee",
+          "615565e6-53eb-42f4-aae5-586ded211515",
+          "a7e6318e-42e8-4305-8eab-121d3a06ddc9",
+          "7c1c2b80-74a8-4bd4-819c-d7428ddc1bbf",
+          "950ba96d-4552-4d5e-b10b-09858d53bc12",
+          "0c37c860-cb88-4af3-ab17-3c4225eb2430",
+          "421a8a80-e918-4efa-8ca1-e083f4904feb",
+          "10c39700-5715-4e52-bb98-3c0e91fc318f",
+          "89ca8f1e-ed2e-4d62-a2dc-93206a479b7e",
+          "b9eb55d4-4757-4e0d-aac1-bc8658a03898",
+          "ee3da63c-d50e-497f-b0fb-74b4a712a363",
+          "c55f103e-df29-4b46-8ad9-df75e375b0a6",
+          "0c1a26a6-e173-46cd-91c1-23e9fdfc158c"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "madhusudhan.c@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from Karwan, Telangana, IN, with MFA, within a 98-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:10:43.6264822Z",
+      "last_event": "2026-01-14T11:12:21.9891141Z",
+      "initiator": "madhusudhan.c@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2409:408c:1e92:ab09:f940:e31b:146c:e2a9"
+        ],
+        "device_info": "YH1101527LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 98,
+        "correlation_ids": [
+          "efb27bcc-df28-4c55-b6ba-1e0ce74ab88c",
+          "70f87c48-0e67-4672-8d5e-426746bae396",
+          "2010fd0b-b2c2-48c3-8caf-d1cb1588b822"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Logins (Duplicate Events)",
+      "user": "shashidhar.vanga@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from IN, with MFA, occurring within 2 seconds, likely duplicate log entries.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:12:13.3744041Z",
+      "last_event": "2026-01-14T11:12:15.5377435Z",
+      "initiator": "shashidhar.vanga@yash.com",
+      "confidence_score": 5,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:4948:2505:a083:7753:d3ef:c4e1"
+        ],
+        "device_info": "YH1011816LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 2,
+        "correlation_ids": [
+          "7d6dae6d-f3a7-4e32-8f5f-f71ee0fdfa8b",
+          "c7a2ba92-494e-4b90-a418-50fc35c588e4"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "dinesh.natarajan@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to SharePoint Online Web Client Extensibility from As Sulaymaniyah, As Sulaymaniyah, IQ, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:12:14.0733659Z",
+      "last_event": "2026-01-14T11:12:14.0733659Z",
+      "initiator": "dinesh.natarajan@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "185.95.186.2"
+        ],
+        "device_info": "YDUB7000592LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "562bdc17-9341-4666-b964-f4f433695514"
+        ]
+      }
+    },
+    {
+      "title": "Impossible Travel: Sign-ins from Geographically Distant Locations",
+      "user": "somya.misra@yash.com",
+      "severity": "CRITICAL",
+      "alert_type": "Impossible Travel",
+      "description": "Sign-ins detected from New Delhi, Delhi, IN, and Mumbai, Maharashtra, IN, within approximately 11 seconds. The distance between these locations makes this travel impossible in such a short timeframe, indicating a potential compromised account.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:11:57.2935144Z",
+      "last_event": "2026-01-14T11:12:12.7141777Z",
+      "initiator": "somya.misra@yash.com",
+      "confidence_score": 95,
+      "details": {
+        "operation": "Impossible Travel Detected",
+        "ip_addresses": [
+          "125.23.93.22",
+          "14.194.129.210"
+        ],
+        "device_info": "YISC1102470LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 11,
+        "correlation_ids": [
+          "54b76c8c-acc5-4c8b-901d-4339d925387a",
+          "98ead678-5a46-4a85-ab24-37710f689e43",
+          "3bbbb0d5-996e-411e-b2f8-ae7a02c64f58"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Applications Without MFA",
+      "user": "somya.misra@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from different locations without multi-factor authentication.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:11:57.2935144Z",
+      "last_event": "2026-01-14T11:12:12.7141777Z",
+      "initiator": "somya.misra@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Multiple Successful Sign-ins (No MFA)",
+        "ip_addresses": [
+          "125.23.93.22",
+          "14.194.129.210"
+        ],
+        "device_info": "YISC1102470LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 15,
+        "correlation_ids": [
+          "54b76c8c-acc5-4c8b-901d-4339d925387a",
+          "98ead678-5a46-4a85-ab24-37710f689e43",
+          "3bbbb0d5-996e-411e-b2f8-ae7a02c64f58"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "ashok.nimmagadda@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Microsoft Authentication Broker from Sanand, Gujarat, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:12:02.6408965Z",
+      "last_event": "2026-01-14T11:12:02.6408965Z",
+      "initiator": "ashok.nimmagadda@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "111.93.228.162"
+        ],
+        "device_info": "YH1002719LT2 (Windows10, Edge 18.26100)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "4b720183-0d58-441b-8411-c62de013ddde"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Application Without MFA",
+      "user": "sasi.katta@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Successful sign-in to Microsoft Teams Web Client (a cloud application) from Rajkot, Gujarat, IN, without multi-factor authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:11:50.2056266Z",
+      "last_event": "2026-01-14T11:11:50.2056266Z",
+      "initiator": "sasi.katta@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Successful Sign-in (No MFA)",
+        "ip_addresses": [
+          "123.63.116.121"
+        ],
+        "device_info": "Windows10 (Edge 86.0.622)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "2fb70624-9fc6-4d86-abf6-87f100a47c11"
+        ]
+      }
+    },
+    {
+      "title": "Routine Successful Login with MFA",
+      "user": "verma.aman@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Successful sign-in to Microsoft Teams Web Client from Chhindwara, Madhya Pradesh, IN, with MFA.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:11:32.361703Z",
+      "last_event": "2026-01-14T11:11:32.361703Z",
+      "initiator": "verma.aman@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Successful Sign-in",
+        "ip_addresses": [
+          "2409:40e3:30ae:717d:646a:bb6f:169e:fd5a"
+        ],
+        "device_info": "MacOs (Safari 26.2)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "d0c9447e-a101-4523-8536-43b997f1a4db"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Successful Logins from Same Location",
+      "user": "sarita.lad@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Routine Authentication",
+      "description": "Multiple successful sign-ins to Office365 Shell WCSS-Client from IN, with MFA, within a 43-second timeframe.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:10:40.9867969Z",
+      "last_event": "2026-01-14T11:11:24.8871121Z",
+      "initiator": "sarita.lad@yash.com",
+      "confidence_score": 10,
+      "details": {
+        "operation": "Multiple Successful Sign-ins",
+        "ip_addresses": [
+          "2401:4900:52f9:3b59:b130:87ec:4a99:ba2b"
+        ],
+        "device_info": "YISC1601949LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 43,
+        "correlation_ids": [
+          "2df61eaa-22af-4708-ae7d-1f5ec6531d16",
+          "3eb96205-f445-4c6a-a3aa-aa8e58a18e10",
+          "57ab30a6-b3b2-4d47-91fd-774e38177726"
+        ]
+      }
+    },
+    {
+      "title": "Access to Cloud Application Without MFA",
+      "user": "pallavi.brale@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Policy Violation",
+      "description": "Successful sign-in to Office365 Shell WCSS-Client (a cloud application) from Begampura, Gujarat, IN, without multi-factor authentication.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:11:17.1016736Z",
+      "last_event": "2026-01-14T11:11:17.1016736Z",
+      "initiator": "pallavi.brale@yash.com",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Successful Sign-in (No MFA)",
+        "ip_addresses": [
+          "152.59.47.82"
+        ],
+        "device_info": "YISC1103027LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "868e5fc2-d9d2-4977-b6a1-663020ac0c87"
+        ]
+      }
+    },
+    {
+      "title": "Impossible Travel: Sign-ins from Geographically Distant Locations",
+      "user": "jai.raikwar@yash.com",
+      "severity": "CRITICAL",
+      "alert_type": "Impossible Travel",
+      "description": "Sign-ins detected from Mumbai, Maharashtra, IN, and Dewas, Madhya Pradesh, IN, within approximately 7 seconds. The distance between these locations makes this travel impossible in such a short timeframe, indicating a potential compromised account.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:10:41.2314099Z",
+      "last_event": "2026-01-14T11:11:10.8076038Z",
+      "initiator": "jai.raikwar@yash.com",
+      "confidence_score": 95,
+      "details": {
+        "operation": "Impossible Travel Detected",
+        "ip_addresses": [
+          "14.143.131.134",
+          "49.249.2.30"
+        ],
+        "device_info": "YI1100128LT (Windows10, Edge 143.0.0)",
+        "time_delta_seconds": 7,
+        "correlation_ids": [
+          "5b636a5e-f536-4734-ba40-fe7acb834dbc",
+          "a7740f21-d8a7-47c7-9b0c-ee4734afdaeb",
+          "a0d699c6-377a-4c24-a8d7-d700df6d87a9"
+        ]
+      }
+    },
+    {
+      "title": "Single Failed Login from Risky Location to Sensitive App",
+      "user": "akhilesh.sodhani@yash.com",
+      "severity": "HIGH",
+      "alert_type": "Credential Attack / Risky Access",
+      "description": "A single failed login attempt to Microsoft Azure CLI (a privileged resource) from Luxembourg, Luxembourg, LU, using an unknown device, due to invalid credentials. This indicates a potential credential attack or unauthorized access attempt from a high-risk location.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:11:04.3431336Z",
+      "last_event": "2026-01-14T11:11:04.3431336Z",
+      "initiator": "akhilesh.sodhani@yash.com",
+      "confidence_score": 85,
+      "details": {
+        "operation": "Failed Sign-in (Invalid Credentials)",
+        "ip_addresses": [
+          "2605:6400:c077:b5f3:426c:766f:bfba:ade8"
+        ],
+        "device_info": "Unknown Device",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "e40b5294-5961-4135-a5ca-3bdef13d9721"
+        ]
+      }
+    }
+  ]
+}
+```

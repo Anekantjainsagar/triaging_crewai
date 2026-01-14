@@ -1,0 +1,1122 @@
+================================================================================
+SOPHOS ENDPOINT LOG ANALYSIS
+================================================================================
+
+### USER ENDPOINT EVENTS ###
+
+
+[USER: parth.govekar]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:31.557Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1101573LT
+      IP: 192.168.0.103
+      Message: 'https://ad.doubleclick.net/ddm/activity/src=8406097;type=ofco;cat=lp_uniq;u1=IN;u2=en-GB;u6=CMC;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1768389424857' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 966338db-e7e1-4256-9937-6dfe7e5f4b2c
+
+
+[USER: mehra.sagun]
+Total Events: 4
+Time Span: 38 seconds
+
+  [WEB] - 4 events:
+    • 2026-01-14T11:17:30.391Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YI1015079LT
+      IP: 10.7.100.117
+      Message: 'https://pixel.mediaiqdigital.com/pixel' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: cc880c08-da04-44ac-8a44-4b9c92033d3b
+    • 2026-01-14T11:17:25.049Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YI1015079LT
+      IP: 10.7.100.117
+      Message: 'https://13.107.213.68/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: e298172b-fc16-471b-aa42-0204775cc75c
+    • 2026-01-14T11:16:51.633Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YI1015079LT
+      IP: 10.7.100.117
+      Message: 'https://di.rlcdn.com/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 203f4c73-4b93-4cb2-8a15-88be24aa1f69
+    • 2026-01-14T11:16:51.612Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YI1015079LT
+      IP: 10.7.100.117
+      Message: 'https://api.ipify.org/' blocked due to tag 'MALICIOUS'
+      Original UID: 217e7c71-0971-442e-b4fa-6d47f38c3698
+
+
+[USER: Swarnima Jain]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:17:28.847Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YI1012383LT
+      IP: 192.168.29.164
+      Message: Controlled application detected: Microsoft Office SelfSign Certificate Tool (Office suite). Path: "C:\Program Files\Microsoft Office\root\Office16\SELFCERT.EXE"
+      Original UID: af5a7440-93ab-4485-b36b-fdea6a16ed8f
+
+
+[USER: Ayush Rathod]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:28.361Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YICIT1009115LT
+      IP: 192.168.1.100
+      Message: 'https://204.79.197.203/' blocked due to category 'Hacking'
+      Original UID: 7762b748-8e0c-4711-b461-1227aeaa3ce8
+
+
+[USER: lokesh.muthu]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:17:28.358Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YPH1100289LT
+      IP: 192.168.29.80
+      Message: Controlled application detected: TCPIP Finger (System tool). Path: "C:\Windows\System32\finger.exe"
+      Original UID: ed515c73-0114-4eb9-acf0-2a647cfefc49
+
+
+[USER: sneha.vairagade]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:28.33Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1103204LT
+      IP: 192.168.1.33
+      Message: 'https://d.adroll.com/onp/ATZA2SSACRCA7GXYO5DVON/UGEI6X2TY5CX3KC2SS35QE' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 9ea185e6-3cfe-4688-8c43-63b93096ac65
+
+
+[USER: kapil.shinde]
+Total Events: 1
+
+  [PROTECTION] - 1 events:
+    • 2026-01-14T11:17:28.094Z
+      Severity: LOW
+      Action: Event::Endpoint::SavScanComplete
+      Threat: N/A
+      Device: YP1100722LT
+      IP: 10.8.100.11
+      Message: Scan 'Sophos Central Scheduled Scan' completed
+      Original UID: f6a9ca78-6c77-4db9-88e7-5466ce1e656a
+
+
+[USER: sawankumar.makwana]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:27.435Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1602463LT
+      IP: 10.9.16.160
+      Message: 'https://www.cricbuzz.com/' blocked due to category 'Sports'
+      Original UID: c8720d15-417d-4de7-a84e-d3ee79a8eb18
+
+
+[USER: simon.wadhwani]
+Total Events: 2
+Time Span: 0 seconds
+
+  [WEB] - 2 events:
+    • 2026-01-14T11:17:27.005Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YICIT1100979LT
+      IP: 192.168.1.4
+      Message: 'https://c.msn.com/c.gif' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 09a6a1c8-14fc-4313-8613-ff653cd07c7f
+    • 2026-01-14T11:17:26.988Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YICIT1100979LT
+      IP: 192.168.1.4
+      Message: 'https://srtb.msn.com/' blocked due to category 'Hacking'
+      Original UID: 97e94b97-8382-4510-a221-6cfb35519514
+
+
+[USER: varunkumar.n]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:26.701Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YB1100439LT
+      IP: 192.168.1.16
+      Message: 'https://accounts.google.com/ListAccounts' blocked due to tag 'GMAIL BLOCK'
+      Original UID: f310abcb-3f41-4331-bd56-ef08b262dc8f
+
+
+[USER: new pc]
+Total Events: 10
+Time Span: 31 seconds
+
+  [PUA] - 10 events:
+    • 2026-01-14T11:17:26.434Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$EXb7640.7458\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: 793dc06a-1a45-4acd-b8f3-5b03656b5c03
+    • 2026-01-14T11:17:26.412Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$EXb7640.7458\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x86 Multilingual\Crack\Patch.exe'
+      Original UID: 362ca0d9-e381-4d55-9111-8a80df711d94
+    • 2026-01-14T11:16:54.689Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$DRb15224.38347\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: a2e59109-c9fb-41ca-8a81-1b5d787e197e
+    • 2026-01-14T11:16:54.667Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$DRb7640.4669\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: 0b57efd2-25a8-46cc-9656-870f1c2f7bc8
+    • 2026-01-14T11:16:54.646Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$EXb13352.31919\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x86 Multilingual\Crack\Patch.exe'
+      Original UID: d7d6205d-3965-4c95-b605-2a7af554c995
+    • 2026-01-14T11:16:54.627Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$EXb13352.31919\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: 8374efbf-f4f9-4e92-8333-d2f5224f93be
+    • 2026-01-14T11:16:54.605Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$EXb13352.43381\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x86 Multilingual\Crack\Patch.exe'
+      Original UID: d985dfd9-9b6a-473f-8056-07394fbab7d3
+    • 2026-01-14T11:16:54.582Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$DRb3076.48131\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: 397617bb-cbf4-45af-bdc6-ce256181c74e
+    • 2026-01-14T11:16:54.557Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$EXb13352.43381\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: d9350532-f672-42cf-82db-dc0d9154544c
+    • 2026-01-14T11:16:54.534Z
+      Severity: LOW
+      Action: Event::Endpoint::CorePuaClean
+      Threat: Generic Patcher
+      Device: YDUB7000148LT
+      IP: 192.168.1.143
+      Message: PUA cleaned up: 'Generic Patcher' at 'C:\Users\new pc\AppData\Local\Temp\Rar$DRb7640.9449\Adobe_Acrobat_Pro_2023.001.20064\Adobe Acrobat Pro DC 2023.001.20064 x64 Multilingual\Crack\Patch.exe'
+      Original UID: 294610d9-6c22-4e27-b3a3-64ce7f717fa9
+
+
+[USER: Kunal Diwakar Kulkarni]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:25.844Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP1011807LT01
+      IP: 192.168.29.250
+      Message: 'https://13.107.213.68/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: c7112df4-6e5f-4ea4-bed8-997eab339fca
+
+
+[USER: suryaprakash.thakur]
+Total Events: 1
+
+  [UPDATING] - 1 events:
+    • 2026-01-14T11:17:25.793Z
+      Severity: LOW
+      Action: Event::Endpoint::UpdateSuccess
+      Threat: N/A
+      Device: YP1101112LT
+      IP: 192.168.0.215
+      Message: Update succeeded
+      Original UID: 2c51e7bb-6268-4cc3-aafe-fb6fc9b738b6
+
+
+[USER: mahesh.ahirwar]
+Total Events: 1
+
+  [PROTECTION] - 1 events:
+    • 2026-01-14T11:17:24.728Z
+      Severity: LOW
+      Action: Event::Endpoint::SavScanComplete
+      Threat: N/A
+      Device: YISC1016380LT
+      IP: 10.4.8.241
+      Message: Scan 'Sophos Central Scheduled Scan' completed
+      Original UID: 9a73d018-3638-4319-a1fa-72026a3a5a58
+
+
+[USER: divyaant.jain]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:22.09Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YISC1101320LT1
+      IP: 10.4.8.45
+      Message: 'https://platform.openai.com/docs/pricing' blocked due to tag 'ChatGPT'
+      Original UID: e78b3e8a-2c2c-4198-bc4a-20cb959881e7
+
+
+[USER: Nilesh.L.Bhise]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:19.234Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP1007079LT
+      IP: 10.8.100.54
+      Message: 'https://204.79.197.203/' blocked due to category 'Hacking'
+      Original UID: dd61aa16-89c0-4682-afe4-7d9753c85120
+
+
+[USER: Yogita Amol Wasnik]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:17.365Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP1012348LT
+      IP: 192.168.43.20
+      Message: 'https://stats.g.doubleclick.net/g/collect' blocked due to category 'Spam URLs'
+      Original UID: 1fa4fc92-c13d-4c96-9f71-acbd4d0a3e43
+
+
+[USER: ashutosh.soni]
+Total Events: 8
+Time Span: 26 seconds
+
+  [WEB] - 8 events:
+    • 2026-01-14T11:17:14.665Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://sync.inmobi.com/oRTB' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 0c430964-cb28-48f4-adcf-2476f6c4c003
+    • 2026-01-14T11:17:09.306Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://ssum.casalemedia.com/usermatch' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 874b5675-7f52-43ce-9208-cacd477b21f6
+    • 2026-01-14T11:17:03.964Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://image8.pubmatic.com/AdServer/ImgSync' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 27f62945-b2fc-4b65-a3a0-ae3234e0fea9
+    • 2026-01-14T11:16:58.623Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://user-sync.fwmrm.net/ad/u' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 8753fc44-fb17-4cb6-97bb-f03c27b3a6d4
+    • 2026-01-14T11:16:53.261Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://ads.yieldmo.com/pbsync' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 0349af48-b926-4313-9efa-dc43f5733d43
+    • 2026-01-14T11:16:47.897Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://c1.adform.net/serving/cookie/match/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 3179b312-c13f-46b3-be25-e79922a9aa19
+    • 2026-01-14T11:16:47.874Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://eus.rubiconproject.com/usync.html' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 58c1e33f-8b5e-4fb6-abc0-e07abc40b164
+    • 2026-01-14T11:16:47.851Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101094LT
+      IP: 10.7.100.25
+      Message: 'https://us-u.openx.net/w/1.0/cm' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 68b503f1-bf6f-47e3-b35b-a1270a639688
+
+
+[USER: mondrati.venkat]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:17:14.199Z
+      Severity: MEDIUM
+      Action: Event::Endpoint::Application::Blocked
+      Threat: N/A
+      Device: YH1102875LT
+      IP: 192.168.1.21
+      Message: Controlled application blocked: Microsoft Powershell (System tool). Path: "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe"
+      Original UID: 8b05c1cd-da74-4cf6-86a5-b4c67e3559a7
+
+
+[USER: Ramesh Potharaju]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:13.694Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1000242LT
+      IP: 192.168.1.5
+      Message: 'https://204.79.197.203/' blocked due to category 'Hacking'
+      Original UID: 770d54a3-fcff-468f-987e-a86f9540f8f6
+
+
+[USER: kushagra.mallick]
+Total Events: 3
+Time Span: 0 seconds
+
+  [WEB] - 3 events:
+    • 2026-01-14T11:17:10.784Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101255LT
+      IP: 192.168.1.9
+      Message: 'https://pagead2.googlesyndication.com/activeview_ext' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 42bd09c3-33d3-430b-a9f2-ee2aad43c388
+    • 2026-01-14T11:17:10.75Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101255LT
+      IP: 192.168.1.9
+      Message: 'https://ade.googlesyndication.com/ddm/activity_ext/dc_pubid=2;dc_exteid=1303694812717357893;met=1;ecn1=1;etm1=0;eid1=11;acvw=sv%3D968%26v%3D20260111%26cb%3Dyw%26e%3D0%26nas%3D1%26sdk%3Db%26p%3D131,567,245,771%26cp%3D56,92,438,771%26tos%3D0,0,0,0,0%26mtos%3D0,0,0,0,0%26amtos%3D0,0,0,0,0%26mcvt%3D0%26ps%3D1265,2770%26scs%3D1280,720%26bs%3D1265,551%26vht%3D0%26mut%3D0%26a%3D0%26ft%3D0%26dft%3D0%26at%3D0%26dat%3D0%26as%3D0%26vpt%3D0%26gmm%3D4%26efpf%3D2%26nmt%3D0%26tcm%3D1%26bt%3D0%26pst%3D1%26dur%3D30000%26vmtime%3D1%26dvs%3D0%26dfvs%3D0%26dvpt%3D0%26is%3D33554707%26i0%3D33554707%26ic%3D33554706%26cs%3D33554706%26c%3D0.5%26mc%3D0.5%26nc%3D0.5%26mv%3D0%26nv%3D0%26lte%3D0.5%26ces%26avms%3Dgeo%26qi%3DYOYtcrEAzVtaVMhS%26psm%3D1%26psv%3D1%26psfv%3D0%26psa%3D0%26ptlt%3D12436250%26pngs%3D9,14,15%26veid%3Dfmd%3A1%26ssb%3D0,0,0,0,0,0,0,0,0,0,0%26co%3D6432172000%26tm%3D0%26tu%3D0;gv=atos%3D0,0,0,0,0%26avt%3D0%26davs%3D0%26dafvs%3D0%26ss%3D0.02%26t%3D1768388920413;dc_eps=AHas8cD_bk0AnLoLP72Iw_yf3zBmh-XXhB1N2I8c6c2fOH1Z9003lnm9BCEgsMNekGIIM7tm-Ow3ysDEsir05g' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: ca64b145-fe78-441c-b947-c0a2b3e8df5e
+    • 2026-01-14T11:17:10.717Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YIBTC1101255LT
+      IP: 192.168.1.9
+      Message: 'https://ad.doubleclick.net/ddm/trackimp/N1014188.279382BIDMANAGER_DFASIT/B34860509.437257892;dc_trk_aid=630463080;dc_trk_cid=248110827;dc_dbm_token=AOjeLNEAAAA6CjQKDAgAFQAAAAAdAAAAABIMCAAVAAAAAB0AAAAAIhQIssiXrVeoArHd-LsdsALo6vnoA0A7EIufNQguJwECx_VYtv0F9sM9znc=;ord=909387816;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1;dc_rui=1;dc_exteid=1303694812717357893;dc_av=536;dc_sk=1;dc_ctype=84;dc_ref=http://www.youtube.com/video/lUIjUhJqWO0;dc_eps=AHas8cBmqLq4kO2YmOQClY5AO9sIqzx_BCdFcUek7y80hh7JZQDs8KcncMFskMV23Z9nxbwhzQaOXAVVrt5ohg;dc_pubid=2;dc_btype=23;dc_ext_key=CjwKCAiAmp3LBhAkEiwAJM2JUNUnZp_zjMIBiA1OvfMzEfkBSifmYTH6E92SizOgtfEzirf-73JVyBoCJYAQAvD_BwE' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 0820f806-150a-4b02-af25-e68f6e6828f6
+
+
+[USER: pedakotaiah.r]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:10.718Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1016395LT
+      IP: 10.199.232.19
+      Message: 'https://accounts.google.com/ListAccounts' blocked due to tag 'GMAIL BLOCK'
+      Original UID: cca3a6a0-9d74-48ee-ae48-1e105191ecc1
+
+
+[USER: Kanneti Ekanath]
+Total Events: 5
+Time Span: 5 seconds
+
+  [WEB] - 5 events:
+    • 2026-01-14T11:17:10.363Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1011194LT1
+      IP: 192.168.1.5
+      Message: 'https://media3.giphy.com/media/v1.Y2lkPWZjZGU1NDk1NGFoa3ptaTBqY2hiM3Zldjhid2xubmg2ZHN0aGFtOGdscHlub3h2aCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/VYYvJjrH5VLV22iKpM/giphy_s.gif' blocked due to category 'Photo Searches'
+      Original UID: 9c79ccf7-f3f3-4dfd-baa6-1b73e9ed7a3e
+    • 2026-01-14T11:17:10.341Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1011194LT1
+      IP: 192.168.1.5
+      Message: 'https://media4.giphy.com/media/v1.Y2lkPWZjZGU1NDk1aXExZjB1cXJlZmNkMmE0OTk2NmZmbmk5NjF0dHFvdmw3bmt0b3FpdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BO7p37KdlUaXA5nhWO/giphy_s.gif' blocked due to category 'Photo Searches'
+      Original UID: 65c19042-9181-4c36-8b88-21029d063ca9
+    • 2026-01-14T11:17:05.013Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1011194LT1
+      IP: 192.168.1.5
+      Message: 'https://media2.giphy.com/media/v1.Y2lkPWZjZGU1NDk1NnRobXhleWdsaDdkZXkzOXV0M2ZvZjR5a3QwcjkxMDkyZTBpbGtqNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/E2ls5WrAuwgtB9galf/giphy_s.gif' blocked due to category 'Photo Searches'
+      Original UID: 583fd1e9-b2a7-45dc-b11d-6f03a454eb22
+    • 2026-01-14T11:17:04.989Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1011194LT1
+      IP: 192.168.1.5
+      Message: 'https://media0.giphy.com/media/v1.Y2lkPWZjZGU1NDk1OW11YnF0ZHJja2plb21sZGx4anZ0YjhyNGIwZW51YmhkZHlndTVqciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/yrdlxOLdkAHeoAqM4e/giphy_s.gif' blocked due to category 'Photo Searches'
+      Original UID: 11eff0f7-b460-49d5-b26b-8c77b7abfc4a
+    • 2026-01-14T11:17:04.969Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1011194LT1
+      IP: 192.168.1.5
+      Message: 'https://media1.giphy.com/media/v1.Y2lkPWZjZGU1NDk1Nms3eXE2dHB0d2VoN29pOHlvZmxiamE5dm1ibms1djd5NXpobTlpciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/OEr1SGJ7ZmKmyIxAGy/giphy_s.gif' blocked due to category 'Photo Searches'
+      Original UID: 25341473-2765-49ab-a3a7-e6c16ce41ff7
+
+
+[USER: charan.kattekola]
+Total Events: 4
+Time Span: 10 seconds
+
+  [WEB] - 4 events:
+    • 2026-01-14T11:17:10.199Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1002238LT1
+      IP: 172.20.10.3
+      Message: 'https://micro.rubiconproject.com/prebid/dynamic/23058.js' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 0522fe97-d589-4c5c-8688-59ba10fc3de7
+    • 2026-01-14T11:17:04.829Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1002238LT1
+      IP: 172.20.10.3
+      Message: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: a65e590c-cdfb-4e8f-ac70-31262faba0c7
+    • 2026-01-14T11:16:59.47Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1002238LT1
+      IP: 172.20.10.3
+      Message: 'https://securepubads.g.doubleclick.net/tag/js/gpt.js' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 9f31aeb7-e721-4ffd-bf8e-f5d912c30b72
+    • 2026-01-14T11:16:59.437Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1002238LT1
+      IP: 172.20.10.3
+      Message: 'https://accounts.google.com/RotateCookiesPage' blocked due to tag 'GMAIL BLOCK'
+      Original UID: 7239fec1-4ac6-469f-af3e-b9eecf3b01cc
+
+
+[USER: binish.ansari]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:09.82Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YI1015031LT
+      IP: 10.26.9.88
+      Message: 'https://c.msn.com/c.gif' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: e1dd2414-bd13-4f6a-99ea-077165249d20
+
+
+[USER: krishna.agrawal]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:08.86Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YISC1100938LT
+      IP: 10.26.9.44
+      Message: 'https://accounts.google.com/ListAccounts' blocked due to tag 'GMAIL BLOCK'
+      Original UID: 6447d9cb-4aa9-4145-8ee7-168d5cb14004
+
+
+[USER: pramod.ghale]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:17:06.882Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP1101923LT1
+      IP: 10.231.55.30
+      Message: 'https://accounts.google.com/ListAccounts' blocked due to tag 'GMAIL BLOCK'
+      Original UID: e789e809-8f28-46d5-9d5e-a073639dbe68
+
+
+[USER: durgadevi.yannam]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:17:05.99Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YH1102612LT
+      IP: 192.168.101.217
+      Message: Controlled application detected: Simple DirectMedia Layer (Game). Path: "C:\ProgramData\Lenovo\Vantage\Addins\LenovoHardwareScanAddin\4.6.0.19\SDL2.dll"
+      Original UID: d69a3708-5445-4684-8f2e-8ae48cea202d
+
+
+[USER: Pooja Shriram Habib]
+Total Events: 2
+Time Span: 0 seconds
+
+  [WEB] - 2 events:
+    • 2026-01-14T11:17:03.952Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1012837LT
+      IP: 10.243.0.160
+      Message: 'https://204.79.197.203/' blocked due to category 'Hacking'
+      Original UID: a778d722-cd4e-4149-9a1f-21f78cfd4b37
+    • 2026-01-14T11:17:03.926Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1012837LT
+      IP: 10.243.0.160
+      Message: 'https://13.107.213.51/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 2dd43a08-54eb-430e-9ac3-2298da5adea9
+
+
+[USER: s.gaurav]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:17:03.576Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YI1015670LT
+      IP: 10.26.9.204
+      Message: Controlled application detected: Microsoft Office SelfSign Certificate Tool (Office suite). Path: "C:\Program Files\Microsoft Office\root\Office16\SELFCERT.EXE"
+      Original UID: 5710d025-4e40-4197-a6bf-aeed84ae41c7
+
+
+[USER: kumar.shailesh]
+Total Events: 1
+
+  [PROTECTION] - 1 events:
+    • 2026-01-14T11:17:03.014Z
+      Severity: LOW
+      Action: Event::Endpoint::SavScanComplete
+      Threat: N/A
+      Device: YH1102242LT
+      IP: 192.168.1.52
+      Message: Scan 'Sophos Central Scheduled Scan' completed
+      Original UID: ab3b95a7-e71e-441c-8838-aad0a95ff3ac
+
+
+[USER: vishwajeet.kadam]
+Total Events: 3
+Time Span: 5 seconds
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:17:02.224Z
+      Severity: MEDIUM
+      Action: Event::Endpoint::Application::Blocked
+      Threat: N/A
+      Device: YPH1016886LT
+      IP: 192.168.0.102
+      Message: Controlled application blocked: Microsoft Phone Link (Mobile Synchronization). Path: "C:\Program Files\WindowsApps\Microsoft.YourPhone_1.25072.79.0_x64__8wekyb3d8bbwe\PhoneExperienceHost.exe"
+      Original UID: 107e0333-b033-4d09-ac7e-e7099a74331b
+
+  [WEB] - 2 events:
+    • 2026-01-14T11:16:56.863Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1016886LT
+      IP: 192.168.0.102
+      Message: 'https://204.79.197.203/' blocked due to category 'Hacking'
+      Original UID: 3cc9871d-4191-4846-9f89-4884804663d4
+    • 2026-01-14T11:16:56.829Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1016886LT
+      IP: 192.168.0.102
+      Message: 'https://13.107.213.68/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: bbd181ce-06e6-466c-a78a-11c063399cab
+
+
+[USER: subhadarshini.das]
+Total Events: 2
+Time Span: 0 seconds
+
+  [WEB] - 2 events:
+    • 2026-01-14T11:17:01.485Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1602442LT
+      IP: 192.168.2.91
+      Message: 'https://c.msn.com/c.gif' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 2e2b11d5-6884-4a71-bd51-41fdcbc7dac4
+    • 2026-01-14T11:17:01.469Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1602442LT
+      IP: 192.168.2.91
+      Message: 'https://srtb.msn.com/' blocked due to category 'Hacking'
+      Original UID: 797f3eee-5c76-4e4b-84f8-286ae59ac2cc
+
+
+[USER: sowmya.u]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:16:58.95Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YB1100152LT
+      IP: 192.168.0.3
+      Message: Controlled application detected: Microsoft Office SelfSign Certificate Tool (Office suite). Path: "C:\Program Files\Microsoft Office\root\Office16\SELFCERT.EXE"
+      Original UID: 838f4969-755b-4247-b989-52f80cbfa9aa
+
+
+[USER: Prajakta Nandkishor Bhagat]
+Total Events: 1
+
+  [UPDATING] - 1 events:
+    • 2026-01-14T11:16:56.161Z
+      Severity: LOW
+      Action: Event::Endpoint::UpdateSuccess
+      Threat: N/A
+      Device: YP1012200LT01
+      IP: 192.168.1.5
+      Message: Update succeeded
+      Original UID: 5fcda823-355d-4b9c-a8f2-ba4e2f17a015
+
+
+[USER: vikash.k]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:16:56.116Z
+      Severity: MEDIUM
+      Action: Event::Endpoint::Application::Blocked
+      Threat: N/A
+      Device: YB1103326LT
+      IP: 192.168.1.5
+      Message: Controlled application blocked: Microsoft Powershell (System tool). Path: "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe"
+      Original UID: 78b0a2db-9d89-4d80-a5aa-f2d4fa637ab6
+
+
+[USER: ramesh.chavan]
+Total Events: 1
+
+  [PROTECTION] - 1 events:
+    • 2026-01-14T11:16:54.596Z
+      Severity: LOW
+      Action: Event::Endpoint::SavScanComplete
+      Threat: N/A
+      Device: YP1103028LT
+      IP: 10.247.138.189
+      Message: Scan 'Sophos Central Scheduled Scan' completed
+      Original UID: cb6a67ec-ba61-4e78-901f-c7f243e41163
+
+
+[USER: Niteen Kumar]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:16:54.589Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YB1012439LT
+      IP: 192.168.1.100
+      Message: Controlled application detected: Spotify (Media player). Path: "C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.272.438.0_x64__zpdnekdrzrea0\Spotify.exe"
+      Original UID: 26e70e60-179b-4ff0-ab89-61e182a61232
+
+
+[USER: gouse.mohiddin]
+Total Events: 1
+
+  [PROTECTION] - 1 events:
+    • 2026-01-14T11:16:52.667Z
+      Severity: LOW
+      Action: Event::Endpoint::SavScanComplete
+      Threat: N/A
+      Device: YH1601340LT
+      IP: 192.168.0.105
+      Message: Scan 'Sophos Central Scheduled Scan' completed
+      Original UID: 466ab93d-ad21-4ab2-a7d4-1a099c96bf7c
+
+
+[USER: Gopichand Ganji]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:16:50.094Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1009770LT
+      IP: 10.84.194.163
+      Message: 'https://c.msn.com/c.gif' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 2d7fa5ef-9a6b-4a99-8c8d-f849a24fa243
+
+
+[USER: riya.mundra]
+Total Events: 1
+
+  [UPDATING] - 1 events:
+    • 2026-01-14T11:16:49.764Z
+      Severity: LOW
+      Action: Event::Endpoint::UpdateRebootRequired
+      Threat: N/A
+      Device: YICIT1101047LT
+      IP: 10.26.9.104
+      Message: Reboot to complete update; computer stays protected in the meantime
+      Original UID: 8981ddbf-6fbd-4a20-996c-76799c3dfe40
+
+
+[USER: Sangappa Kalyanappa Uppin]
+Total Events: 17
+Time Span: 6 seconds
+
+  [WEB] - 17 events:
+    • 2026-01-14T11:16:49.223Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://142.251.222.66/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 67fab0de-46af-45e3-b395-c2dad52d862c
+    • 2026-01-14T11:16:49.208Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://198.8.71.130/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: f9be2e42-7b39-4660-8987-ca68f95bb897
+    • 2026-01-14T11:16:49.192Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://74.214.196.131/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: df50b0c4-597b-43a7-9483-b19b40728355
+    • 2026-01-14T11:16:43.253Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://ssbsync.smartadserver.com/api/sync' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: ff6ad75f-44c9-452b-8f61-3700236e264a
+    • 2026-01-14T11:16:43.237Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://user-sync.fwmrm.net/ad/u' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 7fdd9f30-4124-4c4e-b51d-6079ad0657c7
+    • 2026-01-14T11:16:43.223Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://simage2.pubmatic.com/AdServer/Pug' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: e85fa0e0-3ad4-420a-a191-e203cde6a919
+    • 2026-01-14T11:16:43.207Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://pixel.rubiconproject.com/tap.php' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 3b06cefa-a023-4b1b-82b0-39ae48c8170c
+    • 2026-01-14T11:16:43.192Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://t.mookie1.com/rsp' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 93764339-c78c-41b6-a302-3976e57be332
+    • 2026-01-14T11:16:43.175Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://sync.crwdcntrl.net/qmap' blocked due to category 'Spam URLs'
+      Original UID: bd89028d-b286-404b-9faf-c2dc2a49d15a
+    • 2026-01-14T11:16:43.159Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://p.rfihub.com/cm' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: ad188ff8-6451-4da9-825b-30462f07d4ae
+    • 2026-01-14T11:16:43.141Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://c1.adform.net/serving/cookie/match/' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: a99ee022-48c8-4f55-8681-b0eb36ecba41
+    • 2026-01-14T11:16:43.125Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://bh.contextweb.com/bh/rtset' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 6319d046-038a-4904-a776-6579687967ec
+    • 2026-01-14T11:16:43.111Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://odr.mookie1.com/t/v2/sync' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 855b94c6-e3aa-466c-b90c-0c4afb344531
+    • 2026-01-14T11:16:43.095Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://ap.lijit.com/pixel' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: f3a4c246-a5bb-413f-89a4-1c50544de598
+    • 2026-01-14T11:16:43.079Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://match.deepintent.com/usersync/131' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 6cc7229c-65ef-4bc2-879c-6629c3f05483
+    • 2026-01-14T11:16:43.063Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://us-u.openx.net/w/1.0/cm' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 3748a9df-05a2-4a0f-a544-6b475b5d7864
+    • 2026-01-14T11:16:43.047Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YP100604LT
+      IP: 10.8.101.103
+      Message: 'https://sync.1rx.io/usersync2/rmpssp' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: a7ca2870-5166-43fc-9108-f6586d9fd766
+
+
+[USER: jadhav.poonam]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:16:48.984Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YP1100385LT
+      IP: 192.168.1.37
+      Message: Controlled application detected: Microsoft Edge WebDriver (Internet browser). Path: "C:\Users\jadhav.poonam\.cache\selenium\msedgedriver\win64\126.0.2592.81\msedgedriver.exe"
+      Original UID: 744016f6-481c-47be-be79-c8c879345b51
+
+
+[USER: Saurabh Ravindra Aglave]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:16:48.841Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YPCWFH01LT
+      IP: 192.168.1.5
+      Message: Controlled application detected: Microsoft Powershell ISE (System tool). Path: "C:\Windows\WinSxS\amd64_microsoft-windows-gpowershell-exe_31bf3856ad364e35_10.0.19041.1_none_ee822d264112a470\powershell_ise.exe"
+      Original UID: f0f4cf83-9043-48c8-a455-548c747fdd50
+
+
+[USER: habeeb.mohammad]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:16:48.541Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1016521LT
+      IP: 192.168.0.105
+      Message: 'https://tpc.googlesyndication.com/simgad/9554828141265880540/7610006548669337792' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: 49e7c23f-7a52-4870-8c7e-683923b6cdfc
+
+
+[USER: abhishek.mehta]
+Total Events: 2
+Time Span: 0 seconds
+
+  [WEB] - 2 events:
+    • 2026-01-14T11:16:48.01Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1103195LT
+      IP: 10.9.17.90
+      Message: 'https://c.msn.com/c.gif' blocked due to category 'Advertisements & Pop-Ups'
+      Original UID: e4244921-56bd-461f-9a35-59438e1f6766
+    • 2026-01-14T11:16:47.991Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YPH1103195LT
+      IP: 10.9.17.90
+      Message: 'https://srtb.msn.com/' blocked due to category 'Hacking'
+      Original UID: eaa180d3-35a3-4394-ad54-a4721ff95359
+
+
+[USER: harikanand.v]
+Total Events: 1
+
+  [APPLICATION_CONTROL] - 1 events:
+    • 2026-01-14T11:16:46.813Z
+      Severity: LOW
+      Action: Event::Endpoint::Application::Detected
+      Threat: N/A
+      Device: YH1102191LT
+      IP: 10.6.102.135
+      Message: Controlled application detected: Simple DirectMedia Layer (Game). Path: "C:\ProgramData\Lenovo\Vantage\Addins\LenovoHardwareScanAddin\4.6.0.19\SDL2.dll"
+      Original UID: 70f31dda-93d4-45a8-868e-46495b4e00d9
+
+
+[USER: Manoj]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:16:45.001Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YUSMANOJBAHETI
+      IP: 192.168.1.6
+      Message: 'https://stats.g.doubleclick.net/g/collect' blocked due to category 'Spam URLs'
+      Original UID: b209fd5f-20db-426a-9dbb-025fdacf9ced
+
+
+[USER: divya.kolas]
+Total Events: 1
+
+  [WEB] - 1 events:
+    • 2026-01-14T11:16:44.322Z
+      Severity: LOW
+      Action: Event::Endpoint::WebControlViolation
+      Threat: N/A
+      Device: YH1103357LT
+      IP: 192.168.29.212
+      Message: 'https://accounts.google.com/ListAccounts' blocked due to tag 'GMAIL BLOCK'
+      Original UID: 674afeb1-27a7-4f68-a6a2-6f554367fe26
+
+
+[USER: jada.sandeep]
+Total Events: 1
+
+  [UPDATING] - 1 events:
+    • 2026-01-14T11:16:44.071Z
+      Severity: LOW
+      Action: Event::Endpoint::UpdateSuccess
+      Threat: N/A
+      Device: YH1102880LT
+      IP: 192.168.1.33
+      Message: Update succeeded
+      Original UID: 23239864-9020-4ace-8980-c49c1c0316df
+
+
+================================================================================

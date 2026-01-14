@@ -1,0 +1,1207 @@
+{
+  "generated_at": "2026-01-14T11:17:31.557Z",
+  "log_type": "SophosLogs",
+  "total_users_analyzed": 29,
+  "alerts": [
+    {
+      "title": "Web Control Violation: Advertisements & Pop-Ups Blocked",
+      "user": "parth.govekar",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Advertisements & Pop-Ups' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:31.557Z",
+      "last_event": "2026-01-14T11:17:31.557Z",
+      "initiator": "parth.govekar",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.0.103"
+        ],
+        "device_info": "YPH1101573LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "966338db-e7e1-4256-9937-6dfe7e5f4b2c"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations including Malicious Tag",
+      "user": "mehra.sagun",
+      "severity": "HIGH",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 4 web control violations within 38 seconds, including one site tagged as 'MALICIOUS' and multiple 'Advertisements & Pop-Ups'. This indicates a potentially compromised browser or aggressive ad/malware activity.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:16:51.612Z",
+      "last_event": "2026-01-14T11:17:30.391Z",
+      "initiator": "mehra.sagun",
+      "confidence_score": 85,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.7.100.117"
+        ],
+        "device_info": "YI1015079LT",
+        "time_delta_seconds": 38,
+        "correlation_ids": [
+          "cc880c08-da04-44ac-8a44-4b9c92033d3b",
+          "e298172b-fc16-471b-aa42-0204775cc75c",
+          "203f4c73-4b93-4cb2-8a15-88be24aa1f69",
+          "217e7c71-0971-442e-b4fa-6d47f38c3698"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Microsoft Office SelfSign Certificate Tool",
+      "user": "Swarnima Jain",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Microsoft Office SelfSign Certificate Tool', a common but restricted application.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:28.847Z",
+      "last_event": "2026-01-14T11:17:28.847Z",
+      "initiator": "Swarnima Jain",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.29.164"
+        ],
+        "device_info": "YI1012383LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "af5a7440-93ab-4485-b36b-fdea6a16ed8f"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Hacking Category Blocked",
+      "user": "Ayush Rathod",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Hacking' category. This is a moderately restricted category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:28.361Z",
+      "last_event": "2026-01-14T11:17:28.361Z",
+      "initiator": "Ayush Rathod",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.100"
+        ],
+        "device_info": "YICIT1009115LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "7762b748-8e0c-4711-b461-1227aeaa3ce8"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: TCPIP Finger (System tool)",
+      "user": "lokesh.muthu",
+      "severity": "MEDIUM",
+      "alert_type": "Application Control",
+      "description": "Detection of 'TCPIP Finger', a system tool that can be used for network reconnaissance. This is considered a potentially unwanted application or low-level hacking tool.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:28.358Z",
+      "last_event": "2026-01-14T11:17:28.358Z",
+      "initiator": "lokesh.muthu",
+      "confidence_score": 75,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.29.80"
+        ],
+        "device_info": "YPH1100289LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "ed515c73-0114-4eb9-acf0-2a647cfefc49"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Advertisements & Pop-Ups Blocked",
+      "user": "sneha.vairagade",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Advertisements & Pop-Ups' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:28.33Z",
+      "last_event": "2026-01-14T11:17:28.33Z",
+      "initiator": "sneha.vairagade",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.33"
+        ],
+        "device_info": "YPH1103204LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "9ea185e6-3cfe-4688-8c43-63b93096ac65"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Scheduled Scan Completed",
+      "user": "kapil.shinde",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Central Scheduled Scan completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:28.094Z",
+      "last_event": "2026-01-14T11:17:28.094Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::SavScanComplete",
+        "ip_addresses": [
+          "10.8.100.11"
+        ],
+        "device_info": "YP1100722LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f6a9ca78-6c77-4db9-88e7-5466ce1e656a"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Sports Category Blocked",
+      "user": "sawankumar.makwana",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Sports' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:27.435Z",
+      "last_event": "2026-01-14T11:17:27.435Z",
+      "initiator": "sawankumar.makwana",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.9.16.160"
+        ],
+        "device_info": "YPH1602463LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "c8720d15-417d-4de7-a84e-d3ee79a8eb18"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations including Hacking Category",
+      "user": "simon.wadhwani",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 2 web control violations within 0 seconds, including one site categorized as 'Hacking' and another as 'Advertisements & Pop-Ups'.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:17:26.988Z",
+      "last_event": "2026-01-14T11:17:27.005Z",
+      "initiator": "simon.wadhwani",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.4"
+        ],
+        "device_info": "YICIT1100979LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "09a6a1c8-14fc-4313-8613-ff653cd07c7f",
+          "97e94b97-8382-4510-a221-6cfb35519514"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: GMAIL BLOCK Tag",
+      "user": "varunkumar.n",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'GMAIL BLOCK' tag.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:26.701Z",
+      "last_event": "2026-01-14T11:17:26.701Z",
+      "initiator": "varunkumar.n",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.16"
+        ],
+        "device_info": "YB1100439LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f310abcb-3f41-4331-bd56-ef08b262dc8f"
+        ]
+      }
+    },
+    {
+      "title": "High Volume PUA Cleanup: Generic Patcher Detected",
+      "user": "new pc",
+      "severity": "HIGH",
+      "alert_type": "Malware Detection",
+      "description": "Multiple detections and cleanups of 'Generic Patcher' PUA within a short timeframe (10 events in 31 seconds). This indicates an attempt to use or install potentially unwanted software, possibly for cracking or unauthorized modifications.",
+      "event_count": 10,
+      "first_event": "2026-01-14T11:16:54.534Z",
+      "last_event": "2026-01-14T11:17:26.434Z",
+      "initiator": "new pc",
+      "confidence_score": 90,
+      "details": {
+        "operation": "Multiple Event::Endpoint::CorePuaClean",
+        "ip_addresses": [
+          "192.168.1.143"
+        ],
+        "device_info": "YDUB7000148LT",
+        "time_delta_seconds": 31,
+        "correlation_ids": [
+          "793dc06a-1a45-4acd-b8f3-5b03656b5c03",
+          "362ca0d9-e381-4d55-9111-8a80df711d94",
+          "a2e59109-c9fb-41ca-8a81-1b5d787e197e",
+          "0b57efd2-25a8-46cc-9656-870f1c2f7bc8",
+          "d7d6205d-3965-4c95-b605-2a7af554c995",
+          "8374efbf-f4f9-4e92-8333-d2f5224f93be",
+          "d985dfd9-9b6a-473f-8056-07394fbab7d3",
+          "397617bb-cbf4-45af-bdc6-ce256181c74e",
+          "d9350532-f672-42cf-82db-dc0d9154544c",
+          "294610d9-6c22-4e27-b3a3-64ce7f717fa9"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Advertisements & Pop-Ups Blocked",
+      "user": "Kunal Diwakar Kulkarni",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Advertisements & Pop-Ups' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:25.844Z",
+      "last_event": "2026-01-14T11:17:25.844Z",
+      "initiator": "Kunal Diwakar Kulkarni",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.29.250"
+        ],
+        "device_info": "YP1011807LT01",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "c7112df4-6e5f-4ea4-bed8-997eab339fca"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Endpoint Update Succeeded",
+      "user": "suryaprakash.thakur",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Endpoint update completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:25.793Z",
+      "last_event": "2026-01-14T11:17:25.793Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::UpdateSuccess",
+        "ip_addresses": [
+          "192.168.0.215"
+        ],
+        "device_info": "YP1101112LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "2c51e7bb-6268-4cc3-aafe-fb6fc9b738b6"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Scheduled Scan Completed",
+      "user": "mahesh.ahirwar",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Central Scheduled Scan completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:24.728Z",
+      "last_event": "2026-01-14T11:17:24.728Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::SavScanComplete",
+        "ip_addresses": [
+          "10.4.8.241"
+        ],
+        "device_info": "YISC1016380LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "9a73d018-3638-4319-a1fa-72026a3a5a58"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: ChatGPT Tag Blocked",
+      "user": "divyaant.jain",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'ChatGPT' tag.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:22.09Z",
+      "last_event": "2026-01-14T11:17:22.09Z",
+      "initiator": "divyaant.jain",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.4.8.45"
+        ],
+        "device_info": "YISC1101320LT1",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "e78b3e8a-2c2c-4198-bc4a-20cb959881e7"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Hacking Category Blocked",
+      "user": "Nilesh.L.Bhise",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Hacking' category. This is a moderately restricted category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:19.234Z",
+      "last_event": "2026-01-14T11:17:19.234Z",
+      "initiator": "Nilesh.L.Bhise",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.8.100.54"
+        ],
+        "device_info": "YP1007079LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "dd61aa16-89c0-4682-afe4-7d9753c85120"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Spam URLs Blocked",
+      "user": "Yogita Amol Wasnik",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Spam URLs' category. This is a moderately restricted category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:17.365Z",
+      "last_event": "2026-01-14T11:17:17.365Z",
+      "initiator": "Yogita Amol Wasnik",
+      "confidence_score": 65,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.43.20"
+        ],
+        "device_info": "YP1012348LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "1fa4fc92-c13d-4c96-9f71-acbd4d0a3e43"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations: High Volume Advertisements & Pop-Ups",
+      "user": "ashutosh.soni",
+      "severity": "HIGH",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 8 web control violations for 'Advertisements & Pop-Ups' within 26 seconds. This indicates aggressive ad activity or a potentially compromised browser.",
+      "event_count": 8,
+      "first_event": "2026-01-14T11:16:47.851Z",
+      "last_event": "2026-01-14T11:17:14.665Z",
+      "initiator": "ashutosh.soni",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.7.100.25"
+        ],
+        "device_info": "YIBTC1101094LT",
+        "time_delta_seconds": 26,
+        "correlation_ids": [
+          "0c430964-cb28-48f4-adcf-2476f6c4c003",
+          "874b5675-7f52-43ce-9208-cacd477b21f6",
+          "27f62945-b2fc-4b65-a3a0-ae3234e0fea9",
+          "8753fc44-fb17-4cb6-97bb-f03c27b3a6d4",
+          "0349af48-b926-4313-9efa-dc43f5733d43",
+          "3179b312-c13f-46b3-be25-e79922a9aa19",
+          "58c1e33f-8b5e-4fb6-abc0-e07abc40b164",
+          "68b503f1-bf6f-47e3-b35b-a1270a639688"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Blocked: Microsoft Powershell",
+      "user": "mondrati.venkat",
+      "severity": "MEDIUM",
+      "alert_type": "Application Control",
+      "description": "Controlled application 'Microsoft Powershell' was blocked. Powershell is a powerful system tool that can be used for malicious purposes.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:14.199Z",
+      "last_event": "2026-01-14T11:17:14.199Z",
+      "initiator": "mondrati.venkat",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Event::Endpoint::Application::Blocked",
+        "ip_addresses": [
+          "192.168.1.21"
+        ],
+        "device_info": "YH1102875LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "8b05c1cd-da74-4cf6-86a5-b4c67e3559a7"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Hacking Category Blocked",
+      "user": "Ramesh Potharaju",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Hacking' category. This is a moderately restricted category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:13.694Z",
+      "last_event": "2026-01-14T11:17:13.694Z",
+      "initiator": "Ramesh Potharaju",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.5"
+        ],
+        "device_info": "YH1000242LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "770d54a3-fcff-468f-987e-a86f9540f8f6"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations: High Volume Advertisements & Pop-Ups",
+      "user": "kushagra.mallick",
+      "severity": "HIGH",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 3 web control violations for 'Advertisements & Pop-Ups' within 0 seconds. This indicates aggressive ad activity or a potentially compromised browser.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:17:10.717Z",
+      "last_event": "2026-01-14T11:17:10.784Z",
+      "initiator": "kushagra.mallick",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.9"
+        ],
+        "device_info": "YIBTC1101255LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "42bd09c3-33d3-430b-a9f2-ee2aad43c388",
+          "ca64b145-fe78-441c-b947-c0a2b3e8df5e",
+          "0820f806-150a-4b02-af25-e68f6e6828f6"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: GMAIL BLOCK Tag",
+      "user": "pedakotaiah.r",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'GMAIL BLOCK' tag.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:10.718Z",
+      "last_event": "2026-01-14T11:17:10.718Z",
+      "initiator": "pedakotaiah.r",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.199.232.19"
+        ],
+        "device_info": "YH1016395LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "cca3a6a0-9d74-48ee-ae48-1e105191ecc1"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations: High Volume Photo Searches",
+      "user": "Kanneti Ekanath",
+      "severity": "HIGH",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 5 web control violations for 'Photo Searches' within 5 seconds. This indicates unusually high activity in a restricted category.",
+      "event_count": 5,
+      "first_event": "2026-01-14T11:17:04.969Z",
+      "last_event": "2026-01-14T11:17:10.363Z",
+      "initiator": "Kanneti Ekanath",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.5"
+        ],
+        "device_info": "YH1011194LT1",
+        "time_delta_seconds": 5,
+        "correlation_ids": [
+          "9c79ccf7-f3f3-4dfd-baa6-1b73e9ed7a3e",
+          "65c19042-9181-4c36-8b88-21029d063ca9",
+          "583fd1e9-b2a7-45dc-b11d-6f03a454eb22",
+          "11eff0f7-b460-49d5-b26b-8c77b7abfc4a",
+          "25341473-2765-49ab-a3a7-e6c16ce41ff7"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations: High Volume Advertisements & GMAIL BLOCK",
+      "user": "charan.kattekola",
+      "severity": "HIGH",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 4 web control violations within 10 seconds, including 'GMAIL BLOCK' and multiple 'Advertisements & Pop-Ups'. This indicates aggressive web activity or a potentially compromised browser.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:16:59.437Z",
+      "last_event": "2026-01-14T11:17:10.199Z",
+      "initiator": "charan.kattekola",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "172.20.10.3"
+        ],
+        "device_info": "YH1002238LT1",
+        "time_delta_seconds": 10,
+        "correlation_ids": [
+          "0522fe97-d589-4c5c-8688-59ba10fc3de7",
+          "a65e590c-cdfb-4e8f-ac70-31262faba0c7",
+          "9f31aeb7-e721-4ffd-bf8e-f5d912c30b72",
+          "7239fec1-4ac6-469f-af3e-b9eecf3b01cc"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Advertisements & Pop-Ups Blocked",
+      "user": "binish.ansari",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Advertisements & Pop-Ups' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:09.82Z",
+      "last_event": "2026-01-14T11:17:09.82Z",
+      "initiator": "binish.ansari",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.26.9.88"
+        ],
+        "device_info": "YI1015031LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "e1dd2414-bd13-4f6a-99ea-077165249d20"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: GMAIL BLOCK Tag",
+      "user": "krishna.agrawal",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'GMAIL BLOCK' tag.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:08.86Z",
+      "last_event": "2026-01-14T11:17:08.86Z",
+      "initiator": "krishna.agrawal",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.26.9.44"
+        ],
+        "device_info": "YISC1100938LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "6447d9cb-4aa9-4145-8ee7-168d5cb14004"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: GMAIL BLOCK Tag",
+      "user": "pramod.ghale",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'GMAIL BLOCK' tag.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:06.882Z",
+      "last_event": "2026-01-14T11:17:06.882Z",
+      "initiator": "pramod.ghale",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.231.55.30"
+        ],
+        "device_info": "YP1101923LT1",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "e789e809-8f28-46d5-9d5e-a073639dbe68"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Simple DirectMedia Layer (Game)",
+      "user": "durgadevi.yannam",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Simple DirectMedia Layer (Game)', a common but restricted application.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:05.99Z",
+      "last_event": "2026-01-14T11:17:05.99Z",
+      "initiator": "durgadevi.yannam",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.101.217"
+        ],
+        "device_info": "YH1102612LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "d69a3708-5445-4684-8f2e-8ae48cea202d"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations including Hacking Category",
+      "user": "Pooja Shriram Habib",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 2 web control violations within 0 seconds, including one site categorized as 'Hacking' and another as 'Advertisements & Pop-Ups'.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:17:03.926Z",
+      "last_event": "2026-01-14T11:17:03.952Z",
+      "initiator": "Pooja Shriram Habib",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.243.0.160"
+        ],
+        "device_info": "YPH1012837LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "a778d722-cd4e-4149-9a1f-21f78cfd4b37",
+          "2dd43a08-54eb-430e-9ac3-2298da5adea9"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Microsoft Office SelfSign Certificate Tool",
+      "user": "s.gaurav",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Microsoft Office SelfSign Certificate Tool', a common but restricted application.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:03.576Z",
+      "last_event": "2026-01-14T11:17:03.576Z",
+      "initiator": "s.gaurav",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "10.26.9.204"
+        ],
+        "device_info": "YI1015670LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "5710d025-4e40-4197-a6bf-aeed84ae41c7"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Scheduled Scan Completed",
+      "user": "kumar.shailesh",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Central Scheduled Scan completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:17:03.014Z",
+      "last_event": "2026-01-14T11:17:03.014Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::SavScanComplete",
+        "ip_addresses": [
+          "192.168.1.52"
+        ],
+        "device_info": "YH1102242LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "ab3b95a7-e71e-441c-8838-aad0a95ff3ac"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Blocked and Web Control Violations (Hacking)",
+      "user": "vishwajeet.kadam",
+      "severity": "MEDIUM",
+      "alert_type": "Application Control & Web Control Violation",
+      "description": "Controlled application 'Microsoft Phone Link' was blocked, and user also triggered 2 web control violations within 5 seconds, including one site categorized as 'Hacking'. This indicates multiple policy violations.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:16:56.829Z",
+      "last_event": "2026-01-14T11:17:02.224Z",
+      "initiator": "vishwajeet.kadam",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Event::Endpoint::Application::Blocked & Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.0.102"
+        ],
+        "device_info": "YPH1016886LT",
+        "time_delta_seconds": 5,
+        "correlation_ids": [
+          "107e0333-b033-4d09-ac7e-e7099a74331b",
+          "3cc9871d-4191-4846-9f89-4884804663d4",
+          "bbd181ce-06e6-466c-a78a-11c063399cab"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations including Hacking Category",
+      "user": "subhadarshini.das",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 2 web control violations within 0 seconds, including one site categorized as 'Hacking' and another as 'Advertisements & Pop-Ups'.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:17:01.469Z",
+      "last_event": "2026-01-14T11:17:01.485Z",
+      "initiator": "subhadarshini.das",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.2.91"
+        ],
+        "device_info": "YH1602442LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "2e2b11d5-6884-4a71-bd51-41fdcbc7dac4",
+          "797f3eee-5c76-4e4b-84f8-286ae59ac2cc"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Microsoft Office SelfSign Certificate Tool",
+      "user": "sowmya.u",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Microsoft Office SelfSign Certificate Tool', a common but restricted application.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:58.95Z",
+      "last_event": "2026-01-14T11:16:58.95Z",
+      "initiator": "sowmya.u",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.0.3"
+        ],
+        "device_info": "YB1100152LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "838f4969-755b-4247-b989-52f80cbfa9aa"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Endpoint Update Succeeded",
+      "user": "Prajakta Nandkishor Bhagat",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Endpoint update completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:56.161Z",
+      "last_event": "2026-01-14T11:16:56.161Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::UpdateSuccess",
+        "ip_addresses": [
+          "192.168.1.5"
+        ],
+        "device_info": "YP1012200LT01",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "5fcda823-355d-4b9c-a8f2-ba4e2f17a015"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Blocked: Microsoft Powershell",
+      "user": "vikash.k",
+      "severity": "MEDIUM",
+      "alert_type": "Application Control",
+      "description": "Controlled application 'Microsoft Powershell' was blocked. Powershell is a powerful system tool that can be used for malicious purposes.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:56.116Z",
+      "last_event": "2026-01-14T11:16:56.116Z",
+      "initiator": "vikash.k",
+      "confidence_score": 80,
+      "details": {
+        "operation": "Event::Endpoint::Application::Blocked",
+        "ip_addresses": [
+          "192.168.1.5"
+        ],
+        "device_info": "YB1103326LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "78b0a2db-9d89-4d80-a5aa-f2d4fa637ab6"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Scheduled Scan Completed",
+      "user": "ramesh.chavan",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Central Scheduled Scan completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:54.596Z",
+      "last_event": "2026-01-14T11:16:54.596Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::SavScanComplete",
+        "ip_addresses": [
+          "10.247.138.189"
+        ],
+        "device_info": "YP1103028LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "cb6a67ec-ba61-4e78-901f-c7f243e41163"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Spotify (Media player)",
+      "user": "Niteen Kumar",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Spotify', a common but restricted application.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:54.589Z",
+      "last_event": "2026-01-14T11:16:54.589Z",
+      "initiator": "Niteen Kumar",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.1.100"
+        ],
+        "device_info": "YB1012439LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "26e70e60-179b-4ff0-ab89-61e182a61232"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Scheduled Scan Completed",
+      "user": "gouse.mohiddin",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Central Scheduled Scan completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:52.667Z",
+      "last_event": "2026-01-14T11:16:52.667Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::SavScanComplete",
+        "ip_addresses": [
+          "192.168.0.105"
+        ],
+        "device_info": "YH1601340LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "466ab93d-ad21-4ab2-a7d4-1a099c96bf7c"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Advertisements & Pop-Ups Blocked",
+      "user": "Gopichand Ganji",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Advertisements & Pop-Ups' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:50.094Z",
+      "last_event": "2026-01-14T11:16:50.094Z",
+      "initiator": "Gopichand Ganji",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.84.194.163"
+        ],
+        "device_info": "YH1009770LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "2d7fa5ef-9a6b-4a99-8c8d-f849a24fa243"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Endpoint Update Requires Reboot",
+      "user": "riya.mundra",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Sophos Endpoint update completed but requires a system reboot to finalize. Computer remains protected.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:49.764Z",
+      "last_event": "2026-01-14T11:16:49.764Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::UpdateRebootRequired",
+        "ip_addresses": [
+          "10.26.9.104"
+        ],
+        "device_info": "YICIT1101047LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "8981ddbf-6fbd-4a20-996c-76799c3dfe40"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations: High Volume Advertisements & Pop-Ups",
+      "user": "Sangappa Kalyanappa Uppin",
+      "severity": "HIGH",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 17 web control violations within 6 seconds, primarily for 'Advertisements & Pop-Ups' and 'Spam URLs'. This indicates aggressive ad activity or a potentially compromised browser.",
+      "event_count": 17,
+      "first_event": "2026-01-14T11:16:43.047Z",
+      "last_event": "2026-01-14T11:16:49.223Z",
+      "initiator": "Sangappa Kalyanappa Uppin",
+      "confidence_score": 90,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.8.101.103"
+        ],
+        "device_info": "YP100604LT",
+        "time_delta_seconds": 6,
+        "correlation_ids": [
+          "67fab0de-46af-45e3-b395-c2dad52d862c",
+          "f9be2e42-7b39-4660-8987-ca68f95bb897",
+          "df50b0c4-597b-43a7-9483-b19b40728355",
+          "ff6ad75f-44c9-452b-8f61-3700236e264a",
+          "7fdd9f30-4124-4c4e-b51d-6079ad0657c7",
+          "e85fa0e0-3ad4-420a-a191-e203cde6a919",
+          "3b06cefa-a023-4b1b-82b0-39ae48c8170c",
+          "93764339-c78c-41b6-a302-3976e57be332",
+          "bd89028d-b286-404b-9faf-c2dc2a49d15a",
+          "ad188ff8-6451-4da9-825b-30462f07d4ae",
+          "a99ee022-48c8-4f55-8681-b0eb36ecba41",
+          "6319d046-038a-4904-a776-6579687967ec",
+          "855b94c6-e3aa-466c-b90c-0c4afb344531",
+          "f3a4c246-a5bb-413f-89a4-1c50544de598",
+          "6cc7229c-65ef-4bc2-879c-6629c3f05483",
+          "3748a9df-05a2-4a0f-a544-6b475b5d7864",
+          "a7ca2870-5166-43fc-9108-f6586d9fd766"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Microsoft Edge WebDriver (Internet browser)",
+      "user": "jadhav.poonam",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Microsoft Edge WebDriver', a common but restricted application, often used for automated browser testing.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:48.984Z",
+      "last_event": "2026-01-14T11:16:48.984Z",
+      "initiator": "jadhav.poonam",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.1.37"
+        ],
+        "device_info": "YP1100385LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "744016f6-481c-47be-be79-c8c879345b51"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Microsoft Powershell ISE (System tool)",
+      "user": "Saurabh Ravindra Aglave",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Microsoft Powershell ISE', a system tool that can be used for scripting and system management.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:48.841Z",
+      "last_event": "2026-01-14T11:16:48.841Z",
+      "initiator": "Saurabh Ravindra Aglave",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "192.168.1.5"
+        ],
+        "device_info": "YPCWFH01LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f0f4cf83-9043-48c8-a455-548c747fdd50"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Advertisements & Pop-Ups Blocked",
+      "user": "habeeb.mohammad",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Advertisements & Pop-Ups' category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:48.541Z",
+      "last_event": "2026-01-14T11:16:48.541Z",
+      "initiator": "habeeb.mohammad",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.0.105"
+        ],
+        "device_info": "YH1016521LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "49e7c23f-7a52-4870-8c7e-683923b6cdfc"
+        ]
+      }
+    },
+    {
+      "title": "Multiple Web Control Violations including Hacking Category",
+      "user": "abhishek.mehta",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "User triggered 2 web control violations within 0 seconds, including one site categorized as 'Hacking' and another as 'Advertisements & Pop-Ups'.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:16:47.991Z",
+      "last_event": "2026-01-14T11:16:48.01Z",
+      "initiator": "abhishek.mehta",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Multiple Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "10.9.17.90"
+        ],
+        "device_info": "YPH1103195LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "e4244921-56bd-461f-9a35-59438e1f6766",
+          "eaa180d3-35a3-4394-ad54-a4721ff95359"
+        ]
+      }
+    },
+    {
+      "title": "Controlled Application Detected: Simple DirectMedia Layer (Game)",
+      "user": "harikanand.v",
+      "severity": "LOW",
+      "alert_type": "Application Control",
+      "description": "Detection of 'Simple DirectMedia Layer (Game)', a common but restricted application.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:46.813Z",
+      "last_event": "2026-01-14T11:16:46.813Z",
+      "initiator": "harikanand.v",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::Application::Detected",
+        "ip_addresses": [
+          "10.6.102.135"
+        ],
+        "device_info": "YH1102191LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "70f31dda-93d4-45a8-868e-46495b4e00d9"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: Spam URLs Blocked",
+      "user": "Manoj",
+      "severity": "MEDIUM",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'Spam URLs' category. This is a moderately restricted category.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:45.001Z",
+      "last_event": "2026-01-14T11:16:45.001Z",
+      "initiator": "Manoj",
+      "confidence_score": 65,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.1.6"
+        ],
+        "device_info": "YUSMANOJBAHETI",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "b209fd5f-20db-426a-9dbb-025fdacf9ced"
+        ]
+      }
+    },
+    {
+      "title": "Web Control Violation: GMAIL BLOCK Tag",
+      "user": "divya.kolas",
+      "severity": "LOW",
+      "alert_type": "Web Control Violation",
+      "description": "Single instance of web access blocked due to 'GMAIL BLOCK' tag.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:44.322Z",
+      "last_event": "2026-01-14T11:16:44.322Z",
+      "initiator": "divya.kolas",
+      "confidence_score": 40,
+      "details": {
+        "operation": "Event::Endpoint::WebControlViolation",
+        "ip_addresses": [
+          "192.168.29.212"
+        ],
+        "device_info": "YH1103357LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "674afeb1-27a7-4f68-a6a2-6f554367fe26"
+        ]
+      }
+    },
+    {
+      "title": "Sophos Endpoint Update Succeeded",
+      "user": "jada.sandeep",
+      "severity": "INFORMATIONAL",
+      "alert_type": "System Activity",
+      "description": "Routine Sophos Endpoint update completed successfully.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:44.071Z",
+      "last_event": "2026-01-14T11:16:44.071Z",
+      "initiator": "Sophos Endpoint Protection",
+      "confidence_score": 20,
+      "details": {
+        "operation": "Event::Endpoint::UpdateSuccess",
+        "ip_addresses": [
+          "192.168.1.33"
+        ],
+        "device_info": "YH1102880LT",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "23239864-9020-4ace-8980-c49c1c0316df"
+        ]
+      }
+    }
+  ]
+}

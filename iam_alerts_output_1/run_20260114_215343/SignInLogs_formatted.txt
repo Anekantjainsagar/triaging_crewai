@@ -1,0 +1,1824 @@
+================================================================================
+AZURE AD SIGN-IN LOG ANALYSIS
+================================================================================
+
+### USER SIGN-IN EVENTS ###
+
+
+[USER: srijan.srivastava@yash.com]
+Total Sign-ins: 2
+Successful: 1 | Failed: 1
+Time Span: 2 seconds
+
+  [FAILURE] - 1 events:
+    • 2026-01-14T14:05:29.6076318Z
+      IP: 2405:201:34:1148:f00c:c39:6cd9:6e57
+      Location: Kolhapur, Maharashtra, IN
+      Device: YBTC1011179LT (Windows10, Edge 143.0.0)
+      App: OfficeHome
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Error: Presented multi-factor authentication has expired due to policies configured by your administrator, you must refresh your multi-factor authentication to access '{resource}'.
+      Risk Level: hidden
+      Correlation ID: 019bbcb1-bfbe-7f87-9b9a-bd54078cf036
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T14:05:31.6352875Z
+      IP: 2405:201:34:1148:f00c:c39:6cd9:6e57
+      Location: Kolhapur, Maharashtra, IN
+      Device: YBTC1011179LT (Windows10, Edge 143.0.0)
+      App: OfficeHome
+      Auth Method: Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: e57754eb-715e-4622-9f7c-e948376f6f44
+
+
+[USER: somanath.alegav@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T14:05:09.4624569Z
+      IP: 2405:201:c41c:d80a:a938:664c:942d:33c5
+      Location: Karwan, Telangana, IN
+      Device: YH1101718LT (Windows10, Edge 143.0.0)
+      App: Palo Alto Networks - GlobalProtect
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 636aeca0-71b8-4c0e-968e-953230f27292
+
+
+[USER: arpit.tater@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:17:50.9586734Z
+      IP: 27.58.113.68
+      Location: Jaipur, Rajasthan, IN
+      Device: YICIT1010902LT (Windows10, Edge 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 4ee6eca1-b067-6000-5040-d6045a646433
+
+
+[USER: olga.gretskaya@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:17:34.1059694Z
+      IP: 5.187.52.204
+      Location: Gdansk, Pomorskie, PL
+      Device: MacOs (Chrome 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 5be6eca1-708d-6000-5040-ddae90313512
+
+
+[USER: arzoo.soni@yash.com]
+Total Sign-ins: 1
+Successful: 0 | Failed: 1
+
+  [FAILURE] - 1 events:
+    • 2026-01-14T11:17:22.904416Z
+      IP: 14.143.131.254
+      Location: Beed, Maharashtra, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Error: This occurred due to 'Keep me signed in' interrupt when the user was signing in.
+      Risk Level: hidden
+      Correlation ID: 8ae4eca1-80a7-6000-5040-de0019022080
+
+
+[USER: vishal.gangji@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:17:22.4212808Z
+      IP: 49.43.0.86
+      Location: Indore, Madhya Pradesh, IN
+      Device: YISC110122LT (Windows10, Edge 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 45e6eca1-1057-6000-5040-d963b2428a7e
+
+
+[USER: sriraj.thakur@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 0 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:17:21.9825327Z
+      IP: 2a00:1e:b5c1:302:b928:d8b7:b6af:cb6c
+      Location: Duesseldorf, Nordrhein-Westfalen, DE
+      Device: MacOs
+      App: Microsoft Teams
+      Auth Method: Companion mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 16c8a76f-59f5-4be1-a098-3229467974f6
+    • 2026-01-14T11:17:21.9825256Z
+      IP: 2a00:1e:b5c1:302:b928:d8b7:b6af:cb6c
+      Location: Duesseldorf, Nordrhein-Westfalen, DE
+      Device: MacOs
+      App: Microsoft Teams
+      Auth Method: Companion mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 16c8a76f-59f5-4be1-a098-3229467974f6
+
+
+[USER: m.venugopalarao@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:17:00.9509714Z
+      IP: 87.242.253.113
+      Location: Barnet, Greater London, GB
+      Device: YH1014167LT (Windows10, Edge 143.0.0)
+      App: Dime Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 77e4f1b0-74da-44fc-9811-3799fe0a0f52
+
+
+[USER: arun.velpuri@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 69 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:16:58.2867755Z
+      IP: 4.210.48.40
+      Location: Dublin, Dublin, IE
+      Device: Windows10 (Edge 18.20348)
+      App: Microsoft Edge
+      Auth Method: Password, Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 93f7dae5-702b-407c-8290-fafca8786dd0
+    • 2026-01-14T11:16:57.3379855Z
+      IP: 4.210.48.40
+      Location: Dublin, Dublin, IE
+      Device: Windows10 (Edge 18.20348)
+      App: Microsoft Edge
+      Auth Method: Password, Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 93f7dae5-702b-407c-8290-fafca8786dd0
+    • 2026-01-14T11:15:48.616405Z
+      IP: 4.210.48.40
+      Location: Dublin, Dublin, IE
+      Device: Windows10 (Edge 18.20348)
+      App: Microsoft Edge
+      Auth Method: Password, Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 93f7dae5-702b-407c-8290-fafca8786dd0
+
+
+[USER: neeraj.ahuja@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:16:56.4445769Z
+      IP: 2001:8f8:1d3e:69ff:c4f6:d6af:286b:8085
+      Location: Abu Zaby, Abu Zaby, AE
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 6f9d0211-c5fd-4447-a42b-29366a687d46
+
+
+[USER: ramgopal.arikatha@yash.com]
+Total Sign-ins: 2
+Successful: 1 | Failed: 1
+Time Span: 44 seconds
+
+  [FAILURE] - 1 events:
+    • 2026-01-14T11:16:54.2305956Z
+      IP: 49.37.133.63
+      Location: Mangalhat, Telangana, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Error: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '{resource}'.
+      Risk Level: hidden
+      Correlation ID: f1b99f88-0d5b-4d3a-ad41-4958ef90aedd
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:16:10.140284Z
+      IP: 49.37.133.63
+      Location: Mangalhat, Telangana, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 25aeb744-48bb-44a8-9258-bd4cdca9ba79
+
+
+[USER: ashwani.vaishya@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 96 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:16:48.2886726Z
+      IP: 2401:4900:1c7e:ba5:d176:2ec0:c51e:5001
+      Location: Gurgaon, Haryana, IN
+      Device: Windows10 (Edge 18.26200)
+      App: Microsoft Office
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0689f38d-4d1f-450f-a14a-f5802683d10b
+    • 2026-01-14T11:16:48.2886665Z
+      IP: 2401:4900:1c7e:ba5:d176:2ec0:c51e:5001
+      Location: Gurgaon, Haryana, IN
+      Device: Windows10 (Edge 18.26200)
+      App: Microsoft Office
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0689f38d-4d1f-450f-a14a-f5802683d10b
+    • 2026-01-14T11:15:11.6774036Z
+      IP: 2401:4900:1c7e:ba5:d176:2ec0:c51e:5001
+      Location: Gurgaon, Haryana, IN
+      Device: Windows10 (Edge 18.26200)
+      App: Microsoft Office
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0689f38d-4d1f-450f-a14a-f5802683d10b
+
+
+[USER: sawan.solanki@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 116 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:16:46.307518Z
+      IP: 2401:4900:7b25:90ff:19be:f304:f724:1e08
+      Location: IN
+      Device: Android (Chrome Mobile 143.0.7499)
+      App: Microsoft Authentication Broker
+      Auth Method: Password, Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 6adbd64e-5275-4faa-8b32-c52869419909
+    • 2026-01-14T11:14:49.3698353Z
+      IP: 2401:4900:7b25:90ff:19be:f304:f724:1e08
+      Location: IN
+      Device: Android (Chrome Mobile 143.0.7499)
+      App: Microsoft Authentication Broker
+      Auth Method: Password, Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 6adbd64e-5275-4faa-8b32-c52869419909
+
+
+[USER: umesh.awasarikar@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:16:30.7736377Z
+      IP: 2405:201:1021:a0b5:b8e1:7788:afcf:8d2c
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YPH1101082LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 129d2899-4c3b-4e2a-ae12-7c082d96fb84
+
+
+[USER: boddapati.srinivasa@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 63 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:16:22.1358871Z
+      IP: 2401:4900:1c0f:1eec:c5c7:c6f:a7cb:5651
+      Location: Karwan, Telangana, IN
+      Device: YH1102474LT (Windows10, Edge 143.0.0)
+      App: OfficeHome
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: dc50bff0-34e0-45ad-9067-040a9d669514
+    • 2026-01-14T11:15:47.0281881Z
+      IP: 2401:4900:1c0f:1eec:c5c7:c6f:a7cb:5651
+      Location: Karwan, Telangana, IN
+      Device: YH1102474LT (Windows10, Edge 143.0.0)
+      App: Dime Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 468213a3-35dc-42c3-8650-9002d46082f9
+    • 2026-01-14T11:15:18.587163Z
+      IP: 2401:4900:1c0f:1eec:c5c7:c6f:a7cb:5651
+      Location: Karwan, Telangana, IN
+      Device: YH1102474LT (Windows10, Edge 143.0.0)
+      App: Copilot App
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 019bbc34-62be-7d57-a988-09ab793d836b
+
+
+[USER: prabhanjan.k@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:15:46.9795649Z
+      IP: 49.205.248.128
+      Location: Whitefields (Hyderabad), Telangana, IN
+      Device: YH1004897LT2 (Windows10, Edge 143.0.0)
+      App: M365ChatClient
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: c8bfe2c6-a573-114f-2e4c-39a20aae7819
+
+
+[USER: dhiyaneswaran.s@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:15:45.0279035Z
+      IP: 2401:4900:88e4:5adb:40e:b8d0:9f57:170a
+      Location: Chhindwara, Madhya Pradesh, IN
+      Device: DESKTOP-77EI6Q9 (Windows10, IE 10.0)
+      App: Microsoft Office
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 762dc092-cf80-4b07-966d-219720cadc87
+
+
+[USER: parth.govekar@yash.com]
+Total Sign-ins: 4
+Successful: 4 | Failed: 0
+Time Span: 91 seconds
+
+  [SUCCESS] - 4 events:
+    • 2026-01-14T11:15:18.1082606Z
+      IP: 182.48.218.127
+      Location: Cheeta Camp, Maharashtra, IN
+      Device: YPH1101573LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 0a886e97-52b4-40aa-9c3b-bda78df19532
+    • 2026-01-14T11:14:51.3456491Z
+      IP: 182.48.218.127
+      Location: Cheeta Camp, Maharashtra, IN
+      Device: YPH1101573LT (Windows10, Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 6dc79dbc-1717-4761-a47a-a2a14de17b64
+    • 2026-01-14T11:14:21.5222109Z
+      IP: 182.48.218.127
+      Location: Cheeta Camp, Maharashtra, IN
+      Device: YPH1101573LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 5dadbe31-71c1-46ea-85a8-54474df9e2ae
+    • 2026-01-14T11:13:46.7613399Z
+      IP: 182.48.218.127
+      Location: Cheeta Camp, Maharashtra, IN
+      Device: YPH1101573LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 2bc60c41-a92d-4860-8865-13aea371bdd8
+
+
+[USER: swapna.alhat@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 74 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:15:17.7030441Z
+      IP: 2401:4900:88f8:442e:8f2:7b80:1826:34cd
+      Location: Chhindwara, Madhya Pradesh, IN
+      Device: iPhone 13 (Ios 26.2.0, Mobile Safari 18.7)
+      App: Outlook Mobile
+      Auth Method: Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 117c5dfa-619c-478d-9649-7950e4d2a829
+    • 2026-01-14T11:15:08.575396Z
+      IP: 2401:4900:88f8:442e:8f2:7b80:1826:34cd
+      Location: Chhindwara, Madhya Pradesh, IN
+      Device: iPhone 13 (Ios 26.2.0, Mobile Safari 18.7)
+      App: Outlook Mobile
+      Auth Method: Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 117c5dfa-619c-478d-9649-7950e4d2a829
+    • 2026-01-14T11:14:03.437638Z
+      IP: 2401:4900:88f8:442e:8f2:7b80:1826:34cd
+      Location: Chhindwara, Madhya Pradesh, IN
+      Device: iPhone 13 (Ios 26.2.0, Mobile Safari 18.7)
+      App: Outlook Mobile
+      Auth Method: Text message
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 117c5dfa-619c-478d-9649-7950e4d2a829
+
+
+[USER: govardhan.vindyala@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:15:16.5674698Z
+      IP: 223.187.40.139
+      Location: Guntur, Andhra Pradesh, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Microsoft Office 365 Portal
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 86e272c9-d655-4994-a47a-603da03e7847
+
+
+[USER: preety.agrawalla@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 96 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:15:16.3608424Z
+      IP: 203.197.238.210
+      Location: Delhi, Delhi, IN
+      Device: YH1103279LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 5f3ef842-f044-490f-abb9-637330642b4b
+    • 2026-01-14T11:14:36.354793Z
+      IP: 203.197.238.210
+      Location: Delhi, Delhi, IN
+      Device: YH1103279LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: a0e44e28-9c3c-4d7a-8670-3e5dbca01ffa
+    • 2026-01-14T11:13:39.512466Z
+      IP: 203.197.238.210
+      Location: Delhi, Delhi, IN
+      Device: YH1103279LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 3e8a0b4f-938d-4166-89e2-f1e01556fb8a
+
+
+[USER: prasant.morusu@yash.com]
+Total Sign-ins: 9
+Successful: 8 | Failed: 1
+Time Span: 267 seconds
+
+  [FAILURE] - 1 events:
+    • 2026-01-14T11:10:46.2735125Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: My Signins
+      Auth Method: Password
+      MFA: No
+      Error: This occurred due to 'Keep me signed in' interrupt when the user was signing in.
+      Risk Level: hidden
+      Correlation ID: 9be91ca1-c06a-4708-8b2d-cfe54803d4d1
+
+  [SUCCESS] - 8 events:
+    • 2026-01-14T11:15:14.0576487Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 3540fe61-1780-4780-91fb-5645f251df8a
+    • 2026-01-14T11:14:14.9427396Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: My Signins
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 0a3f5b34-a49a-42ff-933f-931c7b819bcf
+    • 2026-01-14T11:13:43.9040101Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 511f0bd4-7f34-4e7f-ba02-e81d7fb007f0
+    • 2026-01-14T11:13:32.9053997Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: My Signins
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 9be91ca1-c06a-4708-8b2d-cfe54803d4d1
+    • 2026-01-14T11:13:28.7252469Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: My Signins
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 8448ea46-f040-4af9-92d0-ea0cbd894559
+    • 2026-01-14T11:12:31.5366682Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 88f6d852-2ec2-4e90-9573-43e1d8bc1d10
+    • 2026-01-14T11:12:19.9008579Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: ad816175-2a9b-41fa-8ecb-7f166ae2edfc
+    • 2026-01-14T11:11:46.5532978Z
+      IP: 49.204.196.37
+      Location: Nellore, Andhra Pradesh, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft 365 Support Service
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 49cde4f4-9242-4c1e-9532-4eeeaa5a2db7
+
+
+[USER: mohamed.yasser@yash.com]
+Total Sign-ins: 6
+Successful: 6 | Failed: 0
+Time Span: 211 seconds
+
+  [SUCCESS] - 6 events:
+    • 2026-01-14T11:15:11.0981858Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 52855a82-9352-411d-b8fc-73ad7331e5ff
+    • 2026-01-14T11:14:58.1170583Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 9e5eadff-d81e-4889-9eda-9b6e510fd908
+    • 2026-01-14T11:14:44.0772714Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: f247b51a-7016-4359-bc0e-d9725d2c3f90
+    • 2026-01-14T11:14:19.6384797Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 55d442cb-bdbd-4ef2-904a-294a3c6e6e79
+    • 2026-01-14T11:11:39.3773525Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 2de3eca1-503c-6000-5040-de3a5b1c188f
+    • 2026-01-14T11:11:39.3773474Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Password, Mobile app notification
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 2de3eca1-503c-6000-5040-de3a5b1c188f
+
+
+[USER: swathi.jyothula@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:15:00.5226987Z
+      IP: 2401:4900:1cb2:e0f0:398f:31cd:4a93:e08a
+      Location: Karwan, Telangana, IN
+      Device: YH1103076LT (Windows10, Edge 143.0.0)
+      App: OfficeHome
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d3b2badf-42e9-4fca-8b33-8abb87577539
+
+
+[USER: sahelie.chakravarty@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:15:00.2445369Z
+      IP: 2409:40f0:102c:b3b9:45c2:e872:cec2:230b
+      Location: Moosapet, Telangana, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: One Outlook Web
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0a289edb-b167-01eb-3961-3dd360e3308c
+
+
+[USER: more.prashant@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 71 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:14:54.2108234Z
+      IP: 103.153.166.202
+      Location: Pune, Maharashtra, IN
+      Device: YPH1101013LT (Windows10, IE 10.0)
+      App: Microsoft Office
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d1b45e83-c7fb-4cd0-816c-7823c2a4a8be
+    • 2026-01-14T11:13:42.6520144Z
+      IP: 103.153.166.202
+      Location: Pune, Maharashtra, IN
+      Device: YPH1101013LT (Windows10, IE 10.0)
+      App: Microsoft Office
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: f5b1b514-2246-4d90-bde4-7b91ee519cbd
+
+
+[USER: archana.mali@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:14:53.938088Z
+      IP: 2405:201:300a:82d9:f4d6:7f31:2520:5929
+      Location: Indore, Madhya Pradesh, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Outsystem_Timesheet
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: f0a7af4a-fccc-42e4-aa7b-9a47223aa0ad
+
+
+[USER: rajkumar.gehlot@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 15 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:14:49.4008021Z
+      IP: 125.23.93.22
+      Location: New Delhi, Delhi, IN
+      Device: YI1015531LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 2651722b-626a-4698-9633-ecc31beb824e
+    • 2026-01-14T11:14:33.8610444Z
+      IP: 125.23.93.22
+      Location: New Delhi, Delhi, IN
+      Device: YI1015531LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 95a55253-f864-4e11-b89a-880d76b1feb9
+
+
+[USER: sharath.mamidala@yash.com]
+Total Sign-ins: 4
+Successful: 4 | Failed: 0
+Time Span: 69 seconds
+
+  [SUCCESS] - 4 events:
+    • 2026-01-14T11:14:27.9828141Z
+      IP: 111.93.228.162
+      Location: Sanand, Gujarat, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 16e6eca1-50de-b000-1032-cc8185997f49
+    • 2026-01-14T11:14:25.2050906Z
+      IP: 111.93.228.162
+      Location: Sanand, Gujarat, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: dc438026-2342-4d2c-996c-2916b0f57dc1
+    • 2026-01-14T11:13:20.7300157Z
+      IP: 111.93.228.162
+      Location: Sanand, Gujarat, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 0ee6eca1-e049-6000-5040-d6b450fe5ddd
+    • 2026-01-14T11:13:18.2770745Z
+      IP: 111.93.228.162
+      Location: Sanand, Gujarat, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: f4aa8255-0e70-4500-a0f0-6812c0cbfccf
+
+
+[USER: jayanth.kadapatinti@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:14:21.205596Z
+      IP: 49.205.248.117
+      Location: Bamboos (Hyderabad), Telangana, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Outsystem_Timesheet
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 55f24265-e00d-4ade-99ab-4598ed9924a6
+
+
+[USER: atul.gautam@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:14:16.7398563Z
+      IP: 125.23.93.22
+      Location: New Delhi, Delhi, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 425e3caa-b075-48dc-ab9b-6f9bbaec9406
+
+
+[USER: vikram.chavan@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:14:15.2926105Z
+      IP: 2402:e280:3e66:1d6:a1d9:1687:30ca:54d9
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YPH1007344LT (Windows10, Edge 18.19044)
+      App: Microsoft Authentication Broker
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 5401a6e4-3b0b-49bf-be42-d76741aededf
+
+
+[USER: parul.pardhal@yash.com]
+Total Sign-ins: 4
+Successful: 4 | Failed: 0
+Time Span: 85 seconds
+
+  [SUCCESS] - 4 events:
+    • 2026-01-14T11:14:07.3716846Z
+      IP: 2401:4900:52fd:49ac:782c:85f5:7a71:e254
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 2793d379-d3ff-4655-b990-56bb9dae2e05
+    • 2026-01-14T11:13:40.7608201Z
+      IP: 2401:4900:52fd:49ac:782c:85f5:7a71:e254
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: e0e62edd-9c37-4ae2-b762-f55f2a135b77
+    • 2026-01-14T11:13:02.3325211Z
+      IP: 2401:4900:52fd:49ac:782c:85f5:7a71:e254
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 99e40986-9427-46fa-af9c-bf01430265f9
+    • 2026-01-14T11:12:41.8840751Z
+      IP: 2401:4900:52fd:49ac:782c:85f5:7a71:e254
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 38f4162c-58d8-4d03-8ff6-432f2248d676
+
+
+[USER: anjali.sharma@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 67 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:14:07.3004763Z
+      IP: 122.167.115.142
+      Location: Kasarwadi, Maharashtra, IN
+      Device: YP1009615LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: ae72e5ab-b6ba-40c5-af8f-b0222da5c013
+    • 2026-01-14T11:13:51.0447288Z
+      IP: 122.167.115.142
+      Location: Kasarwadi, Maharashtra, IN
+      Device: YP1009615LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d6528cbf-dd3c-42f7-a133-315a79c7fbd0
+    • 2026-01-14T11:12:59.8592292Z
+      IP: 122.167.115.142
+      Location: Kasarwadi, Maharashtra, IN
+      Device: YP1009615LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: a10884db-7017-4fe0-9604-862c997072d9
+
+
+[USER: shivam.bharucha@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 76 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:14:03.3187467Z
+      IP: 27.107.64.154
+      Location: Mumbai, Maharashtra, IN
+      Device: YP1103012LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: b3bd8a45-e4b6-451e-8aa2-d8cca26869ea
+    • 2026-01-14T11:13:19.8827604Z
+      IP: 203.199.133.30
+      Location: Kothrud, Maharashtra, IN
+      Device: YP1103012LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 82b5bf4e-f6ca-4cfc-9053-2e499f4a17f0
+    • 2026-01-14T11:12:46.9321718Z
+      IP: 27.107.64.154
+      Location: Mumbai, Maharashtra, IN
+      Device: YP1103012LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: bc387e04-6da0-4bbc-952e-93c1f412b639
+
+
+[USER: nagavvss.kumar@yash.com]
+Total Sign-ins: 4
+Successful: 4 | Failed: 0
+Time Span: 115 seconds
+
+  [SUCCESS] - 4 events:
+    • 2026-01-14T11:14:01.4482304Z
+      IP: 163.116.214.93
+      Location: Chennai, Tamil Nadu, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: My Signins
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 8e6868ad-07ee-442c-8d26-68d5e998d408
+    • 2026-01-14T11:13:25.9530838Z
+      IP: 163.116.214.93
+      Location: Chennai, Tamil Nadu, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 142bceb4-70d8-4f58-b7e7-e8eba48a4569
+    • 2026-01-14T11:12:54.4445356Z
+      IP: 163.116.214.93
+      Location: Chennai, Tamil Nadu, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: OfficeHome
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0662a5dd-776f-4120-bcdf-1f8abf742c00
+    • 2026-01-14T11:12:05.7580919Z
+      IP: 163.116.214.93
+      Location: Chennai, Tamil Nadu, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: One Outlook Web
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: fd25dd92-47a5-56f5-60d3-9334820fb7e7
+
+
+[USER: ajeet.kumar@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:13:53.7821727Z
+      IP: 2401:4900:188b:ca39:d437:a9d9:b578:9cff
+      Location: Gurgaon, Haryana, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Outsystem_Timesheet
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: a52fb63b-defd-42e8-9c06-694fd89f5e95
+
+
+[USER: waad.elqurashy@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:13:50.7000613Z
+      IP: 194.126.138.52
+      Location: Bayrut, Beyrouth, LB
+      Device: DESKTOP-J9A9V48 (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 3ea53381-ac7a-47b4-b2cd-b522f2aa7e5f
+
+
+[USER: parikh.nikhil@yash.com]
+Total Sign-ins: 4
+Successful: 4 | Failed: 0
+Time Span: 67 seconds
+
+  [SUCCESS] - 4 events:
+    • 2026-01-14T11:13:41.1163212Z
+      IP: 49.43.4.53
+      Location: Padaliya Bajrang, Madhya Pradesh, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 435d2b03-5d5a-4133-ad8b-899f12de06b9
+    • 2026-01-14T11:13:21.1206878Z
+      IP: 49.43.4.53
+      Location: Padaliya Bajrang, Madhya Pradesh, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d81af5a7-85bf-47b1-b2c7-27d60aac5e27
+    • 2026-01-14T11:13:11.8361132Z
+      IP: 49.43.4.53
+      Location: Padaliya Bajrang, Madhya Pradesh, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 43adb44f-b477-4faa-bd61-d88c23a11d49
+    • 2026-01-14T11:12:33.4273723Z
+      IP: 49.43.4.53
+      Location: Padaliya Bajrang, Madhya Pradesh, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 8a52867e-a374-4f95-b12d-c2288a13aa95
+
+
+[USER: amel.shehata@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 100 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:13:32.5761487Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: be8f0b4a-8245-423b-bb50-3580c212be23
+    • 2026-01-14T11:12:31.8066711Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 4f93a4e7-6d38-4b69-a556-9577f2f68acd
+    • 2026-01-14T11:11:52.168364Z
+      IP: 197.36.49.175
+      Location: Al Qahirah, Al Qahirah, EG
+      Device: Windows10 (Chrome 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 035e8d15-9a35-489b-9ac3-ac0d9df5d199
+
+
+[USER: sumit.j@yash.com]
+Total Sign-ins: 5
+Successful: 5 | Failed: 0
+Time Span: 148 seconds
+
+  [SUCCESS] - 5 events:
+    • 2026-01-14T11:13:28.967933Z
+      IP: 14.143.131.134
+      Location: Mumbai, Maharashtra, IN
+      Device: Windows10 (Chrome 143.0.0)
+      App: Outsystem_Timesheet
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 1a07e71c-79c7-4fd5-b3f3-40544eba7e0b
+    • 2026-01-14T11:11:20.8775251Z
+      IP: 14.143.131.134
+      Location: Mumbai, Maharashtra, IN
+      Device: YIBTC1102378LT (Windows10, Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: e83e73a1-2e74-4f68-8cc2-559f27c6c1b0
+    • 2026-01-14T11:11:16.3715395Z
+      IP: 14.143.131.134
+      Location: Mumbai, Maharashtra, IN
+      Device: YIBTC1102378LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0cacdb31-157c-4995-96fe-c6b7e2d1cd81
+    • 2026-01-14T11:11:10.0285493Z
+      IP: 14.143.131.134
+      Location: Mumbai, Maharashtra, IN
+      Device: YIBTC1102378LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: a549bea1-4842-4aac-85c1-de6977a4652f
+    • 2026-01-14T11:11:00.3054132Z
+      IP: 49.249.2.30
+      Location: Dewas, Madhya Pradesh, IN
+      Device: YIBTC1102378LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 53bf35c1-7d80-405c-9f9f-a0761e8f3a17
+
+
+[USER: rishi.rajput@yash.com]
+Total Sign-ins: 5
+Successful: 5 | Failed: 0
+Time Span: 99 seconds
+
+  [SUCCESS] - 5 events:
+    • 2026-01-14T11:13:25.1661456Z
+      IP: 2409:40c2:116e:af47:2132:96b9:e6d1:a173
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YP1102639LT (Windows10, Edge 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: fae5eca1-c081-6000-5040-de5d3c336e8b
+    • 2026-01-14T11:12:44.4389065Z
+      IP: 2409:40c2:116e:af47:2132:96b9:e6d1:a173
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YP1102639LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 535cef1e-c8ed-4d32-9095-e7f2ab561236
+    • 2026-01-14T11:12:25.7435632Z
+      IP: 2409:40c2:116e:af47:2132:96b9:e6d1:a173
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YP1102639LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 160e893d-d7c3-4b37-9f98-0a618445e31f
+    • 2026-01-14T11:11:51.6240366Z
+      IP: 2409:40c2:116e:af47:2132:96b9:e6d1:a173
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YP1102639LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 6556d72a-1047-4819-84b7-5cfa3038b1ff
+    • 2026-01-14T11:11:45.5747804Z
+      IP: 2409:40c2:116e:af47:2132:96b9:e6d1:a173
+      Location: Thathawade (Dattwadi), Maharashtra, IN
+      Device: YP1102639LT (Windows10, Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 177b1d22-3be2-4585-8de1-a594b282a1a4
+
+
+[USER: anil.kesiraju@yash.com]
+Total Sign-ins: 6
+Successful: 6 | Failed: 0
+Time Span: 154 seconds
+
+  [SUCCESS] - 6 events:
+    • 2026-01-14T11:13:14.6005717Z
+      IP: 124.123.137.63
+      Location: Miyapur (Hyderabad), Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office 365 SharePoint Online
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d9e5eca1-20a5-6000-5040-d2828713c310
+    • 2026-01-14T11:11:25.3216988Z
+      IP: 124.123.137.63
+      Location: Miyapur (Hyderabad), Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: c0a66161-936b-47e5-a4f5-f93038dff1aa
+    • 2026-01-14T11:11:22.239262Z
+      IP: 124.123.137.63
+      Location: Miyapur (Hyderabad), Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 9f39ad4b-61a3-4eaf-abba-04e85f284e1f
+    • 2026-01-14T11:11:11.903316Z
+      IP: 124.123.137.63
+      Location: Miyapur (Hyderabad), Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 6eda19ee-a9ae-47c7-a638-ca10d36179dd
+    • 2026-01-14T11:11:08.0974389Z
+      IP: 124.123.137.63
+      Location: Miyapur (Hyderabad), Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: cb376102-c0f3-49d7-837a-13d47868125d
+    • 2026-01-14T11:10:40.1289485Z
+      IP: 124.123.137.63
+      Location: Miyapur (Hyderabad), Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d386a3ab-5123-4a91-a119-e80d3da4fc49
+
+
+[USER: swati.mamgain@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 42 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:13:13.8803646Z
+      IP: 223.190.85.6
+      Location: Ram Nagar, Delhi, IN
+      Device: YG1601194LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 77c6b806-8f9e-4e77-9495-a1d6c03b0cc5
+    • 2026-01-14T11:12:31.6603295Z
+      IP: 223.190.85.6
+      Location: Ram Nagar, Delhi, IN
+      Device: YG1601194LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 3f2168a8-b98b-41f0-8462-be1a72f6a641
+
+
+[USER: sanskar.pukale@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 20 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:13:13.8055179Z
+      IP: 27.107.64.214
+      Location: Mumbai, Maharashtra, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 0600794f-ae6d-44ed-99b5-5875583ef0d1
+    • 2026-01-14T11:13:03.803212Z
+      IP: 14.141.235.38
+      Location: Pune, Maharashtra, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: fffa92bc-f1af-4976-a049-54af191c3b30
+    • 2026-01-14T11:12:53.0925983Z
+      IP: 14.141.235.38
+      Location: Pune, Maharashtra, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 0019624e-11a7-42e4-b093-5b6854a19290
+
+
+[USER: subbareddy.sana@yash.com]
+Total Sign-ins: 1
+Successful: 0 | Failed: 1
+
+  [FAILURE] - 1 events:
+    • 2026-01-14T11:13:07.5171194Z
+      IP: 27.6.183.121
+      Location: Irram Manzil Colony, Telangana, IN
+      Device: Windows10 (Edge 143.0.0)
+      App: Microsoft Teams Web Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Error: The session has expired or is invalid due to sign-in frequency checks by conditional access.
+      Risk Level: hidden
+      Correlation ID: 50628b98-598f-4c39-908a-45113eeb3ad1
+
+
+[USER: rathna.kireeti@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 39 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:13:00.9257838Z
+      IP: 2405:201:c00b:2102:d580:d5d7:1903:825
+      Location: Gachibowli, Telangana, IN
+      Device: YH1011735LT1 (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: c22fc712-4efb-42c5-bc4c-129de6888f06
+    • 2026-01-14T11:12:39.1639285Z
+      IP: 2405:201:c00b:2102:d580:d5d7:1903:825
+      Location: Gachibowli, Telangana, IN
+      Device: YH1011735LT1 (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 65ed6822-c230-4ff0-a427-db9c527abd02
+    • 2026-01-14T11:12:21.8744067Z
+      IP: 2405:201:c00b:2102:d580:d5d7:1903:825
+      Location: Gachibowli, Telangana, IN
+      Device: YH1011735LT1 (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 7705a957-c7ad-471b-acd3-e2da1e81f440
+
+
+[USER: pankaj.dashetwar@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 15 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:12:30.179913Z
+      IP: 49.36.33.141
+      Location: Nagpur, Maharashtra, IN
+      Device: YPH1101433LT (Windows10, Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 2cd9123c-d68d-4013-b039-de578151218b
+    • 2026-01-14T11:12:14.2323118Z
+      IP: 49.36.33.141
+      Location: Nagpur, Maharashtra, IN
+      Device: YPH1101433LT (Windows10, Edge 143.0.0)
+      App: My Signins
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 03d0673b-db69-4aeb-869e-c78b4c0e51af
+
+
+[USER: navya.vullingala@yash.com]
+Total Sign-ins: 13
+Successful: 13 | Failed: 0
+Time Span: 101 seconds
+
+  [SUCCESS] - 13 events:
+    • 2026-01-14T11:12:27.2916591Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 3a267341-a0b5-42b9-b0ea-cec1c09d4eee
+    • 2026-01-14T11:12:25.5225128Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 615565e6-53eb-42f4-aae5-586ded211515
+    • 2026-01-14T11:11:48.1331692Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: a7e6318e-42e8-4305-8eab-121d3a06ddc9
+    • 2026-01-14T11:11:45.1878171Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 7c1c2b80-74a8-4bd4-819c-d7428ddc1bbf
+    • 2026-01-14T11:11:39.4280315Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 950ba96d-4552-4d5e-b10b-09858d53bc12
+    • 2026-01-14T11:11:26.1352717Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0c37c860-cb88-4af3-ab17-3c4225eb2430
+    • 2026-01-14T11:11:16.1388436Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 421a8a80-e918-4efa-8ca1-e083f4904feb
+    • 2026-01-14T11:11:14.1780024Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 10c39700-5715-4e52-bb98-3c0e91fc318f
+    • 2026-01-14T11:11:03.1988886Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 89ca8f1e-ed2e-4d62-a2dc-93206a479b7e
+    • 2026-01-14T11:11:01.8519768Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: b9eb55d4-4757-4e0d-aac1-bc8658a03898
+    • 2026-01-14T11:10:59.0940699Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: ee3da63c-d50e-497f-b0fb-74b4a712a363
+    • 2026-01-14T11:10:51.0393425Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: c55f103e-df29-4b46-8ad9-df75e375b0a6
+    • 2026-01-14T11:10:45.7068713Z
+      IP: 117.252.52.184
+      Location: Anakapalle, Andhra Pradesh, IN
+      Device: YH1102829LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 0c1a26a6-e173-46cd-91c1-23e9fdfc158c
+
+
+[USER: madhusudhan.c@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 98 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:12:21.9891141Z
+      IP: 2409:408c:1e92:ab09:f940:e31b:146c:e2a9
+      Location: Karwan, Telangana, IN
+      Device: YH1101527LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: efb27bcc-df28-4c55-b6ba-1e0ce74ab88c
+    • 2026-01-14T11:12:06.3111106Z
+      IP: 2409:408c:1e92:ab09:f940:e31b:146c:e2a9
+      Location: Karwan, Telangana, IN
+      Device: YH1101527LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 70f87c48-0e67-4672-8d5e-426746bae396
+    • 2026-01-14T11:10:43.6264822Z
+      IP: 2409:408c:1e92:ab09:f940:e31b:146c:e2a9
+      Location: Karwan, Telangana, IN
+      Device: YH1101527LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 2010fd0b-b2c2-48c3-8caf-d1cb1588b822
+
+
+[USER: shashidhar.vanga@yash.com]
+Total Sign-ins: 2
+Successful: 2 | Failed: 0
+Time Span: 2 seconds
+
+  [SUCCESS] - 2 events:
+    • 2026-01-14T11:12:15.5377435Z
+      IP: 2401:4900:4948:2505:a083:7753:d3ef:c4e1
+      Location: IN
+      Device: YH1011816LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 7d6dae6d-f3a7-4e32-8f5f-f71ee0fdfa8b
+    • 2026-01-14T11:12:13.3744041Z
+      IP: 2401:4900:4948:2505:a083:7753:d3ef:c4e1
+      Location: IN
+      Device: YH1011816LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: c7a2ba92-494e-4b90-a418-50fc35c588e4
+
+
+[USER: dinesh.natarajan@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:12:14.0733659Z
+      IP: 185.95.186.2
+      Location: As Sulaymaniyah, As Sulaymaniyah, IQ
+      Device: YDUB7000592LT (Windows10, Edge 143.0.0)
+      App: SharePoint Online Web Client Extensibility
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 562bdc17-9341-4666-b964-f4f433695514
+
+
+[USER: somya.misra@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 15 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:12:12.7141777Z
+      IP: 14.194.129.210
+      Location: Mumbai, Maharashtra, IN
+      Device: YISC1102470LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 54b76c8c-acc5-4c8b-901d-4339d925387a
+    • 2026-01-14T11:12:08.7377989Z
+      IP: 14.194.129.210
+      Location: Mumbai, Maharashtra, IN
+      Device: YISC1102470LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 98ead678-5a46-4a85-ab24-37710f689e43
+    • 2026-01-14T11:11:57.2935144Z
+      IP: 125.23.93.22
+      Location: New Delhi, Delhi, IN
+      Device: YISC1102470LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 3bbbb0d5-996e-411e-b2f8-ae7a02c64f58
+
+
+[USER: ashok.nimmagadda@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:12:02.6408965Z
+      IP: 111.93.228.162
+      Location: Sanand, Gujarat, IN
+      Device: YH1002719LT2 (Windows10, Edge 18.26100)
+      App: Microsoft Authentication Broker
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 4b720183-0d58-441b-8411-c62de013ddde
+
+
+[USER: sasi.katta@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:11:50.2056266Z
+      IP: 123.63.116.121
+      Location: Rajkot, Gujarat, IN
+      Device: Windows10 (Edge 86.0.622)
+      App: Microsoft Teams Web Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 2fb70624-9fc6-4d86-abf6-87f100a47c11
+
+
+[USER: verma.aman@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:11:32.361703Z
+      IP: 2409:40e3:30ae:717d:646a:bb6f:169e:fd5a
+      Location: Chhindwara, Madhya Pradesh, IN
+      Device: MacOs (Safari 26.2)
+      App: Microsoft Teams Web Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: d0c9447e-a101-4523-8536-43b997f1a4db
+
+
+[USER: sarita.lad@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 43 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:11:24.8871121Z
+      IP: 2401:4900:52f9:3b59:b130:87ec:4a99:ba2b
+      Location: IN
+      Device: YISC1601949LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 2df61eaa-22af-4708-ae7d-1f5ec6531d16
+    • 2026-01-14T11:11:13.695868Z
+      IP: 2401:4900:52f9:3b59:b130:87ec:4a99:ba2b
+      Location: IN
+      Device: YISC1601949LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 3eb96205-f445-4c6a-a3aa-aa8e58a18e10
+    • 2026-01-14T11:10:40.9867969Z
+      IP: 2401:4900:52f9:3b59:b130:87ec:4a99:ba2b
+      Location: IN
+      Device: YISC1601949LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 57ab30a6-b3b2-4d47-91fd-774e38177726
+
+
+[USER: pallavi.brale@yash.com]
+Total Sign-ins: 1
+Successful: 1 | Failed: 0
+
+  [SUCCESS] - 1 events:
+    • 2026-01-14T11:11:17.1016736Z
+      IP: 152.59.47.82
+      Location: Begampura, Gujarat, IN
+      Device: YISC1103027LT (Windows10, Edge 143.0.0)
+      App: Office365 Shell WCSS-Client
+      Auth Method: Previously satisfied
+      MFA: No
+      Risk Level: hidden
+      Correlation ID: 868e5fc2-d9d2-4977-b6a1-663020ac0c87
+
+
+[USER: jai.raikwar@yash.com]
+Total Sign-ins: 3
+Successful: 3 | Failed: 0
+Time Span: 29 seconds
+
+  [SUCCESS] - 3 events:
+    • 2026-01-14T11:11:10.8076038Z
+      IP: 14.143.131.134
+      Location: Mumbai, Maharashtra, IN
+      Device: YI1100128LT (Windows10, Edge 143.0.0)
+      App: My Profile
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: 5b636a5e-f536-4734-ba40-fe7acb834dbc
+    • 2026-01-14T11:10:48.7614549Z
+      IP: 49.249.2.30
+      Location: Dewas, Madhya Pradesh, IN
+      Device: YI1100128LT (Windows10, Edge 143.0.0)
+      App: Microsoft Account Controls V2
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: a7740f21-d8a7-47c7-9b0c-ee4734afdaeb
+    • 2026-01-14T11:10:41.2314099Z
+      IP: 14.143.131.134
+      Location: Mumbai, Maharashtra, IN
+      Device: YI1100128LT (Windows10, Edge 143.0.0)
+      App: My Signins
+      Auth Method: Previously satisfied
+      MFA: Yes
+      Risk Level: hidden
+      Correlation ID: a0d699c6-377a-4c24-a8d7-d700df6d87a9
+
+
+[USER: akhilesh.sodhani@yash.com]
+Total Sign-ins: 1
+Successful: 0 | Failed: 1
+
+  [FAILURE] - 1 events:
+    • 2026-01-14T11:11:04.3431336Z
+      IP: 2605:6400:c077:b5f3:426c:766f:bfba:ade8
+      Location: Luxembourg, Luxembourg, LU
+      Device: Unknown Device
+      App: Microsoft Azure CLI
+      Auth Method: Password
+      MFA: No
+      Error: Error validating credentials due to invalid username or password.
+      Risk Level: hidden
+      Correlation ID: e40b5294-5961-4135-a5ca-3bdef13d9721
+
+
+================================================================================

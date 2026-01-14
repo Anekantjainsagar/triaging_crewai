@@ -1,0 +1,1074 @@
+================================================================================
+M365 OFFICE ACTIVITY LOG ANALYSIS
+================================================================================
+
+### USER M365 EVENTS ###
+
+
+[USER: dipti.khapekar@yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:43Z
+      Operation: ReactedToMessage
+      Result: 
+      IP: 106.213.80.180
+      Client/Device:  (v)
+      Target: Teams Chat: 19:111023c6-9109-42c...
+
+
+[USER: sowjanya.padala@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:37Z
+      Operation: ReactedToMessage
+      Result: 
+      IP: 131.106.201.250
+      Client/Device:  (v)
+      Target: Teams Chat: 19:10d24d34-0854-4c6...
+
+
+[USER: shiraj.mulani@yash.com]
+Total Events: 1
+
+  [ONEDRIVE] - 1 events:
+    • 2026-01-14T16:06:34Z
+      Operation: FilePreviewed
+      Result: 
+      IP: 122.167.112.33
+      Client/Device:  (v)
+      Target: Describing challenges and opportunities transforming to SAP S_4HA.html
+      File Name: Describing challenges and opportunities transforming to SAP S_4HA.html
+      File Path: Documents/Desktop
+
+
+[USER: edulakanti.manasa@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:28Z
+      Operation: TeamsSessionStarted
+      Result: 
+      IP: 2401:4900:97ec:1a2c:85aa:10f3:a80:44a
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: prem.gaur@yash.com]
+Total Events: 3
+Time Span: 12 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:25Z
+      Operation: MessageCreatedHasLink
+      Result: 
+      IP: 49.43.4.250
+      Client/Device:  (v)
+      Target: Teams Chat: 19:e11a4550-7353-4a0...
+    • 2026-01-14T16:06:13Z
+      Operation: MessageCreatedHasLink
+      Result: 
+      IP: 49.43.4.250
+      Client/Device:  (v)
+      Target: Teams Chat: 19:562901e7-c241-4b1...
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:06:18Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 
+      Client/Device:  (v)
+      Target: N/A
+
+
+[USER: shailendra.gupta@yash.com]
+Total Events: 2
+Time Span: 1 seconds
+
+  [EXCHANGE] - 2 events:
+    • 2026-01-14T16:06:21Z
+      Operation: SoftDelete
+      Result: Succeeded
+      IP: 122.181.103.108
+      Client/Device: OUTLOOK.EXE (v16.0.19426.20218)
+      Target: Email Item: XZY International...
+      Mail Subject: XZY International
+      Affected Items: Subject: XZY International...
+    • 2026-01-14T16:06:20Z
+      Operation: Send
+      Result: Succeeded
+      IP: 122.181.103.108
+      Client/Device: OUTLOOK.EXE (v16.0.19426.20218)
+      Target: N/A
+
+
+[USER: Sergio.Parra@Livanova.com]
+Total Events: 2
+Time Span: 1 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:21Z
+      Operation: MemberAdded
+      Result: 
+      IP: ::ffff:172.175.47.32
+      Client/Device:  (v)
+      Target: Teams Chat: 19:00fb7e03-b0dc-495...
+    • 2026-01-14T16:06:20Z
+      Operation: MemberAdded
+      Result: 
+      IP: ::ffff:20.96.251.224
+      Client/Device:  (v)
+      Target: Teams Chat: 19:00fb7e03-b0dc-495...
+
+
+[USER: bernabe.bercenas@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:20Z
+      Operation: MessageSent
+      Result: 
+      IP: 187.188.64.1
+      Client/Device:  (v)
+      Target: Teams Chat: 19:00fb7e03-b0dc-495...
+
+
+[USER: kashmira.irani@yash.com]
+Total Events: 1
+
+  [ONEDRIVE] - 1 events:
+    • 2026-01-14T16:06:20Z
+      Operation: FileAccessed
+      Result: 
+      IP: 13.91.204.238
+      Client/Device:  (v)
+      Target: Fulltime Forecast.xlsx
+      File Name: Fulltime Forecast.xlsx
+      File Path: Documents
+
+
+[USER: murali.giridhar@yash.com]
+Total Events: 1
+
+  [ONEDRIVE] - 1 events:
+    • 2026-01-14T16:06:20Z
+      Operation: FileAccessed
+      Result: 
+      IP: 104.211.219.142
+      Client/Device:  (v)
+      Target: Document 13.docx
+      File Name: Document 13.docx
+      File Path: Documents
+
+
+[USER: akilan.r@yash.com]
+Total Events: 1
+
+  [ONEDRIVE] - 1 events:
+    • 2026-01-14T16:06:19Z
+      Operation: FileSyncUploadedFull
+      Result: 
+      IP: 140.82.202.234
+      Client/Device:  (v)
+      Target: Screenshot 2026-01-14 212854.png
+      File Name: Screenshot 2026-01-14 212854.png
+      File Path: Documents/Pictures/Screenshots
+
+
+[USER: priyanka.sanda@yash.com]
+Total Events: 2
+Time Span: 18 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:12Z
+      Operation: MessageCreatedHasLink
+      Result: 
+      IP: 99.132.125.165
+      Client/Device:  (v)
+      Target: Teams Chat: 19:26fa6621-579b-4d5...
+    • 2026-01-14T16:05:54Z
+      Operation: MessageCreatedHasLink
+      Result: 
+      IP: 99.132.125.165
+      Client/Device:  (v)
+      Target: Teams Chat: 19:26fa6621-579b-4d5...
+
+
+[USER: sudheer.malyala@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:11Z
+      Operation: ReactedToMessage
+      Result: 
+      IP: 2401:4900:97ec:7287:bdaf:80ec:9934:c6cc
+      Client/Device:  (v)
+      Target: Teams Chat: 19:8ce4900c-3225-4f0...
+
+
+[USER: sampath.chinta@yash.com]
+Total Events: 1
+
+  [SHAREPOINT] - 1 events:
+    • 2026-01-14T16:06:10Z
+      Operation: FileModified
+      Result: 
+      IP: 2405:201:c009:59ca:81f6:8c9e:5fa2:b2ca
+      Client/Device:  (v)
+      Target: Bristow Yash Quarterly Review Q4 Oct to Dec 2025.pptx
+      File Name: Bristow Yash Quarterly Review Q4 Oct to Dec 2025.pptx
+      File Path: Shared Documents/AMS Delivery/Stabilization Phase - Non SAP & SAP- All Towers
+
+
+[USER: ashwini.gour@yash.com]
+Total Events: 2
+Time Span: 7 seconds
+
+  [ONEDRIVE] - 2 events:
+    • 2026-01-14T16:06:10Z
+      Operation: FileSyncUploadedFull
+      Result: 
+      IP: 2401:4900:1cba:9206:3d74:bd4b:7c27:5a3a
+      Client/Device:  (v)
+      Target: Screenshot 2026-01-14 213528.png
+      File Name: Screenshot 2026-01-14 213528.png
+      File Path: Documents/Pictures/Screenshots
+    • 2026-01-14T16:06:03Z
+      Operation: FileSyncUploadedFull
+      Result: 
+      IP: 2401:4900:1cba:9206:3d74:bd4b:7c27:5a3a
+      Client/Device:  (v)
+      Target: Screenshot 2026-01-14 213520.png
+      File Name: Screenshot 2026-01-14 213520.png
+      File Path: Documents/Pictures/Screenshots
+
+
+[USER: urvashi.chouhan@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:08Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.9.16.149
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: surya.jijesh@yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [ONEDRIVE] - 2 events:
+    • 2026-01-14T16:06:07Z
+      Operation: FileAccessed
+      Result: 
+      IP: 2a01:111:f402:f0e7::f156
+      Client/Device:  (v)
+      Target: Maha Oct Nov 2024.pdf
+      File Name: Maha Oct Nov 2024.pdf
+      File Path: Documents/Desktop
+    • 2026-01-14T16:06:07Z
+      Operation: FilePreviewed
+      Result: 
+      IP: 5.31.218.26
+      Client/Device:  (v)
+      Target: Maha Oct Nov 2024.pdf
+      File Name: Maha Oct Nov 2024.pdf
+      File Path: Documents/Desktop
+
+
+[USER: janet.pennel@yash.com]
+Total Events: 2
+Time Span: 2 seconds
+
+  [SHAREPOINT] - 2 events:
+    • 2026-01-14T16:06:07Z
+      Operation: FileModifiedExtended
+      Result: 
+      IP: 2601:240:4500:74e0:91c5:ad79:d6c3:ef4
+      Client/Device:  (v)
+      Target: Territory Intro_MN_IA_NE v011426.pptx
+      File Name: Territory Intro_MN_IA_NE v011426.pptx
+      File Path: Shared Documents/General/Service Line
+    • 2026-01-14T16:06:05Z
+      Operation: FileAccessedExtended
+      Result: 
+      IP: 2601:240:4500:74e0:91c5:ad79:d6c3:ef4
+      Client/Device:  (v)
+      Target: Territory Intro_MN_IA_NE v011426.pptx
+      File Name: Territory Intro_MN_IA_NE v011426.pptx
+      File Path: Shared Documents/General/Service Line
+
+
+[USER: janvi.valecha@yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:05Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 172.20.10.2
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:06:05Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.29.141
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: sreenath.v@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:04Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.6
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:06:04Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.15
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: piyush.dusane@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:03Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.29.186
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:06:03Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.47.157.19
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: logesh.raja@Yash.com]
+Total Events: 2
+Time Span: 3 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:06:01Z
+      Operation: MessageSent
+      Result: 
+      IP: ::ffff:172.197.6.170
+      Client/Device:  (v)
+      Target: Teams Chat: 19:meeting_ZDNjN2VlY...
+    • 2026-01-14T16:05:58Z
+      Operation: MessageSent
+      Result: 
+      IP: ::ffff:172.197.6.170
+      Client/Device:  (v)
+      Target: Teams Chat: 19:meeting_ZDNjN2VlY...
+
+
+[USER: arpan.dhaketa@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:06:00Z
+      Operation: TeamsSessionStarted
+      Result: 
+      IP: 106.219.85.100
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: nitesh.gatlawar@yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:59Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.8.101.14
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:59Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.8.100.85
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: ameet.joshi@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:59Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 52.112.207.x
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:59Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.128.2.234
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: vinay.baji@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:05:59Z
+      Operation: MessageCreatedHasLink
+      Result: 
+      IP: 2001:8f8:1825:a43b:d41c:d161:c524:5f5a
+      Client/Device:  (v)
+      Target: Teams Chat: 19:2cf98885-32e3-477...
+
+
+[USER: veerak@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:59Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 2405:201:c030:497c:ae71:aea3:77cf:57f7
+      Client/Device: OUTLOOK.EXE (v16.0.19426.20218)
+      Target: N/A
+
+
+[USER: shashank.karn@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:58Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.128.13.12
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:58Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.10
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: nagaraj.bhargava@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:58Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 
+      Client/Device:  (v)
+      Target: N/A
+
+
+[USER: nitin@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:56Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 
+      Client/Device:  (v)
+      Target: N/A
+
+
+[USER: harshadas.haridas@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:55Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.200.1.62
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:55Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.176
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: mahesh.bhujbal@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:53Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.8.100.85
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:53Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.8.101.x
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: subrahmanyam.t@yash.com]
+Total Events: 1
+
+  [SHAREPOINT] - 1 events:
+    • 2026-01-14T16:05:52Z
+      Operation: FileModifiedExtended
+      Result: 
+      IP: 2603:1063:2202:14::
+      Client/Device:  (v)
+      Target: YASH Proposal to SAGG for Grow with SAP S4HANA Public Cloud Implementation Services.pptx
+      File Name: YASH Proposal to SAGG for Grow with SAP S4HANA Public Cloud Implementation Services.pptx
+      File Path: Shared Documents/AL Ghurair RFP Response/RFP Response
+
+
+[USER: harsh.baheti@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:52Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 
+      Client/Device:  (v)
+      Target: N/A
+
+
+[USER: ravikishore.mikkili@yash.com]
+Total Events: 3
+Time Span: 4 seconds
+
+  [ONEDRIVE] - 3 events:
+    • 2026-01-14T16:05:50Z
+      Operation: FilePreviewed
+      Result: 
+      IP: 2401:4900:4fc5:3a39:a9cd:71bd:ec1d:a7a0
+      Client/Device:  (v)
+      Target: ZMRP_REPORT1_N report raj petro - PRD 14.01.2026.docx
+      File Name: ZMRP_REPORT1_N report raj petro - PRD 14.01.2026.docx
+      File Path: Documents/Microsoft Teams Chat Files
+    • 2026-01-14T16:05:49Z
+      Operation: FileDownloaded
+      Result: 
+      IP: 2401:4900:4fc5:3a39:a9cd:71bd:ec1d:a7a0
+      Client/Device:  (v)
+      Target: zmrp_report1_n report in PRD 14.01.2026.XLSX
+      File Name: zmrp_report1_n report in PRD 14.01.2026.XLSX
+      File Path: Documents/Microsoft Teams Chat Files
+    • 2026-01-14T16:05:46Z
+      Operation: FilePreviewed
+      Result: 
+      IP: 2401:4900:4fc5:3a39:a9cd:71bd:ec1d:a7a0
+      Client/Device:  (v)
+      Target: zmrp_report1_n report in PRD 14.01.2026.XLSX
+      File Name: zmrp_report1_n report in PRD 14.01.2026.XLSX
+      File Path: Documents/Microsoft Teams Chat Files
+
+
+[USER: srikanth.pathipati@Yash.com]
+Total Events: 2
+Time Span: 2 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:50Z
+      Operation: MemberAdded
+      Result: 
+      IP: ::ffff:20.27.13.154
+      Client/Device:  (v)
+      Target: Teams Chat: 19:37557072-d78c-43f...
+    • 2026-01-14T16:05:48Z
+      Operation: UserAccepted
+      Result: 
+      IP: 
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: vaibhav.shyamkuwar@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:49Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 172.20.10.2
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:49Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.8.100.121
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: sankar.allampati@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:48Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.16.51
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:48Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.68.107
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: zaneer.babu@yash.com]
+Total Events: 2
+Time Span: 2 seconds
+
+  [EXCHANGE] - 2 events:
+    • 2026-01-14T16:05:48Z
+      Operation: Send
+      Result: Succeeded
+      IP: 173.27.171.152
+      Client/Device: OUTLOOK.EXE (v16.0.19426.20218)
+      Target: N/A
+    • 2026-01-14T16:05:46Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 
+      Client/Device:  (v)
+      Target: N/A
+
+
+[USER: akash.mishra@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:47Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.8.100.135
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:47Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.29.134
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: vaibhav.khandelwal@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:46Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.6
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:46Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.29.226
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: akanksha.gautam@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:45Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.26.9.6
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:45Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.54
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: alekya.srirangam@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:44Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.0.6
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:44Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.29.242
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: gangadhar.p@Yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:44Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.17
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:44Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.5
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: leelarajesh.t@yash.com]
+Total Events: 1
+
+  [SHAREPOINT] - 1 events:
+    • 2026-01-14T16:05:43Z
+      Operation: FileModifiedExtended
+      Result: 
+      IP: 2603:1063:2202:14::
+      Client/Device:  (v)
+      Target: ISG Databricks RFI Briefing deck 2026.pptx
+      File Name: ISG Databricks RFI Briefing deck 2026.pptx
+      File Path: Shared Documents/GTM and Collaterals/GTM-GTC 2025/Analyst/ISG
+
+
+[USER: sarath.sannadi@yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [ONEDRIVE] - 2 events:
+    • 2026-01-14T16:05:40Z
+      Operation: FilePreviewed
+      Result: 
+      IP: true
+      Client/Device:  (v)
+      Target: Legacy Modernization using YASH GenAI DocWriter for Medline - Draft.pptx
+      File Name: Legacy Modernization using YASH GenAI DocWriter for Medline - Draft.pptx
+      File Path: Documents/Account Management/Medline
+    • 2026-01-14T16:05:40Z
+      Operation: FilePreviewed
+      Result: 
+      IP: true
+      Client/Device:  (v)
+      Target: Legacy Modernization using YASH GenAI DocWriter for Medline - Draft.pptx
+      File Name: Legacy Modernization using YASH GenAI DocWriter for Medline - Draft.pptx
+      File Path: Documents/Account Management/Medline
+
+
+[USER: srinath.chidurala@yash.com]
+Total Events: 1
+
+  [ONEDRIVE] - 1 events:
+    • 2026-01-14T16:05:40Z
+      Operation: FileAccessed
+      Result: 
+      IP: 65.128.223.124
+      Client/Device:  (v)
+      Target: Yash_Digital Offering with AI-IoT-FA_use cases_V1.0-Seagate.pptx
+      File Name: Yash_Digital Offering with AI-IoT-FA_use cases_V1.0-Seagate.pptx
+      File Path: Documents
+
+
+[USER: prerna.sharda@yash.com]
+Total Events: 2
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 2 events:
+    • 2026-01-14T16:05:40Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.9.16.212
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:40Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 192.168.1.6
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: devesh.neema@yash.com]
+Total Events: 1
+
+  [ONEDRIVE] - 1 events:
+    • 2026-01-14T16:05:39Z
+      Operation: FileAccessed
+      Result: 
+      IP: 46.110.83.67
+      Client/Device:  (v)
+      Target: All.aspx
+      File Name: All.aspx
+      File Path: Documents/Forms
+
+
+[USER: saneef.sohail@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:39Z
+      Operation: Send
+      Result: Succeeded
+      IP: 106.205.29.80
+      Client/Device: OUTLOOK.EXE (v16.0.10417.20080)
+      Target: N/A
+
+
+[USER: singh.akash@yash.com]
+Total Events: 3
+Time Span: 1 seconds
+
+  [EXCHANGE] - 3 events:
+    • 2026-01-14T16:05:38Z
+      Operation: SoftDelete
+      Result: Succeeded
+      IP: 223.230.158.153
+      Client/Device: OUTLOOK.EXE (v16.0.10417.20080)
+      Target: Email Item: [Request ID :##RE-89808##] : Added to gr...
+      Mail Subject: [Request ID :##RE-89808##] : Added to group CIMS Azure Account Name: Rogers Corporation
+      Affected Items: Subject: [Request ID :##RE-89808##] : Added to gr...
+    • 2026-01-14T16:05:37Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 223.230.158.153
+      Client/Device: OUTLOOK.EXE (v16.0.10417.20080)
+      Target: N/A
+    • 2026-01-14T16:05:37Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP: 223.230.158.153
+      Client/Device: OUTLOOK.EXE (v16.0.10417.20080)
+      Target: N/A
+
+
+[USER: ethan.marti@yash.com]
+Total Events: 1
+
+  [SHAREPOINT] - 1 events:
+    • 2026-01-14T16:05:36Z
+      Operation: FilePreviewed
+      Result: 
+      IP: 97.125.37.28
+      Client/Device:  (v)
+      Target: YASH Albaugh SAP Security IT Roles cleanup_SOW v 0.1.docx
+      File Name: YASH Albaugh SAP Security IT Roles cleanup_SOW v 0.1.docx
+      File Path: Shared Documents/Albaugh AMS (offshore)/Steady State/Project SOWs
+
+
+[USER: pranay.jadhav@Yash.com]
+Total Events: 1
+
+  [MICROSOFTTEAMS] - 1 events:
+    • 2026-01-14T16:05:36Z
+      Operation: CallParticipantDetail
+      Result: 
+      IP: 10.6.104.97
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+
+
+[USER: rajender.ketavath@Yash.com]
+Total Events: 4
+Time Span: 0 seconds
+
+  [MICROSOFTTEAMS] - 4 events:
+    • 2026-01-14T16:05:36Z
+      Operation: MeetingParticipantDetail
+      Result: 
+      IP: 10.8.101.72
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:36Z
+      Operation: MeetingParticipantDetail
+      Result: 
+      IP: 192.168.1.6
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:36Z
+      Operation: MeetingParticipantDetail
+      Result: 
+      IP: 100.97.131.236
+      Client/Device:  (v)
+      Target: Teams Chat: ...
+    • 2026-01-14T16:05:36Z
+      Operation: MeetingDetail
+      Result: 
+      IP: 192.168.1.6
+      Client/Device:  (v)
+      Target: Teams Chat: 19:meeting_MWJmYmU0O...
+
+
+### APPLICATION M365 EVENTS (Service Host/System) ###
+
+
+[APPLICATION: app@sharepoint]
+Total Events: 6
+Time Span: 37 seconds
+
+  [ONEDRIVE] - 4 events:
+    • 2026-01-14T16:06:17Z
+      Operation: FileAccessed
+      Result: 
+      IP: 135.13.35.167
+      Client/Device:  (v)
+      Target: RB_2026.pdf
+      UserType: Application
+      ClientAppId: 0ca31068-fae0-4191-9632-08de5386d9a1
+    • 2026-01-14T16:06:15Z
+      Operation: FileAccessed
+      Result: 
+      IP: 135.13.35.167
+      Client/Device:  (v)
+      Target: EWA_PRD.pdf
+      UserType: Application
+      ClientAppId: 6064b446-80da-45e1-b743-08de5386d840
+    • 2026-01-14T16:05:42Z
+      Operation: FileModifiedExtended
+      Result: 
+      IP: 135.13.35.167
+      Client/Device:  (v)
+      Target: YASH Resume - 1102831 - Premchand Parakhi updated_5.docx
+      UserType: Application
+      ClientAppId: 31c05add-3007-4958-2e34-08de5386c48b
+    • 2026-01-14T16:05:40Z
+      Operation: FileAccessed
+      Result: 
+      IP: 135.13.35.167
+      Client/Device:  (v)
+      Target: Legal Entity V1.pdf
+      UserType: Application
+      ClientAppId: e9a3f80f-f399-456e-af78-08de5386c3b8
+
+  [SHAREPOINT] - 2 events:
+    • 2026-01-14T16:05:58Z
+      Operation: FileAccessed
+      Result: 
+      IP: 13.74.166.92
+      Client/Device:  (v)
+      Target: Digital Deal Tracker_Bangalore_Staffing- final.xlsx
+      UserType: Application
+      ClientAppId: 8ea7cc8b-b93f-4f68-6416-08de5386ce82
+    • 2026-01-14T16:05:46Z
+      Operation: FileModified
+      Result: 
+      IP: 20.235.40.4
+      Client/Device:  (v)
+      Target: SAP AMS Medline Governance Call 14th Jan 2026.pptx
+      UserType: Application
+      ClientAppId: e252df30-d0ce-41c5-151b-08de5386c706
+
+
+[APPLICATION: abhishek.bajpai@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:06:13Z
+      Operation: Update
+      Result: Succeeded
+      IP: 2603:1046:c04:c46::5
+      Client/Device:  (v)
+      Target: N/A
+      UserType: Application
+      ClientAppId: 8b5f7fbd-adaf-49cd-f1fb-08de5386d71f
+
+
+[APPLICATION: ela.robles@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:06:02Z
+      Operation: Update
+      Result: Succeeded
+      IP: 2603:1046:c06:823::5
+      Client/Device:  (v)
+      Target: N/A
+      UserType: Application
+      ClientAppId: dce80574-0e2e-441c-723d-08de5386d0d8
+
+
+[APPLICATION: vipul.karia@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:06:00Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP:  
+      Client/Device:  (v)
+      Target: N/A
+      UserType: Application
+      ClientAppId: 7b980220-4f20-4e7a-8ba3-72a815c6b95a
+
+
+[APPLICATION: abraham.kurien@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:44Z
+      Operation: MailItemsAccessed
+      Result: Succeeded
+      IP:  
+      Client/Device:  (v)
+      Target: N/A
+      UserType: Application
+      ClientAppId: ba9f4d4a-6744-4015-9b12-15392451125f
+
+
+[APPLICATION: ruchi.sarawagi@yash.com]
+Total Events: 1
+
+  [EXCHANGE] - 1 events:
+    • 2026-01-14T16:05:40Z
+      Operation: AttachmentAccess
+      Result: Succeeded
+      IP:  
+      Client/Device:  (v)
+      Target: N/A
+      UserType: Application
+      ClientAppId: c84b2373-2cc0-4136-bff5-e6866d497626
+
+
+================================================================================

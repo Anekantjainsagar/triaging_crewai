@@ -1,0 +1,706 @@
+{
+  "generated_at": "2026-01-14T11:16:38.5757728Z",
+  "log_type": "Azure AD Audit",
+  "total_users_analyzed": 22,
+  "alerts": [
+    {
+      "title": "Routine Settings Retrieval",
+      "user": "pragyan.behera@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Audit Trail",
+      "description": "User successfully retrieved system settings.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:16:38.5757728Z",
+      "last_event": "2026-01-14T11:16:38.5757728Z",
+      "initiator": "SYSTEM",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Settings_GetSettingsAsync",
+        "ip_addresses": [
+          "4.194.47.148"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "0daebeca-b165-4c52-8ead-9e443b41e3aa"
+        ]
+      }
+    },
+    {
+      "title": "Routine MFA User Update",
+      "user": "dhiyaneswaran.s@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "MFA Activity",
+      "description": "User's MFA settings were updated by Azure MFA StrongAuthenticationService.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:15:09.9514809Z",
+      "last_event": "2026-01-14T11:15:09.9514809Z",
+      "initiator": "Azure MFA StrongAuthenticationService",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f483e8f6-2b17-4d82-98f7-d035d64e8829"
+        ]
+      }
+    },
+    {
+      "title": "Suspicious Access Pattern - Multiple IPs",
+      "user": "prasant.morusu@Yash.com",
+      "severity": "CRITICAL",
+      "alert_type": "Access Anomaly",
+      "description": "User accessed resources from 3 different IP addresses (4.194.47.148, 4.194.47.155, 4.194.47.151) within 144 seconds.",
+      "event_count": 6,
+      "first_event": "2026-01-14T11:10:03.8390086Z",
+      "last_event": "2026-01-14T11:12:27.8237416Z",
+      "initiator": "SYSTEM",
+      "confidence_score": 95,
+      "details": {
+        "operation": "Settings_GetSettingsAsync",
+        "ip_addresses": [
+          "4.194.47.148",
+          "4.194.47.155",
+          "4.194.47.151"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 144,
+        "correlation_ids": [
+          "fae23c06-7083-4fc4-993a-d0a9e0d0f2f2",
+          "1d954f63-349e-4a90-a13a-9a3bdb0001f1",
+          "21325a98-9e7d-45b5-b4e6-943f7c1e2ec7"
+        ]
+      }
+    },
+    {
+      "title": "Routine MFA User Update",
+      "user": "vikram.chavan@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "MFA Activity",
+      "description": "User's MFA settings were updated by Azure MFA StrongAuthenticationService.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:11:38.6104571Z",
+      "last_event": "2026-01-14T11:11:38.6104571Z",
+      "initiator": "Azure MFA StrongAuthenticationService",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "cc440101-7e8f-4fd3-83f6-552fb93469db"
+        ]
+      }
+    },
+    {
+      "title": "Successful Group Management Operations",
+      "user": "sarita.lad@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Group Management",
+      "description": "User successfully added members and owners to groups.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:11:10.0080483Z",
+      "last_event": "2026-01-14T11:11:23.779393Z",
+      "initiator": "Office 365 SharePoint Online",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Add owner to group, Add member to group",
+        "ip_addresses": [
+          "2a01:111:f402:f0e7::f152"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 13,
+        "correlation_ids": [
+          "11d87e6f-8437-49fa-b872-c832b64e78cb",
+          "91c6784d-5e87-462a-a116-71afaff43eb7",
+          "a8a0c475-c8ec-448d-8be1-3f8a68334815"
+        ]
+      }
+    },
+    {
+      "title": "Routine Settings Retrieval",
+      "user": "nagavvss.kumar@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Audit Trail",
+      "description": "User successfully retrieved system settings.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:11:10.5737838Z",
+      "last_event": "2026-01-14T11:11:10.5737838Z",
+      "initiator": "SYSTEM",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Settings_GetSettingsAsync",
+        "ip_addresses": [
+          "4.194.47.156"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "f8b5ad86-8efd-45d8-a271-1905376dbfe0"
+        ]
+      }
+    },
+    {
+      "title": "Single Failed Self-Service Password Reset",
+      "user": "nagavvss.kumar@Yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Password Reset Anomaly",
+      "description": "User initiated a self-service password reset which subsequently failed.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:04:03.2700053Z",
+      "last_event": "2026-01-14T11:04:04.6189556Z",
+      "initiator": "My Signins",
+      "confidence_score": 80,
+      "details": {
+        "operation": "User started password reset, Reset password (self-service)",
+        "ip_addresses": [
+          "4.194.47.158"
+        ],
+        "device_info": "Naga V V S S Kumar K",
+        "time_delta_seconds": 1,
+        "correlation_ids": [
+          "455159d8-d4f8-4fa3-a558-264b9914ac65"
+        ]
+      }
+    },
+    {
+      "title": "Concurrent Password Changes from Different Sources/IPs",
+      "user": "nagavvss.kumar@Yash.com",
+      "severity": "HIGH",
+      "alert_type": "Password Reset Anomaly",
+      "description": "User's password was reset via self-service and another source (163.116.214.93) almost simultaneously.",
+      "event_count": 10,
+      "first_event": "2026-01-14T11:04:45Z",
+      "last_event": "2026-01-14T11:04:47.3487547Z",
+      "initiator": "My Signins, Microsoft password reset service, Naga V V S S Kumar K",
+      "confidence_score": 90,
+      "details": {
+        "operation": "User reset password, User started password reset, Reset password (self-service), Update StsRefreshTokenValidFrom Timestamp, Reset user password, Update PasswordProfile, Update user",
+        "ip_addresses": [
+          "163.116.214.93",
+          "4.194.47.150"
+        ],
+        "device_info": "Naga V V S S Kumar K, N/A",
+        "time_delta_seconds": 2,
+        "correlation_ids": [
+          "9062dd04-e28d-4938-98c9-2363a15b5a8b",
+          "cbf15a86-a967-4b27-adb0-ae5bd0c9a07c",
+          "a3ab0487-f28f-47dd-bdbc-9f003ec0066b"
+        ]
+      }
+    },
+    {
+      "title": "Routine MFA and System User Updates",
+      "user": "nagavvss.kumar@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User's MFA settings updated and system-initiated user/password updates.",
+      "event_count": 9,
+      "first_event": "2026-01-14T11:04:55.0726424Z",
+      "last_event": "2026-01-14T11:09:02.2569404Z",
+      "initiator": "Azure MFA StrongAuthenticationService, ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user, Update StsRefreshTokenValidFrom Timestamp, Change user password, Update PasswordProfile",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 247,
+        "correlation_ids": [
+          "ff0e7286-2f32-471e-8c7d-16443e31c910",
+          "7d042a0d-c0d6-4a6d-82d1-1d2b916fa613",
+          "013a369d-c51d-49a7-a8c2-35af19dd821d",
+          "88b4ac7e-8399-4bcc-8871-5ae23e414bc3"
+        ]
+      }
+    },
+    {
+      "title": "Routine Settings Retrieval",
+      "user": "pankaj.dashetwar@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Audit Trail",
+      "description": "User successfully retrieved system settings.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:10:48.3315135Z",
+      "last_event": "2026-01-14T11:10:48.3315135Z",
+      "initiator": "SYSTEM",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Settings_GetSettingsAsync",
+        "ip_addresses": [
+          "4.194.47.147"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "76b06456-1e17-45a1-89e6-f3c4cb629b5c"
+        ]
+      }
+    },
+    {
+      "title": "Routine MFA User Update",
+      "user": "parul.pardhal@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "MFA Activity",
+      "description": "User's MFA settings were updated by Azure MFA StrongAuthenticationService.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:10:26.0759939Z",
+      "last_event": "2026-01-14T11:10:26.0759939Z",
+      "initiator": "Azure MFA StrongAuthenticationService",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "bca71318-d402-492c-9c38-9c559c118bbe"
+        ]
+      }
+    },
+    {
+      "title": "Access from New but Nearby IP Addresses",
+      "user": "jai.raikwar@Yash.com",
+      "severity": "LOW",
+      "alert_type": "Access Anomaly",
+      "description": "User accessed resources from 2 different IP addresses (4.194.47.154, 4.194.47.158) within the same /24 subnet in 20 seconds.",
+      "event_count": 4,
+      "first_event": "2026-01-14T11:08:53.7149302Z",
+      "last_event": "2026-01-14T11:09:14.6565357Z",
+      "initiator": "SYSTEM",
+      "confidence_score": 60,
+      "details": {
+        "operation": "Settings_GetSettingsAsync",
+        "ip_addresses": [
+          "4.194.47.154",
+          "4.194.47.158"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 20,
+        "correlation_ids": [
+          "c5c34cdc-0d45-4033-b49e-a0ac1ea19193",
+          "a25e22c4-02d9-483b-a137-2e06e1ba2062"
+        ]
+      }
+    },
+    {
+      "title": "Routine MFA User Update",
+      "user": "chandra.chunduri@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "MFA Activity",
+      "description": "User's MFA settings were updated by Azure MFA StrongAuthenticationService.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:08:51.5768808Z",
+      "last_event": "2026-01-14T11:08:51.5768808Z",
+      "initiator": "Azure MFA StrongAuthenticationService",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "0a0c2bef-a8f3-40fb-81ee-8599971cde39"
+        ]
+      }
+    },
+    {
+      "title": "Routine Settings Retrieval",
+      "user": "ashok.nimmagadda@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Audit Trail",
+      "description": "User successfully retrieved system settings.",
+      "event_count": 2,
+      "first_event": "2026-01-14T11:04:55.6704622Z",
+      "last_event": "2026-01-14T11:04:55.6704622Z",
+      "initiator": "SYSTEM",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Settings_GetSettingsAsync",
+        "ip_addresses": [
+          "4.194.47.150"
+        ],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "fe6f91f0-7391-43c6-a845-3f2a104eddc7"
+        ]
+      }
+    },
+    {
+      "title": "Successful Self-Service Password Reset and System User Updates",
+      "user": "ashok.nimmagadda@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Password Reset, User Management",
+      "description": "User successfully performed a self-service password reset and system-initiated user/password updates occurred.",
+      "event_count": 12,
+      "first_event": "2026-01-14T11:06:14.9713908Z",
+      "last_event": "2026-01-14T11:06:55.8486837Z",
+      "initiator": "My Signins, Microsoft password reset service, ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 70,
+      "details": {
+        "operation": "User started password reset, Reset password (self-service), Update StsRefreshTokenValidFrom Timestamp, Reset user password, Update PasswordProfile, Update user, Change user password",
+        "ip_addresses": [
+          "4.194.47.153"
+        ],
+        "device_info": "Ashok Kumar Nimmagadda, N/A",
+        "time_delta_seconds": 40,
+        "correlation_ids": [
+          "aefedc09-b4d2-4ddb-bd35-a06ae67026cc",
+          "9cf064bc-f102-4afa-84de-534624122407",
+          "b9c812ee-c156-4398-8e79-0d75b927f580"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "suresh.paturi@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:41.5460977Z",
+      "last_event": "2026-01-14T11:06:41.5460977Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "59b5c998-a7af-4473-8bf5-a1119a769e15"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "leela.bhupathi@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:41.5390944Z",
+      "last_event": "2026-01-14T11:06:41.5390944Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "59b5c998-a7af-4473-8bf5-a1119a769e15"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "bhargava.pappu@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.591937Z",
+      "last_event": "2026-01-14T11:06:40.591937Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "babi.naimkhan@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.5859383Z",
+      "last_event": "2026-01-14T11:06:40.5859383Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "abhay.raghuvanshi@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.5799411Z",
+      "last_event": "2026-01-14T11:06:40.5799411Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "ananya.budhauliya@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.5729404Z",
+      "last_event": "2026-01-14T11:06:40.5729404Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "karan.sandbhor@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.5599402Z",
+      "last_event": "2026-01-14T11:06:40.5599402Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "amol.khomne@Yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.5529398Z",
+      "last_event": "2026-01-14T11:06:40.5529398Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Routine System User Update",
+      "user": "bhavana.kaithi@yash.com",
+      "severity": "INFORMATIONAL",
+      "alert_type": "User Management",
+      "description": "User profile updated by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.5459361Z",
+      "last_event": "2026-01-14T11:06:40.5459361Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Failed User Addition by System Service",
+      "user": "Abhishek Bhardwaj@Yash.com",
+      "severity": "LOW",
+      "alert_type": "User Management Failure",
+      "description": "Attempt to add user failed by ConnectSyncProvisioning service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:06:40.4819338Z",
+      "last_event": "2026-01-14T11:06:40.4819338Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 70,
+      "details": {
+        "operation": "Add user",
+        "ip_addresses": [],
+        "device_info": "N/A",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "013a369d-c51d-49a7-a8c2-35af19dd821d"
+        ]
+      }
+    },
+    {
+      "title": "Unusual Access Pattern - Different Subnets",
+      "user": "sagar.aluri@yash.com",
+      "severity": "MEDIUM",
+      "alert_type": "Access Anomaly",
+      "description": "User accessed resources from 2 different subnets (52.112.54.x and 52.123.178.x) within 27 seconds.",
+      "event_count": 7,
+      "first_event": "2026-01-14T11:04:07.3894101Z",
+      "last_event": "2026-01-14T11:04:35.3653475Z",
+      "initiator": "Microsoft Teams Services",
+      "confidence_score": 85,
+      "details": {
+        "operation": "Add member to group, Add owner to group, Add group",
+        "ip_addresses": [
+          "52.112.54.109",
+          "52.123.178.56"
+        ],
+        "device_info": "N/A, Business and Industry Consulting @ Americas",
+        "time_delta_seconds": 27,
+        "correlation_ids": [
+          "ea26c916-c24b-4c79-8c6d-e122f03995a2",
+          "6cbfa521-2a22-4a2e-8766-1874776b5622",
+          "a7afa24a-ff6d-49e9-b7a6-d8308c39612e",
+          "81467d16-32fc-459b-b4fa-8280170cab7c",
+          "12ca860a-fb18-4d9d-8bb8-eb4fd2c3cb3b"
+        ]
+      }
+    },
+    {
+      "title": "Routine Device Registration Updates",
+      "user": "N/A",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Device Management",
+      "description": "Routine updates for registered devices.",
+      "event_count": 5,
+      "first_event": "2026-01-14T11:06:19.4894737Z",
+      "last_event": "2026-01-14T11:12:39.3264905Z",
+      "initiator": "Device Registration Service",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update device",
+        "ip_addresses": [],
+        "device_info": "YISC1101571LT, YH1102151LT, YH1004605LT, YISC1012341LT",
+        "time_delta_seconds": 380,
+        "correlation_ids": [
+          "2f6b1f52-3073-4a09-8050-7307cb52588c",
+          "2b208cf2-f9a7-4c8b-9b21-f3000a3bf68b",
+          "d3038bd3-8a70-4a5c-b3aa-585a961a91fc",
+          "5c0531cf-755d-4b88-9600-839098be8e10"
+        ]
+      }
+    },
+    {
+      "title": "Routine System Group Updates",
+      "user": "N/A",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Group Management",
+      "description": "Routine group updates by ConnectSyncProvisioning service.",
+      "event_count": 5,
+      "first_event": "2026-01-14T11:06:41.6265145Z",
+      "last_event": "2026-01-14T11:06:41.6605149Z",
+      "initiator": "ConnectSyncProvisioning_INHYDADCON10_16ff3c35c0a6",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update group",
+        "ip_addresses": [],
+        "device_info": "BG2-BU2, Panasonicprojectyashteam, YASH Updates - US Immigration, LinkedinSalesNav_Users, BG4-BU7",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "59b5c998-a7af-4473-8bf5-a1119a769e15"
+        ]
+      }
+    },
+    {
+      "title": "Routine SharePoint Group Updates",
+      "user": "N/A",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Group Management",
+      "description": "Routine group updates by Office 365 SharePoint Online service.",
+      "event_count": 3,
+      "first_event": "2026-01-14T11:04:16.2150976Z",
+      "last_event": "2026-01-14T11:06:15.5307295Z",
+      "initiator": "Office 365 SharePoint Online",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update group",
+        "ip_addresses": [],
+        "device_info": "Business and Industry Consulting @ Americas",
+        "time_delta_seconds": 119,
+        "correlation_ids": [
+          "81ddf065-c26b-4153-9a7c-ac1d53980ea1",
+          "682c108f-21e2-40c4-8bf5-72f4bd136bbd",
+          "8e38db4b-7b27-4e75-97f2-b5be5fd7501b"
+        ]
+      }
+    },
+    {
+      "title": "Routine Teams Group Update",
+      "user": "N/A",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Group Management",
+      "description": "Routine group update by Microsoft Teams Templates Service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:05:44.4984823Z",
+      "last_event": "2026-01-14T11:05:44.4984823Z",
+      "initiator": "Microsoft Teams Templates Service",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update group",
+        "ip_addresses": [],
+        "device_info": "Business and Industry Consulting @ Americas",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "acbecdaf-6466-43ca-b9a8-aa9d6f431e57"
+        ]
+      }
+    },
+    {
+      "title": "Routine Exchange Group Update",
+      "user": "N/A",
+      "severity": "INFORMATIONAL",
+      "alert_type": "Group Management",
+      "description": "Routine group update by Office 365 Exchange Online service.",
+      "event_count": 1,
+      "first_event": "2026-01-14T11:04:35.5288755Z",
+      "last_event": "2026-01-14T11:04:35.5288755Z",
+      "initiator": "Office 365 Exchange Online",
+      "confidence_score": 50,
+      "details": {
+        "operation": "Update group",
+        "ip_addresses": [],
+        "device_info": "Business and Industry Consulting @ Americas",
+        "time_delta_seconds": 0,
+        "correlation_ids": [
+          "543c2f60-4836-4a72-ba3d-2a5ae5949948"
+        ]
+      }
+    }
+  ]
+}
