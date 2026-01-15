@@ -8,7 +8,7 @@ import time
 
 
 st.set_page_config(
-    page_title="IAM Alert Analyzer",
+    page_title="Alert Analyzer",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -461,7 +461,7 @@ def show_batch_analysis():
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = f"iam_batch_report_{timestamp}.md"
 
-                md_content = f"""# IAM Alert Analysis Report (Batch)
+                md_content = f"""# Alert Analysis Report (Batch)
 
 **Generated:** {datetime.now().isoformat()}
 **Total Alerts:** {len(st.session_state.results)}
@@ -546,7 +546,7 @@ def show_batch_analysis():
 
 
 def main():
-    st.title("🛡️ IAM Alert Analyzer Dashboard")
+    st.title("🛡️ Alert Analyzer Dashboard")
 
     show_batch_analysis()
 
