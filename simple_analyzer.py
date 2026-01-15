@@ -194,8 +194,8 @@ class CrewAIAnalyzer:
             from datetime import datetime, timedelta
             try:
                 incident_dt = datetime.fromisoformat(incident_time.replace('Z', '+00:00'))
-                start_time = (incident_dt - timedelta(days=1)).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
-                end_time = (incident_dt + timedelta(days=1)).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+                start_time = (incident_dt - timedelta(days=5)).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+                end_time = (incident_dt + timedelta(days=5)).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
                 time_filter = f"TimeGenerated between (datetime('{start_time}') .. datetime('{end_time}'))"
             except:
                 time_filter = "TimeGenerated >= ago(2d)"
@@ -205,12 +205,7 @@ class CrewAIAnalyzer:
         queries = []
         
         # Query 1: User authentication patterns
-        base_query = f"SigninLogs | where UserPrincipalName == '{user_email}' | where {time_filter}"
-        
-        if 'Unfamiliar sign-in properties' in risk_factors:
-            base_query += " | where RiskDetail != 'none'"
-        if 'Anonymous IP address' in risk_factors:
-            base_query += " | where NetworkLocationDetails has 'anonymousProxy'"
+        base_query = f"SigninLogs | where UserPrincipalName == '{user_email.lower()}' | where {time_filter}"
         
         queries.append(base_query + " | summarize count() by AppDisplayName, IPAddress, bin(TimeGenerated, 1h) | order by TimeGenerated desc | limit 50")
         
@@ -228,9 +223,6 @@ class CrewAIAnalyzer:
         user_type = alert_data.get('user_type', '')
         if user_type != 'Guest':
             audit_query = f"AuditLogs | where InitiatedBy.user.userPrincipalName == '{user_email}' | where {time_filter}"
-            
-            if risk_score >= 5:
-                audit_query += " | where Category in ('RoleManagement', 'UserManagement', 'ApplicationManagement')"
             
             queries.append(audit_query + " | summarize count() by OperationName, bin(TimeGenerated, 1h) | order by TimeGenerated desc | limit 20")
         

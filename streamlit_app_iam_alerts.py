@@ -33,6 +33,28 @@ def load_alerts():
                 alert["file_path"] = file_path
                 alert["user_principal_name"] = alert.get("user", "Unknown")
                 alert["risk_score"] = alert.get("confidence_score", 50) / 10
+                
+                # Extract details
+                details = alert.get("details", {})
+                ip_addresses = details.get("ip_addresses", [])
+                device_info = details.get("device_info", "Unknown")
+                
+                # Format locations with timestamp
+                alert["locations"] = [{
+                    "ip_address": ip_addresses[0] if ip_addresses else "Unknown",
+                    "city": "Unknown",
+                    "timestamp": alert.get("first_event", "")
+                }]
+                
+                # Add applications (empty for IAM alerts)
+                alert["applications"] = []
+                
+                # Add risk factors from alert type and severity
+                risk_factors = []
+                if alert.get("severity") in ["HIGH", "CRITICAL"]:
+                    risk_factors.append(alert.get("alert_type", "Unknown Risk"))
+                alert["risk_factors"] = risk_factors
+                
                 alert_count += 1
 
             all_alerts.extend(alerts)
@@ -189,7 +211,7 @@ def show_batch_analysis():
     with col1:
         if st.button("🚀 Start Dynamic Analysis", type="primary"):
             with st.spinner("Loading alerts and generating dynamic KQL queries..."):
-                alerts = load_alerts()[:3]
+                alerts = load_alerts()[:10]
                 st.info(f"Found {len(alerts)} alerts (limited to 3 for analysis)")
                 st.info(
                     "🔍 Generating dynamic KQL queries based on alert characteristics..."
